@@ -1,19 +1,9 @@
 ---
-title: "Title"
+title: "Dog Control"
 author: "Tom Saunders"
 output: html_document
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
-if (!dir.exists("output")){
-  dir.create("output")
-}else{
-  print("dir exists")
-}
-```
 
 ```{r, message=false}
 library()
