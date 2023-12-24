@@ -5,14 +5,14 @@ output: html_document
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 ---
 
-```{r, message=false}
+```{r, message=FALSE}
 library(readr)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
 ```
 
-```{r, message=false}
+```{r, message=FALSE}
 dog_data <- read_csv("data/dog-control.csv")
 ```
 
@@ -29,7 +29,7 @@ ggplot(known_dogs, aes(financial_year, value)) +
   ggtitle("Known dogs over time")
 ```
 
-```{r, warning=false}
+```{r, warning=FALSE}
 attacks <- dog_data |> 
   filter(category == "response" & measure == "attack-people") |> 
   group_by(financial_year)
