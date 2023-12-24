@@ -10,6 +10,7 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
+library(stringr)
 ```
 
 ```{r, message=FALSE}
@@ -17,45 +18,30 @@ dog_data <- read_csv("data/dog-control.csv")
 ```
 
 ```{r}
-known_dogs <- dog_data |> 
-  filter(subcategory == "dogs" & measure == "known") |> 
-  group_by(financial_year)
+# Summaries of dogs and owners
 
-ggplot(known_dogs, aes(financial_year, value)) +
-  geom_line() +
-  theme_classic() +
-  xlab("Year") +
-  ylab("") +
-  ggtitle("Known dogs over time")
-```
+dogs <- dog_data |> 
+  filter(category == "registrations" | category == "classification") |> 
+  group_by(financial_year) |> 
+  select(-category) |> 
+  pivot_wider(names_from = c(subcategory, measure), values_from = value) |> 
+  select(-dangerous_total, -(starts_with("shelters"))) |> 
+  mutate(
+    menacing = menacing_33A + menacing_33C,
+    dangerous = dangerous_conviction + dangerous_evidence + dangerous_admission,
+    pc_men = menacing / dogs_known,
+    pc_dan = dangerous / dogs_known,
+  )
 
-```{r, warning=FALSE}
-attacks <- dog_data |> 
-  filter(category == "response" & measure == "attack-people") |> 
-  group_by(financial_year)
-
-ggplot(attacks, aes(financial_year, value)) +
-  geom_line() +
-  theme_classic() +
-  xlab("Year") +
-  ylab("") +
-  ggtitle("Attacks on people over time")
+owners <- dog_data |> 
+  filter(subcategory == "owners" | subcategory == "prosecution-appeal") |> 
+  group_by(financial_year) |> 
+  select(-category) |> 
+  pivot_wider(names_from = c(subcategory, measure), values_from = value)
 ```
 
 ```{r}
-registered <- dog_data |> 
-  filter(subcategory == "dogs") |> 
-  group_by(financial_year) |> 
-  pivot_wider(names_from = measure, values_from = value) |> 
-  mutate(
-    pc = registered / known,
-  )
 
-ggplot(registered, aes(financial_year, pc)) +
-  geom_line() +
-  theme_classic() +
-  xlab("Year") +
-  ylab("") +
-  ggtitle("Proportion of known dogs registered over time")
 ```
+
 
