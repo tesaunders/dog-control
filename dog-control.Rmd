@@ -6,6 +6,56 @@ knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = e
 ---
 
 ```{r, message=false}
-library()
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+```{r, message=false}
+dog_data <- read_csv("data/dog-control.csv")
+```
+
+```{r}
+known_dogs <- dog_data |> 
+  filter(subcategory == "dogs" & measure == "known") |> 
+  group_by(financial_year)
+
+ggplot(known_dogs, aes(financial_year, value)) +
+  geom_line() +
+  theme_classic() +
+  xlab("Year") +
+  ylab("") +
+  ggtitle("Known dogs over time")
+```
+
+```{r, warning=false}
+attacks <- dog_data |> 
+  filter(category == "response" & measure == "attack-people") |> 
+  group_by(financial_year)
+
+ggplot(attacks, aes(financial_year, value)) +
+  geom_line() +
+  theme_classic() +
+  xlab("Year") +
+  ylab("") +
+  ggtitle("Attacks on people over time")
+```
+
+```{r}
+registered <- dog_data |> 
+  filter(subcategory == "dogs") |> 
+  group_by(financial_year) |> 
+  pivot_wider(names_from = measure, values_from = value) |> 
+  mutate(
+    pc = registered / known,
+  )
+
+ggplot(registered, aes(financial_year, pc)) +
+  geom_line() +
+  theme_classic() +
+  xlab("Year") +
+  ylab("") +
+  ggtitle("Proportion of known dogs registered over time")
 ```
 
