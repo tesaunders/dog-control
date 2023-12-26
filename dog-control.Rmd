@@ -3,11 +3,13 @@ title: "Dog Management in Auckland"
 author: "Tom Saunders"
 output: html_document
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
+bibliography: references.bib
+csl: style.csl
 ---
 
-Under the Dog Control Act 1996 local territorial authorities are responsible for enacting and enforcing bylaws designed to minimise the danger and nuisance caused by dogs to the public. The Act also requires local authorities to report statistics and data relating to dog control activities. Auckland Council operates a regional Animal Management unit and provides data relating to it's activities within [annual reports](https://www.aucklandcouncil.govt.nz/plans-projects-policies-reports-bylaws/our-policies/Pages/policy-on-dogs.aspx). 
+Under the Dog Control Act 1996[@anonymous1996] local territorial authorities are responsible for enacting and enforcing bylaws designed to minimise the danger and nuisance caused by dogs to the public. The Act also requires local authorities to report statistics and data relating to dog control activities. Auckland Council operates a regional Animal Management unit and provides data relating to it's activities within [annual reports](https://www.aucklandcouncil.govt.nz/plans-projects-policies-reports-bylaws/our-policies/Pages/policy-on-dogs.aspx).
 
-I have compiled a dataset relating to dog control taken from these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control). 
+I have compiled a dataset relating to dog control taken from these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control).
 
 ```{r, echo=FALSE, message=FALSE}
 library(readr)
@@ -53,12 +55,11 @@ owners <- dog_data |>
 
 ### Number of Dogs
 
-The number of known dogs has increased dramatically since 2020.
-*The drop in known dog numbers in 2018 reflects work to remove duplicate entries from the register in 2017.
+The number of known dogs has increased dramatically since 2020, while the drop in 2018 reflects work to remove duplicate entries from the register in 2017.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = dogs_known)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -66,12 +67,11 @@ ggplot(dogs, aes(x = financial_year, y = dogs_known)) +
 
 ### Registrations
 
-But the proportion of dogs registered has started to fall sharply since 2020.
-*Investigate blip in registrations in 2017
+The proportion of dogs registered has started to fall sharply since 2020.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = pc_reg)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -80,26 +80,26 @@ ggplot(dogs, aes(x = financial_year, y = pc_reg)) +
 
 ### Menacing Dogs
 
-Meanwhile, the proportion of known dogs classified as menacing has more than doubled since 2014.
+Meanwhile, the proportion of dogs classified as menacing has more than doubled since 2014.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = pc_men)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
   scale_y_continuous(labels = scales::percent)
 ```
 
-## {-}
+##  {.unnumbered}
 
 ## Owners {.tabset}
 
 ### Number of Owners
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(owners, aes(x = financial_year, y = owners_total)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -107,26 +107,26 @@ ggplot(owners, aes(x = financial_year, y = owners_total)) +
 
 ### Sanctioned Owners
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(owners, aes(x = financial_year, y = pc_sanctioned)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
   scale_y_continuous(labels = scales::percent)
 ```
 
-## {-}
+##  {.unnumbered}
 
-The rise in dog ownership since 2020 has been attributed to the increased time many people spent at home during COVID-19 lockdowns. A nation-wide lockdown was enacted in late March for 2 months, followed by regionalised lockdowns for Auckland in August–September 2020 and February–March 2021. Veterinary de-sexing services were unable to operate...WIP 
+The rise in dog ownership since 2020 has been attributed to the increased time many people spent at home during COVID-19 lockdowns. A nation-wide lockdown was enacted in late March for 2 months, followed by regionalised lockdowns for Auckland in August–September 2020 and February–March 2021. Veterinary de-sexing services were unable to operate...WIP
 
-While the *number* of sanctioned owners would be expected to rise in line with the increase in owners, it is concerning that the *proportion* of owners classified as probationary or disqualified is also increasing. 
+While the *number* of sanctioned owners would be expected to rise in line with the increase in owners, it is concerning that the *proportion* of owners classified as probationary or disqualified is also increasing.
 
 ## Responses {.tabset}
 
 ### Responses over time
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 rfs <- dog_data |> 
   filter(subcategory == "priority-1" | 
            subcategory == "priority-2") |> 
@@ -138,8 +138,8 @@ rfs <- dog_data |>
   )
 
 ggplot(rfs, aes(x = financial_year)) +
-  geom_line(aes(y = rfs_total, color = "Total")) +
-  geom_line(aes(y = `priority-1`, color = "Priority 1")) +
+  geom_smooth(aes(y = rfs_total, color = "Total"), se = FALSE, linewidth = 0.8) +
+  geom_smooth(aes(y = `priority-1`, color = "Priority 1"), se = FALSE, linewidth = 0.8) +
   scale_color_manual(values = c(
     "Total" = "darkblue",
     "Priority 1" = "darkred")) +
@@ -149,7 +149,7 @@ ggplot(rfs, aes(x = financial_year)) +
   ylab("")
 ```
 
-## {-}
+##  {.unnumbered}
 
 ## Impounds {.tabset}
 
@@ -173,9 +173,9 @@ impounds <- impounds |>
 
 ### Impounded Dogs
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_impounded)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -184,9 +184,9 @@ ggplot(impounds, aes(x = financial_year, y = pc_impounded)) +
 
 ### Claimed/Returned to Owner
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_returned)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -195,9 +195,9 @@ ggplot(impounds, aes(x = financial_year, y = pc_returned)) +
 
 ### Euthanised
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_euthanised)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -206,16 +206,16 @@ ggplot(impounds, aes(x = financial_year, y = pc_euthanised)) +
 
 ### Adopted/Rescued
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_adopted)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
   scale_y_continuous(labels = scales::percent)
 ```
 
-## {-}
+##  {.unnumbered}
 
 ## Enforcement {.tabset}
 
@@ -229,9 +229,9 @@ enforce <- dog_data |>
 
 ### Infringement notices - total
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 ggplot(enforce, aes(x = financial_year, y = offence_total)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -242,12 +242,13 @@ ggplot(enforce, aes(x = financial_year, y = offence_total)) +
 ```{r, echo=FALSE, message=FALSE}
 ggplot(enforce, aes(x = financial_year, 
                    y = `prosecution-appeal_total`)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("")
 ```
-## {-}
+
+##  {.unnumbered}
 
 ## Resourcing {.tabset}
 
@@ -271,10 +272,10 @@ resource <- resource |>
 
 ### Staff vs Dogs
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(resource, aes(x = financial_year, 
                    y = staff_indexed)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -282,14 +283,16 @@ ggplot(resource, aes(x = financial_year,
 
 ### AMOs %
 
-```{r, echo=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(resource, aes(x = financial_year, 
                    y = pc_field)) +
-  geom_line() +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
   ylab("") +
   scale_y_continuous(labels = scales::percent)
 ```
 
-## {-}
+##  {.unnumbered}
+
+## References
