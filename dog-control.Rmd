@@ -74,7 +74,8 @@ ggplot(dogs, aes(x = financial_year, y = pc_reg)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ### Menacing Dogs
@@ -86,7 +87,8 @@ ggplot(dogs, aes(x = financial_year, y = pc_men)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ## {-}
@@ -110,7 +112,8 @@ ggplot(owners, aes(x = financial_year, y = pc_sanctioned)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ## {-}
@@ -135,8 +138,12 @@ rfs <- dog_data |>
   )
 
 ggplot(rfs, aes(x = financial_year)) +
-  geom_line(aes(y = rfs_total), color = "darkred") +
-  geom_line(aes(y = `priority-1`), color = "darkblue") +
+  geom_line(aes(y = rfs_total, color = "Total")) +
+  geom_line(aes(y = `priority-1`, color = "Priority 1")) +
+  scale_color_manual(values = c(
+    "Total" = "darkblue",
+    "Priority 1" = "darkred")) +
+  labs(color = "Response Type") +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -171,7 +178,8 @@ ggplot(impounds, aes(x = financial_year, y = pc_impounded)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ### Claimed/Returned to Owner
@@ -181,7 +189,8 @@ ggplot(impounds, aes(x = financial_year, y = pc_returned)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ### Euthanised
@@ -191,7 +200,8 @@ ggplot(impounds, aes(x = financial_year, y = pc_euthanised)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ### Adopted/Rescued
@@ -201,21 +211,36 @@ ggplot(impounds, aes(x = financial_year, y = pc_adopted)) +
   geom_line() +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
 ```
 
 ## {-}
 
 ## Enforcement {.tabset}
 
+```{r, echo=FALSE}
+enforce <- dog_data |> 
+  filter(category == "enforcement" | category == "infringements") |>
+  select(-category) |> 
+  group_by(financial_year) |> 
+  pivot_wider(names_from = c(subcategory, measure), values_from = value)
+```
+
 ### Infringement notices - total
 
-### Infringement notices - per owner
+```{r, echo=FALSE}
+ggplot(enforce, aes(x = financial_year, y = offence_total)) +
+  geom_line() +
+  theme_classic() +
+  xlab("Year") +
+  ylab("")
+```
 
 ### Prosecutions
 
 ```{r, echo=FALSE, message=FALSE}
-ggplot(owners, aes(x = financial_year, 
+ggplot(enforce, aes(x = financial_year, 
                    y = `prosecution-appeal_total`)) +
   geom_line() +
   theme_classic() +
@@ -224,3 +249,47 @@ ggplot(owners, aes(x = financial_year,
 ```
 ## {-}
 
+## Resourcing {.tabset}
+
+```{r, echo=FALSE}
+resource <- dog_data |> 
+  filter(category == "resourcing") |>
+  select(-category) |> 
+  group_by(financial_year) |> 
+  pivot_wider(names_from = c(subcategory, measure), values_from = value) |> 
+  mutate(
+    pc_field = staff_field / staff_total,
+  )
+
+resource$dogs_known <- dogs$dogs_known
+
+resource <- resource |> 
+  mutate(
+    staff_indexed = dogs_known / staff_total,
+  )
+```
+
+### Staff vs Dogs
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(resource, aes(x = financial_year, 
+                   y = staff_indexed)) +
+  geom_line() +
+  theme_classic() +
+  xlab("Year") +
+  ylab("")
+```
+
+### AMOs %
+
+```{r, echo=FALSE, warning=FALSE}
+ggplot(resource, aes(x = financial_year, 
+                   y = pc_field)) +
+  geom_line() +
+  theme_classic() +
+  xlab("Year") +
+  ylab("") +
+  scale_y_continuous(labels = scales::percent)
+```
+
+## {-}
