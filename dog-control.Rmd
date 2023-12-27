@@ -1,15 +1,19 @@
 ---
 title: "Dog Management in Auckland"
 author: "Tom Saunders"
+date: 2023-12-27
 output: html_document
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
-bibliography: references.bib
-csl: style.csl
 ---
+A number of concerning dog attacks have been reported in the media recently:
 
-Under the Dog Control Act 1996[@anonymous1996] local territorial authorities are responsible for enacting and enforcing bylaws designed to minimise the danger and nuisance caused by dogs to the public. The Act also requires local authorities to report statistics and data relating to dog control activities. Auckland Council operates a regional Animal Management unit and provides data relating to it's activities within [annual reports](https://www.aucklandcouncil.govt.nz/plans-projects-policies-reports-bylaws/our-policies/Pages/policy-on-dogs.aspx).
+* Neville Thomson was [mauled to death](https://www.rnz.co.nz/news/national/472476/fatal-northland-dog-attack-victim-s-family-want-answers-from-boarder) by a pack of dogs belonging to a friend who was boarding on his property in Pānguru, Northland.
+* An elderly woman in the Northland community of Moerewa was [killed](https://www.rnz.co.nz/news/national/500060/community-shocked-after-fatal-dog-attack-in-moerewa), and two others were injured, after a roaming dog came onto her property and attacked her as she was hanging out washing.
+* ["Unleashed"](https://www.tvnz.co.nz/shows/sunday/clips/unleashed) featured an investigation by current affairs programme "Sunday" into a vicious attack on a 5 year old in Rotorua and the wider issue of increasing dog attacks in New Zealand.
 
-The following analyses have been performed on a dataset compiled from data within these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control).
+Under the [Dog Control Act 1996](https://www.legislation.govt.nz/act/public/1996/0013/latest/whole.html#DLM374410) local territorial authorities are responsible for enacting and enforcing bylaws to minimise the danger and nuisance caused by dogs to the public. The Act also requires local authorities to report statistics and data relating to dog control activities. Auckland Council operates a regional Animal Management unit and provides data relating to it's activities within [annual reports](https://www.aucklandcouncil.govt.nz/plans-projects-policies-reports-bylaws/our-policies/Pages/policy-on-dogs.aspx).
+
+The following analyses have been performed on a dataset compiled from these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control).
 
 ```{r load-packages, echo=FALSE, message=FALSE}
 library(readr)
@@ -55,7 +59,7 @@ owners <- dog_data |>
 
 ### Number of Dogs
 
-The number of known dogs has increased dramatically since 2020, while the drop in 2018 reflects work to remove duplicate entries from the register in 2017.
+The number of known dogs has increased dramatically since 2020. Note: the drop in 2018 reflects work to remove duplicate entries from the register in 2017.
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = dogs_known)) +
@@ -78,6 +82,23 @@ ggplot(dogs, aes(x = financial_year, y = pc_reg)) +
   scale_y_continuous(labels = scales::percent)
 ```
 
+### Roaming dogs
+
+The number of roaming dogs has increased by over 70% since 2021.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+roaming <- dog_data |> 
+  filter(measure == "roaming-dog") |> 
+  group_by(financial_year) 
+
+ggplot(roaming, aes(x = financial_year, y = value)) +
+  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  theme_classic() +
+  xlab("Year") +
+  ylab("")
+```
+
+
 ##  {.unnumbered}
 
 ## Attacks {.tabset}
@@ -96,29 +117,37 @@ attacks <- dog_data |>
 
 ### Attacks on People
 
+The number of dog attacks on people has increased by a whopping 60% since 2021. 
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-ggplot(attacks, aes(x = financial_year, y = pc_attack_people)) +
+ggplot(attacks, aes(x = financial_year, y = `type_attack-people`)) +
   geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
   theme_classic() +
   xlab("Year") +
-  ylab("") +
-  scale_y_continuous(labels = scales::percent)
+  ylab("")
 ```
 
 ### Aggression
 
+The number of responses to dogs aggressive to people and animals, and attacks on animals, are all on the increase. 
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(attacks, aes(x = financial_year)) +
-  geom_smooth(aes(y = `type_aggressive-people`, colour = "ag_people"), se = FALSE, linewidth = 0.8) +
-  geom_smooth(aes(y = `type_attack-animals`, colour = "at_animals"), se = FALSE, linewidth = 0.8) +
-  geom_smooth(aes(y = `type_aggressive-animals`, colour = "ag_animals"), se = FALSE, linewidth = 0.8) +
-  scale_color_manual(values = c(
-    "ag_people" = "darkred",
-    "at_animals" = "orange",
-    "ag_animals" = "yellow")) +
+  geom_smooth(aes(y = `type_aggressive-people`, colour = "Aggressive to People"), se = FALSE, linewidth = 0.8) +
+  geom_smooth(aes(y = `type_attack-animals`, colour = "Attack on Animal"), se = FALSE, linewidth = 0.8) +
+  geom_smooth(aes(y = `type_aggressive-animals`, colour = "Aggressive to Animal"), se = FALSE, linewidth = 0.8) +
+  scale_color_manual(name = "Response Type", values = c(
+    "Aggressive to People" = "darkred",
+    "Attack on Animal" = "orange",
+    "Aggressive to Animal" = "yellow"),
+    breaks = c(
+      "Aggressive to People",
+      "Attack on Animal",
+      "Aggressive to Animal"
+    )) +
   theme_classic() +
   xlab("Year") +
-  ylab("")
+  ylab("") 
 ```
 
 ### Menacing Dogs
@@ -140,6 +169,8 @@ ggplot(dogs, aes(x = financial_year, y = pc_men)) +
 
 ### Number of Owners
 
+Dog ownership continues to trend upward since lockdowns.
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(owners, aes(x = financial_year, y = owners_total)) +
   geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
@@ -149,6 +180,8 @@ ggplot(owners, aes(x = financial_year, y = owners_total)) +
 ```
 
 ### Sanctioned Owners
+
+There are now 6 times more owners classified as 'probationary' or 'disqualified' since 2020.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(owners, aes(x = financial_year, y = pc_sanctioned)) +
@@ -164,6 +197,8 @@ ggplot(owners, aes(x = financial_year, y = pc_sanctioned)) +
 ## Responses {.tabset}
 
 ### Responses over time
+
+As the overall number of Animal Management responses decreases over time, the share of high priority responses is increasing.
 
 ```{r, echo=FALSE, message=FALSE}
 rfs <- dog_data |> 
@@ -212,6 +247,8 @@ impounds <- impounds |>
 
 ### Impounded Dogs
 
+The proportion of known dogs impounded each year was declining, but has started to rise again since COVID-19 lockdowns.
+
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_impounded)) +
   geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
@@ -223,6 +260,8 @@ ggplot(impounds, aes(x = financial_year, y = pc_impounded)) +
 
 ### Claimed/Returned to Owner
 
+The proportion of impounded dogs returned to their owner increased to around 70% in 2021, but has since fallen sharply.
+
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_returned)) +
   geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
@@ -232,7 +271,9 @@ ggplot(impounds, aes(x = financial_year, y = pc_returned)) +
   scale_y_continuous(labels = scales::percent)
 ```
 
-### Euthanised
+### Euthanized
+
+The proportion of impounded dogs euthanized has increased sharply since 2021.
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_euthanised)) +
@@ -266,7 +307,7 @@ enforce <- dog_data |>
   pivot_wider(names_from = c(subcategory, measure), values_from = value)
 ```
 
-### Infringement notices - total
+### Infringements Issued
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(enforce, aes(x = financial_year, y = offence_total)) +
@@ -311,6 +352,8 @@ resource <- resource |>
 
 ### Staff vs Dogs
 
+The ratio of known dogs to Animal Management staff has increased over time.
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(resource, aes(x = financial_year, 
                    y = staff_indexed)) +
@@ -320,7 +363,9 @@ ggplot(resource, aes(x = financial_year,
   ylab("")
 ```
 
-### AMOs %
+### Animal Management Officers
+
+The proportion of Animal Management staff made up of Animal Management Officers (field staff) has increased since 2021.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(resource, aes(x = financial_year, 
@@ -336,13 +381,15 @@ ggplot(resource, aes(x = financial_year,
 
 ## Conclusions
 
--   Dog ownership has increased dramatically since 2020, driven significantly by time spent at home during COVID-19 lockdowns[@mayron2022].
--   The proportion of dogs being registered is dropping, while the proportion of dogs classified as menacing has doubled since 2014 and is still increasing.
--   Both the number and proportion of responses relating to attacks on people have dramatically increased since 2020. 
--   The proportion of probationary or disqualified owners is increasing, as are the number of infringements issued, but the number of prosecutions is actually dropping.
--   The number of high priority responses has increased slightly since 2020, while the number of lower priority responses has been falling since 2016.
+Based on these analyses, in relation to dogs in Auckland:
+
+-   Dog ownership has increased dramatically since 2020, but the proportion of dogs being registered is dropping.
+-   The proportion of dogs classified as menacing has doubled since 2014 and is still increasing.
+-   The number of roaming dogs has increased by over 70% since 2021. 
+-   The number of dog attacks on people has increased by a whopping 60% since 2021, and attacks on people are making up a greater proportion of Animal Management responses than before COVID-19 lockdowns.
+-   Attacks and aggression towards other animals have also been trending upward since 2021. 
+-   The proportion of probationary or disqualified owners is increasing, as are the number of infringements issued. This makes the drop in prosecutions difficult to understand.
+-   A larger share of responses have been classified as 'high priority' since 2016.
 -   The proportion of known dogs being impounded was dropping up until 2021, but is now increasing.
 -   The proportion of impounded dogs claimed/returned to owners, or adopted/rescued, has sharply declined over the last few years, while the proportion of impounded dogs euthanized has sharply risen.
 -   The rise in animal management staff has not kept up with the rise in dog numbers over recent years.
-
-## References
