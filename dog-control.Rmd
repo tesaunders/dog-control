@@ -59,11 +59,11 @@ owners <- dog_data |>
 
 ### Number of Dogs
 
-The number of known dogs has increased dramatically since 2020. Note: the drop in 2018 reflects work to remove duplicate entries from the register in 2017.
+The number of known dogs has increased dramatically since 2020. Note: the drop in 2018 reflects work to remove duplicate entries from the register.
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = dogs_known)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -71,11 +71,11 @@ ggplot(dogs, aes(x = financial_year, y = dogs_known)) +
 
 ### Registrations
 
-The proportion of dogs registered has started to fall sharply since 2020.
+The proportion of dogs registered has started to fall sharply since 2020. Note: The drop in 2017 was the result of work to remove duplicate entries from the register.
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = pc_reg)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -92,7 +92,7 @@ roaming <- dog_data |>
   group_by(financial_year) 
 
 ggplot(roaming, aes(x = financial_year, y = value)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) + 
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -121,7 +121,7 @@ The number of dog attacks on people has increased by a whopping 60% since 2021.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(attacks, aes(x = financial_year, y = `type_attack-people`)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) + 
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -133,9 +133,9 @@ The number of responses to dogs aggressive to people and animals, and attacks on
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(attacks, aes(x = financial_year)) +
-  geom_smooth(aes(y = `type_aggressive-people`, colour = "Aggressive to People"), se = FALSE, linewidth = 0.8) +
-  geom_smooth(aes(y = `type_attack-animals`, colour = "Attack on Animal"), se = FALSE, linewidth = 0.8) +
-  geom_smooth(aes(y = `type_aggressive-animals`, colour = "Aggressive to Animal"), se = FALSE, linewidth = 0.8) +
+  geom_line(aes(y = `type_aggressive-people`, colour = "Aggressive to People"), linewidth = 0.8) +
+  geom_line(aes(y = `type_attack-animals`, colour = "Attack on Animal"), linewidth = 0.8) +
+  geom_line(aes(y = `type_aggressive-animals`, colour = "Aggressive to Animal"), linewidth = 0.8) +
   scale_color_manual(name = "Response Type", values = c(
     "Aggressive to People" = "darkred",
     "Attack on Animal" = "orange",
@@ -156,7 +156,7 @@ The proportion of dogs classified as menacing has more than doubled since 2014.
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(dogs, aes(x = financial_year, y = pc_men)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -173,7 +173,7 @@ Dog ownership continues to trend upward since lockdowns.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(owners, aes(x = financial_year, y = owners_total)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -185,7 +185,7 @@ There are now 6 times more owners classified as 'probationary' or 'disqualified'
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(owners, aes(x = financial_year, y = pc_sanctioned)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -212,8 +212,8 @@ rfs <- dog_data |>
   )
 
 ggplot(rfs, aes(x = financial_year)) +
-  geom_smooth(aes(y = rfs_total, color = "Total"), se = FALSE, linewidth = 0.8) +
-  geom_smooth(aes(y = `priority-1`, color = "Priority 1"), se = FALSE, linewidth = 0.8) +
+  geom_line(aes(y = rfs_total, color = "Total"), linewidth = 0.8) +
+  geom_line(aes(y = `priority-1`, color = "Priority 1"), linewidth = 0.8) +
   scale_color_manual(values = c(
     "Total" = "darkblue",
     "Priority 1" = "darkred")) +
@@ -251,7 +251,7 @@ The proportion of known dogs impounded each year was declining, but has started 
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_impounded)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -264,7 +264,7 @@ The proportion of impounded dogs returned to their owner increased to around 70%
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_returned)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -277,7 +277,7 @@ The proportion of impounded dogs euthanized has increased sharply since 2021.
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_euthanised)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -288,7 +288,7 @@ ggplot(impounds, aes(x = financial_year, y = pc_euthanised)) +
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(impounds, aes(x = financial_year, y = pc_adopted)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
@@ -311,7 +311,7 @@ enforce <- dog_data |>
 
 ```{r, echo=FALSE, message=FALSE}
 ggplot(enforce, aes(x = financial_year, y = offence_total)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -322,7 +322,7 @@ ggplot(enforce, aes(x = financial_year, y = offence_total)) +
 ```{r, echo=FALSE, message=FALSE}
 ggplot(enforce, aes(x = financial_year, 
                    y = `prosecution-appeal_total`)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -357,7 +357,7 @@ The ratio of known dogs to Animal Management staff has increased over time.
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(resource, aes(x = financial_year, 
                    y = staff_indexed)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("")
@@ -370,7 +370,7 @@ The proportion of Animal Management staff made up of Animal Management Officers 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 ggplot(resource, aes(x = financial_year, 
                    y = pc_field)) +
-  geom_smooth(se = FALSE, linewidth = 0.8, colour = "black") +
+  geom_line(linewidth = 0.8) +
   theme_classic() +
   xlab("Year") +
   ylab("") +
