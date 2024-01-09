@@ -2,18 +2,16 @@
 title: "Dog Management in Auckland"
 author: "Tom Saunders"
 date: 2023-12-27
-output: html_document
+output:
+  html_document:
+    css: "style.css"
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 ---
-A number of concerning dog attacks have been reported in the media recently:
-
-* Neville Thomson was [mauled to death](https://www.rnz.co.nz/news/national/472476/fatal-northland-dog-attack-victim-s-family-want-answers-from-boarder) by a pack of dogs belonging to a friend who was boarding on his property in Pānguru, Northland.
-* An elderly woman in the Northland community of Moerewa was [killed](https://www.rnz.co.nz/news/national/500060/community-shocked-after-fatal-dog-attack-in-moerewa), and two others were injured, after a roaming dog came onto her property and attacked her as she was hanging out washing.
-* ["Unleashed"](https://www.tvnz.co.nz/shows/sunday/clips/unleashed) featured an investigation by current affairs programme "Sunday" into a vicious attack on a 5 year old in Rotorua and the wider issue of increasing dog attacks in New Zealand.
+Over the last couple of years, a national rise in dog attacks have resulted in the deaths of people in [Pānguru](https://www.rnz.co.nz/news/national/472476/fatal-northland-dog-attack-victim-s-family-want-answers-from-boarder) and [Moerewa](https://www.rnz.co.nz/news/national/500060/community-shocked-after-fatal-dog-attack-in-moerewa), the mauling of [children](https://www.tvnz.co.nz/shows/sunday/clips/unleashed), and the [deaths of pets](https://www.rnz.co.nz/news/national/506338/pets-reportedly-killed-by-roaming-dogs-in-whakatane-over-holiday-period).
 
 Under the [Dog Control Act 1996](https://www.legislation.govt.nz/act/public/1996/0013/latest/whole.html#DLM374410) local territorial authorities are responsible for enacting and enforcing bylaws to minimise the danger and nuisance caused by dogs to the public. The Act also requires local authorities to report statistics and data relating to dog control activities. Auckland Council operates a regional Animal Management unit and provides data relating to it's activities within [annual reports](https://www.aucklandcouncil.govt.nz/plans-projects-policies-reports-bylaws/our-policies/Pages/policy-on-dogs.aspx).
 
-The following analyses have been performed on a dataset compiled from these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control).
+The following analyses were performed on a dataset compiled from these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control).
 
 ```{r load-packages, echo=FALSE, message=FALSE}
 library(readr)
