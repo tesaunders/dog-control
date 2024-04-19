@@ -14,11 +14,7 @@ Under the [Dog Control Act 1996](https://www.legislation.govt.nz/act/public/1996
 The following analyses were performed on a dataset compiled from these annual reports starting in 2014. The complete dataset, and R code used to perform all the analyses, is available [here](https://github.com/tesaunders/dog-control).
 
 ```{r load-packages, echo=FALSE, message=FALSE}
-library(readr)
-library(dplyr)
-library(ggplot2)
-library(tidyr)
-library(stringr)
+library(tidyverse)
 ```
 
 ```{r read-data, echo=FALSE, message=FALSE}
@@ -345,6 +341,7 @@ resource$dogs_known <- dogs$dogs_known
 resource <- resource |> 
   mutate(
     staff_indexed = dogs_known / staff_total,
+    expend_indexed = budget_expenditure / dogs_known,
   )
 ```
 
@@ -375,6 +372,20 @@ ggplot(resource, aes(x = financial_year,
   scale_y_continuous(labels = scales::percent)
 ```
 
+### Expenditure
+
+The budget allocated to Animal Management has not increased anywhere near the rate of the increase in numbers of dogs.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(resource, aes(x = financial_year, 
+                   y = budget_expenditure)) +
+  geom_line(linewidth = 0.8) +
+  theme_classic() +
+  xlab("Year") +
+  ylab("Expenditure ($)") +
+  ylim(0, 9500000)
+```
+
 ##  {.unnumbered}
 
 ## Conclusions
@@ -391,3 +402,4 @@ Based on these analyses, in relation to dogs in Auckland:
 -   The proportion of known dogs being impounded was dropping up until 2021, but is now increasing.
 -   The proportion of impounded dogs claimed/returned to owners, or adopted/rescued, has sharply declined over the last few years, while the proportion of impounded dogs euthanized has sharply risen.
 -   The rise in animal management staff has not kept up with the rise in dog numbers over recent years.
+-   The budget allocated to Animal Management has barely increased since 2017, despite massive increases in dogs.
