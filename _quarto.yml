@@ -1,17 +1,14 @@
 project:
   type: manuscript
 
+manuscript: 
+  code-links: repo
+
 execute:
   freeze: auto
 
 format:
   html:
     toc: true
-    comments:
-      hypothesis: true
   docx: default
-  jats: default
-  agu-pdf: default
-
-
-
+  pdf: default

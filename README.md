@@ -1,4 +1,4 @@
-## A Quarto Manuscript Template
+## Dog Control in Auckland
 
-This is a template repo for generating a manuscript from Quarto that accompanies the tutorial at: [Quarto Manuscripts: RStudio](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
+A project to analyse and visualise data on dogs in Auckland using data compiled by Auckland Council's Animal Management division.
 
