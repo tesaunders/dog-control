@@ -12,7 +12,6 @@ number-sections: true
 key-points:
   - Key points.
 bibliography: references.bib
-number-sections: true
 ---
 
 ## Introduction

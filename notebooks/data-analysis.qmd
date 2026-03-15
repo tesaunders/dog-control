@@ -2,3 +2,631 @@
 title: Data Analysis
 author: Thomas E. Saunders
 ---
+## Set up
+
+Load libraries
+
+```{r, message=FALSE}
+# Load packages
+library(akldogs)
+library(tidyverse)
+library(tidytext)
+library(fs)
+library(gt)
+library(patchwork)
+library(scales)
+```
+
+Read in data compiled from Animal Management reports
+
+```{r}
+#| message: false
+report_files <- list.files(path = "../data", 
+                           pattern = "am-reports", 
+                           full.names = TRUE)
+
+report_data <- 
+  report_files |> 
+  map(read_csv) |> 
+  set_names(path_file(str_extract(report_files, "[^-]+(?=\\.[^.]+$)")) |> path_ext_remove())
+```
+
+Tidy data and column names
+
+```{r}
+registration <- 
+  registration |> 
+  mutate(
+    across(
+      starts_with("animal_breed"), 
+      ~ str_replace(.x, "^([^,]+),\\s*(.*)$", "\\2 \\1")
+    )
+  )
+
+registration <- rename(registration, suburb = suburb_name)
+rfs <- rename(rfs, suburb = location_suburb_name)
+```
+
+## Auckland Dog Population Overview
+
+Known dogs as at FY2025
+
+```{r}
+reg_2025 <-
+  registration |> 
+  filter(sheet_name == "FY25")
+
+nrow(reg_2025)
+```
+
+Dog population primary breed counts
+
+```{r}
+primary_breed <-
+  reg_2025 |> 
+  group_by(animal_breed_description) |> 
+  count(name = "primary_breed") |> 
+  ungroup() |> 
+  mutate(
+    prop = primary_breed / sum(primary_breed)
+  ) |> 
+  arrange(desc(prop))
+```
+
+Dog population secondary breed counts
+
+```{r}
+secondary_breed <-
+  reg_2025 |> 
+  group_by(animal_breed2_description) |> 
+  count(name = "secondary_breed") |> 
+  ungroup() |> 
+  mutate(
+    prop = secondary_breed / sum(secondary_breed)
+  ) |> 
+  arrange(desc(prop))
+```
+
+Primary breeds most commonly classified as 'menacing' due to behaviour
+
+```{r}
+menacing_breed <-
+  reg_2025 |>
+  filter(classification == "Menacing - observed or reported behaviour of dog") |> 
+  count(animal_breed_description, name = "menacing") |> 
+  left_join(primary_breed |> rename(primary_prop = prop), by = join_by(animal_breed_description)) |> 
+  mutate(menacing_prop = menacing / primary_breed) |> 
+  arrange(desc(menacing_prop))
+```
+
+Annual attack rate
+
+```{r}
+attack_rate <-
+  report_data$service |> 
+  filter(category == "attack-people") |>
+  select(-category) |> 
+  rename(count_attacks = count) |> 
+  left_join(
+    report_data$ownership |> 
+      filter(category == "dogs") |> 
+      select(-category) |> 
+      rename(count_dogs = count),
+    by = join_by(year)) |> 
+  mutate(
+    attack_rate = (count_attacks / count_dogs) * 1000,
+  ) 
+```
+
+Severity of attack based on primary dog breed
+
+```{r}
+attack_severity <-
+  impounds |> 
+  filter(impound_date > "2023-07-01" & !is.na(severity)) |> 
+  group_by(severity) |> 
+  count(primary_breed) |> 
+  arrange(desc(severity), desc(n))
+```
+
+Trends in ownership over time
+
+```{r}
+ownership_trends <-
+  report_data$ownership |>
+  pivot_wider(
+    names_from = category,
+    values_from = count
+  ) |> 
+  arrange(year) |>
+  mutate(
+    prev_value = lag(dogs),
+    change = dogs - prev_value,
+    pc_change = change / dogs,
+    reg_pc = registered / dogs,
+    desex_pc = desexed / dogs,
+    men_pc = menacing / dogs
+  ) |>
+  select(year, dogs, pc_change:men_pc) |> 
+  arrange(desc(year))
+
+ownership_trends |>
+  rename("Year" = year,
+         "Known Dogs" = dogs,
+         "Pop. Change (%)" = pc_change,
+         "Registered (%)" = reg_pc,
+         "Desexed (%)" = desex_pc,
+         "Menacing (%)" = men_pc) |> 
+  arrange(desc(`Year`)) |> 
+  gt() |> 
+  fmt_percent(columns = contains("%"),
+              decimals = 1) |>
+  fmt_number(columns = `Known Dogs`,
+             sep_mark = ",",
+             decimals = 0) |> 
+  sub_missing(
+    columns = `Desexed (%)`,
+    missing_text = "-"
+  )
+```
+
+Impound outcomes
+
+```{r}
+#| warning: FALSE
+
+impound_result <-
+  report_data$impounds |> 
+  filter(category != "impounds")
+
+impound_result$category <- factor(impound_result$category, 
+                                 levels = c("transferred", "returned", "euthanised"))
+
+ggplot(impound_result, aes(x = year, y = count, fill = category)) +
+  geom_bar(position = "fill", stat = "identity") +
+  theme_minimal() +
+  scale_fill_manual(values = c("lightblue", "lightgreen", "red")) +
+  scale_y_continuous(labels = scales::label_percent()) +
+  scale_x_continuous(breaks = unique(impound_result$year)) +
+  xlab("") +
+  ylab("")
+```
+
+Impound outcome by primary breed (FY2025 population data with FY2024 impound data)
+
+```{r}
+breed_processed <- 
+  impounds |>
+  filter(impound_date > "2023-07-01", status %in% c("Euthanised", "For Euthanasia")) |>
+  mutate(primary_breed = if_else(str_detect(primary_breed, "Pit Bull Terrier"), "American Pit Bull Terrier", primary_breed)) |>
+  count(primary_breed, name = "count_euthanised") |>
+  mutate(proportion_euthanised = count_euthanised / sum(count_euthanised)) |>
+  left_join(primary_breed |> rename(count_population = primary_breed,
+                                    proportion_population = prop), 
+            by = join_by(primary_breed == animal_breed_description)) |>
+  mutate(
+    diff = proportion_euthanised - proportion_population,
+    max_val = pmax(proportion_euthanised, proportion_population)
+  ) |>
+  filter(abs(diff) > 0.01) |>
+  arrange(abs(diff)) |>
+  mutate(primary_breed = fct_inorder(primary_breed))
+
+breed_long <- 
+  breed_processed |>
+  pivot_longer(cols = starts_with("proportion"), names_to = "type", values_to = "val") |>
+  mutate(label = if_else(str_detect(type, "pop"), "Population", "Euthanised"))
+
+colours <- c("proportion_euthanised" = "#BF2F24", "proportion_population" = "#436685")
+
+n_breeds <- nrow(breed_processed)
+
+plot_main <- 
+  ggplot(breed_long, aes(val, primary_breed)) +
+  geom_line(aes(group = primary_breed), color = "#E7E7E7", linewidth = 3.5) +
+  geom_point(aes(color = type), size = 3) +
+  geom_text(aes(label = percent(val, accuracy = 0.01), color = type,
+                hjust = if_else(val == max_val, -0.2, 1.2)), 
+            size = 3.25) +
+  geom_text(data = filter(breed_long, diff == max(diff)),
+            aes(label = label, color = type), 
+            nudge_y = 0.8, fontface = "bold", size = 3.25) +
+  scale_color_manual(values = colours) +
+  coord_cartesian(xlim = c(-0.02, 0.45), ylim = c(1, n_breeds + 1), clip = "off") +
+  labs(title = "Breed Profile: Auckland Dog Population vs Euthanised",
+       subtitle = "Breeds with >1% difference", x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(legend.position = "none", panel.grid = element_blank(),
+        plot.title = element_text(face = "bold", hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5))
+
+plot_diff <- 
+  ggplot(breed_processed, aes(x = 0, y = primary_breed)) +
+  geom_text(aes(label = percent(diff, accuracy = 0.1), 
+                color = if_else(diff > 0, "proportion_euthanised", "proportion_population")),
+            fontface = "bold", size = 3.25) +
+  annotate("text", x = 0, y = n_breeds + 0.8, 
+           label = "Difference", fontface = "bold", size = 3.25) +
+  scale_color_manual(values = colours) +
+  coord_cartesian(ylim = c(1, n_breeds + 1), clip = "off") +
+  theme_void() +
+  theme(legend.position = "none")
+
+plot_main + plot_diff + 
+  plot_layout(widths = c(10, 1)) & 
+  theme(plot.margin = margin(t = 20, r = 5, b = 10, l = 5))
+
+```
+
+Reasons for euthanasia
+
+```{r}
+euthanised_reason <-
+  impounds |>
+  filter(impound_date > "2023-07-01" & !is.na(euthanasia_reason)) |>
+  mutate(
+    euthanasia_reason = case_when(
+      str_detect(euthanasia_reason, "Health|Parvo") ~ "Health or Parvo Virus",
+      str_detect(euthanasia_reason, "Dog vs Dog|Dog vs Domestic|Dog vs Stock|Dog vs Poultry") ~ "S.57 Dog vs Animal",
+      .default = euthanasia_reason
+    )
+  ) |> 
+  group_by(euthanasia_reason) |> 
+  count(name = "count") |>
+  ungroup() |> 
+  mutate(
+    proportion = count / sum(count)
+  ) |> 
+  arrange(desc(proportion))
+```
+
+## Auckland Dog Population By Region
+
+Known dogs
+
+```{r}
+regions_dogs <- 
+  registration |>
+  filter(sheet_name == "FY25") |> 
+  left_join(locality, by = join_by(suburb)) |>
+  select(suburb, local_board, region) |> 
+  group_by(suburb) |> 
+  add_count(suburb, name = "known_suburb") |> 
+  group_by(local_board) |> 
+  add_count(local_board, name = "known_board") |> 
+  group_by(region) |> 
+  add_count(region, name = "known_region") |>
+  unique() |> 
+  arrange(desc(known_suburb)) |> 
+  ungroup()
+```
+
+Registration data
+
+```{r}
+regions_2025 <-
+  registration |> 
+  filter(sheet_name == "FY25") |> 
+  mutate(
+    current_reg = case_when(registration_latest_year < 2024 ~ FALSE, .default = TRUE),
+    owner_reg = case_when(owner_registration_class == "RDOL" ~ TRUE),
+    classification = case_when(classification == "Unknown" ~ FALSE,
+                               str_detect(classification, "Menacing|Dangerous") ~ TRUE)
+  ) |> 
+  left_join(regions_dogs, by = join_by(suburb)) |> 
+  select(current_reg, owner_reg, animal_breed_description, animal_desexed, classification, suburb, local_board:known_region) 
+  
+regions_reg <- 
+  regions_2025 |>
+  pivot_longer(
+    cols = c(current_reg, owner_reg, animal_desexed, classification),
+    names_to = "metric",
+    values_to = "is_true"
+  ) |>
+  group_by(suburb, local_board, region, metric) |>
+  summarise(
+    count = sum(is_true, na.rm = TRUE),
+    known_suburb = first(known_suburb),
+    known_board = first(known_board),
+    known_region = first(known_region),
+    .groups = "drop"
+  ) |>
+  group_by(metric) |>
+  mutate(
+    p_suburb = count / known_suburb
+  ) |>
+  group_by(local_board, metric) |>
+  mutate(p_board = sum(count) / first(known_board)) |>
+  group_by(region, metric) |>
+  mutate(p_region = sum(count) / first(known_region)) |>
+  ungroup()
+```
+
+Compare Local Boards
+
+```{r}
+plot_data <- regions_reg |>
+  select(local_board, metric, p_board) |>
+  distinct()
+
+ggplot(plot_data, aes(x = p_board, y = fct_reorder(local_board, p_board), fill = metric)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~metric, scales = "free_x") +
+  scale_x_continuous(labels = scales::label_percent()) +
+  theme_minimal() +
+  labs(
+    title = "Animal Registration Metrics by Local Board (FY25)",
+    subtitle = "Proportions calculated against known totals per board",
+    x = "Proportion (%)",
+    y = NULL
+  )
+```
+
+Attacks per 1,000 known dogs in each Local Board
+
+```{r}
+regions_attacks <-
+  rfs |> 
+  filter(rfs_date >= "2024-07-01",
+         rfs_type %in% c("Dog attack on people", 
+                         "Dog attack on child", 
+                         "Dog Attack on Child")
+  ) |> 
+  left_join(regions_dogs |> select(-local_board), by = join_by(suburb)) |> 
+  group_by(suburb) |> 
+  add_count(suburb, name = "attacks_suburb") |> 
+  group_by(local_board) |> 
+  mutate(
+    attacks_board = sum(attacks_suburb)
+  ) |> 
+  group_by(region) |> 
+  mutate(
+    attacks_region = sum(attacks_suburb)
+  ) |> 
+  ungroup() |> 
+  mutate(
+    rate_suburb = (attacks_suburb / known_suburb) * 1000,
+    rate_board = (attacks_board / known_board) * 1000,
+    rate_region = (attacks_region / known_region) * 1000
+  ) |> 
+  select(suburb, local_board, region:rate_region) |> 
+  unique()
+```
+
+Primary breed profile for each region
+
+```{r}
+regions_breed <-
+  registration |> 
+  filter(sheet_name == "FY25") |> 
+  left_join(locality, by = join_by(suburb)) |> 
+  group_by(region) |> 
+  count(animal_breed_description, name = "count") |> 
+  arrange(desc(count), .by_group = TRUE) |> 
+  left_join(regions_dogs |> select(region, known_region) |> unique(), by = join_by(region)) |>
+  mutate(
+    prop_breed = format(count / known_region, scientific = FALSE)
+  )
+```
+
+Compare regional breed profiles statistically
+
+```{r}
+# Chi-squared test of independence and Pearson residual analysis
+
+# Prepare contingency table
+breed_table <- 
+  regions_breed |> 
+  filter(!is.na(region), !is.na(animal_breed_description)) |> 
+  select(region, animal_breed_description, count) |> 
+  pivot_wider(names_from = region, values_from = count, values_fill = 0) |> 
+  column_to_rownames("animal_breed_description") |> 
+  as.matrix()
+
+# Perform Chi-Squared Test
+chi_test <- chisq.test(breed_table, simulate.p.value = TRUE)
+
+# Extract Pearson residuals to examine over/under-representation
+residuals <- as.data.frame(chi_test$residuals) |> 
+  rownames_to_column("breed") |> 
+  pivot_longer(-breed, names_to = "region", values_to = "residual")
+
+# Identify top over-represented breeds per region (Residual > 2)
+overrepresented <- residuals |> 
+  filter(residual > 2) |> 
+  arrange(region, desc(residual))
+```
+
+```{r}
+# Calculate % above expected
+
+# Extract Observed and Expected values from the test result
+observed_counts <- as.data.frame(chi_test$observed)  |> 
+  rownames_to_column("breed") |> 
+  pivot_longer(-breed, names_to = "region", values_to = "observed")
+
+expected_counts <- as.data.frame(chi_test$expected)  |> 
+  rownames_to_column("breed") |> 
+  pivot_longer(-breed, names_to = "region", values_to = "expected")
+
+# Join and calculate the percentage difference
+comparison_df <- observed_counts |> 
+  left_join(expected_counts, by = c("breed", "region")) |> 
+  mutate(
+    diff_raw = observed - expected,
+    percent_diff = (diff_raw / expected) * 100
+  )
+
+# View the top over-represented breeds by percentage
+top_overrepresented <- comparison_df |> 
+  filter(observed > 50)  |>  
+  arrange(desc(percent_diff))
+```
+
+```{r}
+# Visualise over-represented breeds in each region
+
+over_breeds <- observed_counts |> 
+  left_join(expected_counts, by = c("breed", "region")) |> 
+  left_join(residuals, by = c("breed", "region")) |> 
+  mutate(
+    diff_raw = observed - expected,
+    percent_diff = (diff_raw / expected) * 100
+  ) |> 
+  filter(residual > 2 & observed >= 50) |> 
+  group_by(region) |> 
+  slice_max(percent_diff, n = 5) |> 
+  ungroup()
+
+ggplot(over_breeds, aes(x = reorder_within(breed, percent_diff, region),
+                        y = percent_diff, 
+                        fill = region)) +
+  geom_col() +
+  geom_text(aes(label = paste0("+", round(percent_diff), "%")), 
+            hjust = -0.1, size = 3.5, fontface = "bold") +
+  scale_x_reordered() +
+  coord_flip() +
+  facet_wrap(~region, scales = "free_y") +
+  scale_y_continuous(expand = expansion(mult = c(0, .25))) + 
+  labs(
+    title = "Regional Dog Breed 'Hotspots'",
+    subtitle = "Breeds with the highest % overrepresentation (where Residual > 2)",
+    x = NULL,
+    y = "% More Common than Expected"
+  ) +
+  theme_minimal() +
+  theme(
+    strip.text = element_text(face = "bold", size = 12),
+    panel.grid.minor = element_blank()
+  ) +
+  guides(fill = "none")
+```
+
+Impounds per 1,000 dogs (FY2024 data)
+
+```{r}
+regions_impounds <- 
+  impounds |>
+  filter(impound_date > "2023-07-01") |> 
+  left_join(regions_dogs, by = join_by(suburb)) |> 
+  group_by(suburb) |> 
+  mutate(
+    impounds_suburb = n()
+  ) |> 
+  group_by(local_board) |> 
+  mutate(
+    impounds_board = n()
+  ) |> 
+  group_by(region) |> 
+  mutate(
+    impounds_region = n()
+  ) |> 
+  ungroup() |> 
+  mutate(
+    rate_suburb = (impounds_suburb / known_suburb) * 1000,
+    rate_board = (impounds_board / known_board) * 1000,
+    rate_region = (impounds_region / known_region) * 1000
+  ) |> 
+  select(suburb, local_board:rate_region) |> 
+  unique()
+```
+
+Impound rate for attacks/rushing (FY2024 data)
+
+```{r}
+regions_impounds_attacks <-
+  impounds |>
+  filter(impound_date > "2023-07-01") |>
+  select(impound_reason, suburb, s_57_type, severity) |> 
+  mutate(
+    impound_reason = case_match(
+      impound_reason,
+      c("Relq - Sec 57", "Sec 57") ~ "attack",
+      "Sec 57A" ~ "rush", 
+      "Sec 15" ~ "neglect",
+      "Sec 28" ~ "owner_disqual",
+      c("Sec 32", "Sec 33EC") ~ "fail_class",
+      "Sec 42" ~ "unreg",
+      c("Sec 52 (2a)", "Sec 52 (2b)", "Sec 52A") ~ "roam_control",
+      "Sec 56" ~ "barking",
+      "Sec 59" ~ "wildlife",
+      "Sec 64" ~ "destruct_order",
+      "Sec 72A" ~ "seize"
+    ) 
+  ) |> 
+  filter(impound_reason %in% c("attack", "rush")) |> 
+  left_join(regions_dogs, by = join_by(suburb)) |> 
+  group_by(suburb) |> 
+  mutate(
+    impounds_attack_suburb = n()
+  ) |> 
+  group_by(local_board) |> 
+  mutate(
+    impounds_attack_board = n()
+  ) |> 
+  group_by(region) |> 
+  mutate(
+    impounds_attack_region = n()
+  ) |> 
+  ungroup() |> 
+  mutate(
+    rate_attack_suburb = (impounds_attack_suburb / known_suburb) * 1000,
+    rate_attack_board = (impounds_attack_board / known_board) * 1000,
+    rate_attack_region = (impounds_attack_region / known_region) * 1000
+  ) |> 
+  select(suburb, local_board:rate_attack_region) |> 
+  unique()
+```
+
+Outcome of impound by area
+
+```{r}
+regions_impounds_outcome <-
+  impounds |> 
+  filter(impound_date > "2023-07-01") |>
+  select(suburb, status) |> 
+  group_by(suburb) |> 
+  count(status, name = "count") |> 
+  left_join(regions_dogs, by = join_by(suburb)) |>
+  mutate(
+    status = case_match(
+      status, 
+      "For Euthanasia" ~ "Euthanised",
+      c("Adoption Pending", 
+        "Fostered", 
+        "Hold - Adoption") ~ "Adopted",
+      c("Dead on Arrival",
+        "Died in Shelter",
+        "Escaped",
+        "Hold - General",
+        "Hold - Legal Reason",
+        "Hold - Temp Test",
+        "Processing",
+        "Stolen") ~ "Other",
+      c("Trfd to Breed Rescue",
+        "Trfd to Other TA",
+        "Trfd to Rescue Group",
+        "Trfd to SPCA") ~ "Rescued",
+      .default = status
+    ) 
+  ) |> 
+  group_by(local_board, status) |> 
+  summarise(
+    count = sum(count)
+  ) |> 
+  group_by(local_board) |> 
+  mutate(
+    board_total = sum(count),
+    proportion = count / board_total
+  )
+
+# Visualise euthanasia by local board
+# Colour bars by region
+
+regions_impounds_outcome |> 
+  filter(status == "Euthanised" & !is.na(local_board)) |> 
+  ggplot(aes(x = fct_reorder(local_board, proportion), y = proportion)) +
+  geom_col() +
+  coord_flip()
+```
+
