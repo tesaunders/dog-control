@@ -1,0 +1,336 @@
+---
+title: Mapping
+author: Thomas E. Saunders
+---
+## Set up
+
+```{r}
+#| message: false
+
+library(akldogs)
+library(tidyverse)
+library(fs)
+library(sf)
+library(ggnewscale)
+library(colorspace)
+library(scales)
+library(patchwork)
+```
+
+Read in regional data created in Data Analysis notebook
+
+```{r}
+#| message: false
+
+regional_files <- list.files(path = "../data", 
+                           pattern = "regions|breed", 
+                           full.names = TRUE)
+
+regional_data <- 
+  regional_files |> 
+  map(read_csv) |> 
+  set_names(path_file(str_extract(regional_files, "[^-]+(?=\\.[^.]+$)")) |> path_ext_remove())
+```
+
+Get Auckland human population by Local Board
+
+```{r}
+# Source: https://figure.nz/chart/bSr6yQmn9V9BFrXK
+
+auck_pop <- 
+  read_csv("../data/2023-auckland-population.csv") |> 
+  filter(`Census year` == "2023" & `Local board area` != "Auckland") |> 
+  mutate(
+    local_board = paste0(`Local board area`, " Local Board Area"),
+    local_board = case_when(
+      local_board == "Auckland Local Board Area" ~ "Total Auckland",
+      .default = local_board)
+  ) |> 
+  rename(census_year = `Census year`,
+         population = Value) |> 
+  select(census_year, local_board, population)
+```
+
+Import NZ map shapefile with local board divisions
+
+```{r}
+#| message: false
+
+# Source: https://datafinder.stats.govt.nz/layer/120947-territorial-authority-local-board-2025-clipped/
+
+shape_nz <- st_read("../data/shapefiles/nz/territorial-authority-local-board-2025-clipped.shp") |> 
+  rename(local_board = TALB2025_1) |> 
+  select(local_board, geometry) |> 
+  filter(local_board != c("Area Outside Territorial Authority", "Chatham Islands Territory"))
+```
+
+Join locality data to shapefile data
+
+```{r}
+auckland <-
+  shape_nz |>
+  st_simplify(dTolerance = 500) |> 
+  mutate(
+    include = case_when(local_board %in% auck_pop$local_board ~ TRUE,
+                        local_board %in% c("Kaipara District", 
+                                           "Thames-Coromandel District",
+                                           "Waikato District",
+                                           "Hauraki District",
+                                           "Whangarei District") ~ TRUE)
+  ) |>
+  left_join(akldogs::locality |> 
+              select(local_board, region) |>
+              unique(),
+            by = join_by(local_board)) |>
+  mutate(
+    region = case_when(local_board == "Aotea/Great Barrier Local Board Area" ~ "north",
+                       .default = region)
+  ) |> 
+  filter(include == TRUE)
+
+auckland$region <- as.factor(auckland$region)
+```
+
+Create a plotting function for Local Board-level data
+
+```{r}
+plot_local_board <- function(base_df, 
+                             map_df, 
+                             fill_var, 
+                             title = waiver(),
+                             subtitle = waiver(),
+                             legend_title = waiver(), 
+                             labels = waiver()) {
+  ggplot() +
+    geom_sf(data = base_df, 
+            fill = "#EEEEEE", 
+            colour = NA) +
+    new_scale_fill() +
+    geom_sf(data = map_df, 
+            aes(fill = {{ fill_var }})) + 
+    scale_fill_gradient(low = "green",
+                        high = "red",
+                        name = legend_title,
+                        labels = labels) +
+    coord_sf(
+      xlim = c(1700000, 1830000),
+      ylim = c(5869755, 6010000),
+      expand = FALSE
+    ) +
+    theme_void() +
+    labs(title = title,
+         subtitle = subtitle) +
+    theme(plot.title = element_text(face = "bold",
+                                    size = 15,
+                                    hjust = 0.5,
+                                    margin = margin(10, 0, 00, 0)),
+          plot.subtitle = element_text(hjust = 0.5,
+                                       margin = margin(10, 0, 10, 0)))
+}
+
+# Set colours for Local Boards for regional map
+
+col_central <- c("#74c476", "#41ab5d", "#238b45", "#006d2c","#00441b")
+col_east <- c("#f16913")
+col_north <- c("#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b")
+col_south <- c("#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d")
+col_west <- c("#cb181d", "#a50f15", "#67000d")
+col_regions <- c("#006d2c", "#f16913", "#08519c", "#54278f", "#a50f15")
+```
+
+## Maps
+
+Map of NZ with border around Auckland
+
+```{r}
+shape_nz |> 
+  st_simplify(dTolerance = 100) |>
+  ggplot() +
+  geom_sf(fill = "#b0bc6d", colour = "black") +
+  geom_rect(
+    xmin = 1700000,
+    ymin = 5869755,
+    xmax = 1830000,
+    ymax = 6010000,
+    fill = NA, 
+    colour = "darkred",
+    linewidth = 1
+  ) +
+  theme_void() +
+  theme(legend.position = "none",
+        panel.background = element_rect(fill = "lightblue"))
+```
+
+Auckland Local Boards
+
+```{r}
+# Map 2: Auckland local boards  
+
+ggplot() +
+  geom_sf(data = auckland, fill = "#EEEEEE", colour = NA) +
+  new_scale_fill() +
+  geom_sf(data = auckland |> filter(region == "north"),
+          aes(fill = local_board)) + 
+  scale_fill_manual(values = col_north) +
+  new_scale_fill() +
+  geom_sf(data = auckland |> filter(region == "east"),
+          aes(fill = local_board)) +
+  scale_fill_manual(values = col_east) +
+  new_scale_fill() +
+  geom_sf(data = auckland |> filter(region == "south"),
+          aes(fill = local_board)) + 
+  scale_fill_manual(values = col_south) +
+  new_scale_fill() +
+  geom_sf(data = auckland |> filter(region == "west"),
+          aes(fill = local_board)) + 
+  scale_fill_manual(values = col_west) +
+  new_scale_fill() +
+  geom_sf(data = auckland |> filter(region == "central"),
+          aes(fill = local_board)) + 
+  scale_fill_manual(values = col_central) +
+  coord_sf(
+    xlim = c(1700000, 1830000),
+    ylim = c(5869755, 6010000),
+    expand = FALSE
+  ) +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+Auckland regions
+
+```{r}
+ggplot() +
+  geom_sf(data = auckland, fill = "#EEEEEE", colour = NA) +
+  new_scale_fill() +
+  geom_sf(data = auckland |> 
+            filter(!is.na(region)), aes(fill = region, colour = NA)) + 
+  scale_fill_manual(values = col_regions) +
+  coord_sf(
+    xlim = c(1700000, 1830000),
+    ylim = c(5869755, 6010000),
+    expand = FALSE
+  ) +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+Proportion of desexed dogs by Local Board
+
+```{r}
+map_desex <-
+  auckland |> 
+  left_join(regional_data$regions_reg |> filter(metric == "animal_desexed"), 
+            by = join_by(local_board)) |> 
+  select(local_board, p_board, geometry) |> 
+  unique() |> 
+  filter(!is.na(p_board))
+
+plot_local_board(auckland, 
+                 map_desex,
+                 p_board,
+                 "Desexed Dogs",
+                 "Proportion of dogs in each Local Board Area") +
+  scale_fill_gradient(low = "red",
+                      high = "green",
+                      name = "Desexed",
+                      labels = label_percent())
+```
+
+Proportion of dogs with a classification under the Dog Control Act by Local Board
+
+```{r}
+map_class <-
+  auckland |> 
+  left_join(regional_data$regions_reg |> filter(metric == "classification"), 
+            by = join_by(local_board)) |> 
+  select(local_board, p_board, geometry) |> 
+  unique() |> 
+  filter(!is.na(p_board))
+
+plot_local_board(auckland, 
+                 map_class,
+                 p_board,
+                 "Menacing & Dangerous Dogs",
+                 "Proportion of dogs in each Local Board Area",
+                 "Classifications",
+                 label_percent())
+```
+
+Rate of dog attacks by Local Board
+
+```{r}
+map_attacks <-
+  auckland |> 
+  left_join(regional_data$regions_attacks |> 
+              select(local_board, rate_board) |> 
+              unique() |> 
+              mutate(
+                local_board = paste0(local_board, " Area")
+              ), by = join_by(local_board)) |> 
+  select(local_board, rate_board, geometry) |> 
+  filter(!is.na(rate_board))
+
+plot_local_board(auckland, 
+                 map_attacks,
+                 rate_board,
+                 "Dog Attacks",
+                 "Per 1,000 dogs in each Local Board Area",
+                 "Attack Rate")
+```
+
+Rate of dog impounds by Local Board
+
+```{r}
+map_impounds <-
+  auckland |> 
+  left_join(regional_data$regions_impounds, by = join_by(local_board)) |> 
+  select(local_board, rate_board, geometry) |> 
+  unique() |> 
+  filter(!is.na(rate_board))
+
+plot_local_board(auckland, 
+                 map_impounds,
+                 rate_board,
+                 "Dog Impounds",
+                 "Per 1,000 dogs in each Local Board Area",
+                 "Impound Rate")
+```
+
+Rate of dog impounds due to attacks on people by Local Board
+
+```{r}
+map_impounds_attacks <-
+  auckland |> 
+  left_join(regional_data$regions_impounds_attacks, by = join_by(local_board)) |> 
+  select(local_board, rate_attack_board, geometry) |> 
+  unique() |> 
+  filter(!is.na(rate_attack_board))
+
+plot_local_board(auckland, 
+                 map_impounds_attacks,
+                 rate_attack_board,
+                 "Dogs Impounded For Attacks",
+                 "Per 1,000 dogs in each Local Board Area",
+                 "Impound Rate")
+```
+
+Proportion of impounded dogs euthanised by Local Board
+
+```{r}
+map_impounds_euthanised <-
+  auckland |> 
+  left_join(regional_data$regions_impounds_outcome, by = join_by(local_board)) |> 
+  select(local_board, status, proportion, geometry) |> 
+  unique() |> 
+  filter(status == "Euthanised" & local_board != "Aotea/Great Barrier Local Board Area")
+
+plot_local_board(auckland, 
+                 map_impounds_euthanised,
+                 proportion,
+                 "Euthanasia of Impounded Dogs",
+                 "Over half put down in some southern areas",
+                 "Euthanised",
+                 label_percent())
+```
+

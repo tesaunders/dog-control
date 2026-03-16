@@ -6,8 +6,9 @@ author: Thomas E. Saunders
 
 Load libraries
 
-```{r, message=FALSE}
-# Load packages
+```{r}
+#| message: false
+
 library(akldogs)
 library(tidyverse)
 library(tidytext)
@@ -21,6 +22,7 @@ Read in data compiled from Animal Management reports
 
 ```{r}
 #| message: false
+
 report_files <- list.files(path = "../data", 
                            pattern = "am-reports", 
                            full.names = TRUE)
@@ -340,6 +342,8 @@ regions_reg <-
   group_by(region, metric) |>
   mutate(p_region = sum(count) / first(known_region)) |>
   ungroup()
+
+write_csv(regions_reg, "../data/regions_reg.csv")
 ```
 
 Compare Local Boards
@@ -391,6 +395,8 @@ regions_attacks <-
   ) |> 
   select(suburb, local_board, region:rate_region) |> 
   unique()
+
+write_csv(regions_attacks, "../data/regions_attacks.csv")
 ```
 
 Primary breed profile for each region
@@ -458,9 +464,11 @@ comparison_df <- observed_counts |>
   )
 
 # View the top over-represented breeds by percentage
-top_overrepresented <- comparison_df |> 
+breed_over <- comparison_df |> 
   filter(observed > 50)  |>  
   arrange(desc(percent_diff))
+
+write_csv(breed_over, "../data/breed_over.csv")
 ```
 
 ```{r}
@@ -529,6 +537,8 @@ regions_impounds <-
   ) |> 
   select(suburb, local_board:rate_region) |> 
   unique()
+
+write_csv(regions_impounds, "../data/regions_impounds.csv")
 ```
 
 Impound rate for attacks/rushing (FY2024 data)
@@ -576,6 +586,8 @@ regions_impounds_attacks <-
   ) |> 
   select(suburb, local_board:rate_attack_region) |> 
   unique()
+
+write_csv(regions_impounds_attacks, "../data/regions_impounds_attacks.csv")
 ```
 
 Outcome of impound by area
@@ -619,6 +631,8 @@ regions_impounds_outcome <-
     board_total = sum(count),
     proportion = count / board_total
   )
+
+write_csv(regions_impounds_outcome, "../data/regions_impounds_outcome.csv")
 
 # Visualise euthanasia by local board
 # Colour bars by region
