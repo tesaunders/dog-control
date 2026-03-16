@@ -4,8 +4,6 @@ author: Thomas E. Saunders
 ---
 ## Set up
 
-Load libraries
-
 ```{r}
 #| message: false
 
@@ -17,8 +15,6 @@ library(gt)
 library(patchwork)
 library(scales)
 ```
-
-Read in data compiled from Animal Management reports
 
 ```{r}
 #| message: false
@@ -32,8 +28,6 @@ report_data <-
   map(read_csv) |> 
   set_names(path_file(str_extract(report_files, "[^-]+(?=\\.[^.]+$)")) |> path_ext_remove())
 ```
-
-Tidy data and column names
 
 ```{r}
 registration <- 
@@ -51,17 +45,15 @@ rfs <- rename(rfs, suburb = location_suburb_name)
 
 ## Auckland Dog Population Overview
 
-Known dogs as at FY2025
+There were `{r} format(nrow(reg_2025), big.mark = ",")` known dogs as at FY2025.
 
 ```{r}
 reg_2025 <-
   registration |> 
   filter(sheet_name == "FY25")
-
-nrow(reg_2025)
 ```
 
-Dog population primary breed counts
+Top 10 primary breeds as at FY2025:
 
 ```{r}
 primary_breed <-
@@ -73,6 +65,8 @@ primary_breed <-
     prop = primary_breed / sum(primary_breed)
   ) |> 
   arrange(desc(prop))
+
+head(primary_breed, n = 10)
 ```
 
 Dog population secondary breed counts
@@ -87,6 +81,8 @@ secondary_breed <-
     prop = secondary_breed / sum(secondary_breed)
   ) |> 
   arrange(desc(prop))
+
+head(secondary_breed, n = 10)
 ```
 
 Primary breeds most commonly classified as 'menacing' due to behaviour
@@ -101,7 +97,7 @@ menacing_breed <-
   arrange(desc(menacing_prop))
 ```
 
-Annual attack rate
+The rate of attacks on people per 1,000 dogs has increased from 6 in FY2016, to 10 in FY2025.
 
 ```{r}
 attack_rate <-
@@ -131,7 +127,7 @@ attack_severity <-
   arrange(desc(severity), desc(n))
 ```
 
-Trends in ownership over time
+As the dog population has increased, rates of registration and desexing have fallen, while rates of menacing dog ownership have increased.
 
 ```{r}
 ownership_trends <-
@@ -172,7 +168,7 @@ ownership_trends |>
   )
 ```
 
-Impound outcomes
+The overall rate of euthanising impounded dogs was dropping between 2014-2019. But after COVID, the rate has increased to be higher than ever before.
 
 ```{r}
 #| warning: FALSE
@@ -194,16 +190,30 @@ ggplot(impound_result, aes(x = year, y = count, fill = category)) +
   ylab("")
 ```
 
-Impound outcome by primary breed (FY2025 population data with FY2024 impound data)
+Impound outcome by primary breed (population and impound data are both FY2024)
 
 ```{r}
-breed_processed <- 
+reg_2024 <-
+  registration |> 
+  filter(sheet_name == "FY24")
+
+primary_breed_2024 <-
+  reg_2024 |> 
+  group_by(animal_breed_description) |> 
+  count(name = "primary_breed") |> 
+  ungroup() |> 
+  mutate(
+    prop = primary_breed / sum(primary_breed)
+  ) |> 
+  arrange(desc(prop))
+
+breed_processed_2024 <- 
   impounds |>
   filter(impound_date > "2023-07-01", status %in% c("Euthanised", "For Euthanasia")) |>
   mutate(primary_breed = if_else(str_detect(primary_breed, "Pit Bull Terrier"), "American Pit Bull Terrier", primary_breed)) |>
   count(primary_breed, name = "count_euthanised") |>
   mutate(proportion_euthanised = count_euthanised / sum(count_euthanised)) |>
-  left_join(primary_breed |> rename(count_population = primary_breed,
+  left_join(primary_breed_2024 |> rename(count_population = primary_breed,
                                     proportion_population = prop), 
             by = join_by(primary_breed == animal_breed_description)) |>
   mutate(
@@ -214,27 +224,25 @@ breed_processed <-
   arrange(abs(diff)) |>
   mutate(primary_breed = fct_inorder(primary_breed))
 
-breed_long <- 
-  breed_processed |>
+breed_long_2024 <- 
+  breed_processed_2024 |>
   pivot_longer(cols = starts_with("proportion"), names_to = "type", values_to = "val") |>
   mutate(label = if_else(str_detect(type, "pop"), "Population", "Euthanised"))
 
-colours <- c("proportion_euthanised" = "#BF2F24", "proportion_population" = "#436685")
+n_breeds_2024 <- nrow(breed_processed_2024)
 
-n_breeds <- nrow(breed_processed)
-
-plot_main <- 
-  ggplot(breed_long, aes(val, primary_breed)) +
+plot_main_2024 <- 
+  ggplot(breed_long_2024, aes(val, primary_breed)) +
   geom_line(aes(group = primary_breed), color = "#E7E7E7", linewidth = 3.5) +
   geom_point(aes(color = type), size = 3) +
   geom_text(aes(label = percent(val, accuracy = 0.01), color = type,
                 hjust = if_else(val == max_val, -0.2, 1.2)), 
             size = 3.25) +
-  geom_text(data = filter(breed_long, diff == max(diff)),
+  geom_text(data = filter(breed_long_2024, diff == max(diff)),
             aes(label = label, color = type), 
             nudge_y = 0.8, fontface = "bold", size = 3.25) +
   scale_color_manual(values = colours) +
-  coord_cartesian(xlim = c(-0.02, 0.45), ylim = c(1, n_breeds + 1), clip = "off") +
+  coord_cartesian(xlim = c(-0.02, 0.45), ylim = c(1, n_breeds_2024 + 1), clip = "off") +
   labs(title = "Breed Profile: Auckland Dog Population vs Euthanised",
        subtitle = "Breeds with >1% difference", x = NULL, y = NULL) +
   theme_minimal() +
@@ -242,19 +250,19 @@ plot_main <-
         plot.title = element_text(face = "bold", hjust = 0.5),
         plot.subtitle = element_text(hjust = 0.5))
 
-plot_diff <- 
-  ggplot(breed_processed, aes(x = 0, y = primary_breed)) +
+plot_diff_2024 <- 
+  ggplot(breed_processed_2024, aes(x = 0, y = primary_breed)) +
   geom_text(aes(label = percent(diff, accuracy = 0.1), 
                 color = if_else(diff > 0, "proportion_euthanised", "proportion_population")),
             fontface = "bold", size = 3.25) +
-  annotate("text", x = 0, y = n_breeds + 0.8, 
+  annotate("text", x = 0, y = n_breeds_2024 + 0.8, 
            label = "Difference", fontface = "bold", size = 3.25) +
   scale_color_manual(values = colours) +
-  coord_cartesian(ylim = c(1, n_breeds + 1), clip = "off") +
+  coord_cartesian(ylim = c(1, n_breeds_2024 + 1), clip = "off") +
   theme_void() +
   theme(legend.position = "none")
 
-plot_main + plot_diff + 
+plot_main_2024 + plot_diff_2024 + 
   plot_layout(widths = c(10, 1)) & 
   theme(plot.margin = margin(t = 20, r = 5, b = 10, l = 5))
 
@@ -280,6 +288,32 @@ euthanised_reason <-
     proportion = count / sum(count)
   ) |> 
   arrange(desc(proportion))
+
+euthanised_reason
+```
+
+Total infringements skyrocket in 2025
+
+```{r}
+# Infringements
+report_data$enforcement |> 
+  filter(category == "infringements-total")
+```
+
+The bulk of infringements are for failing to register a dog
+
+```{r}
+# Failure to register
+report_data$enforcement |> 
+  filter(category == "failure-register")
+```
+
+But prosecutions remain at low levels
+
+```{r}
+# Prosecutions
+report_data$enforcement |> 
+  filter(category == "prosecutions-appeals")
 ```
 
 ## Auckland Dog Population By Region
@@ -301,6 +335,29 @@ regions_dogs <-
   unique() |> 
   arrange(desc(known_suburb)) |> 
   ungroup()
+```
+
+Dog population trends in each Local Board
+
+```{r}
+dogs_board <-
+  registration |> 
+  select(sheet_name, suburb) |> 
+  left_join(locality, by = join_by(suburb)) |> 
+  group_by(sheet_name, local_board) |> 
+  count() |> 
+  pivot_wider(names_from = sheet_name, values_from = n) |> 
+  mutate(
+    change = (FY25 - FY21) / FY21
+  ) |> 
+  filter(FY25 > 100) |> 
+  arrange(desc(change))
+
+dogs_board
+```
+
+```{r}
+median(dogs_board$change, na.rm = TRUE)
 ```
 
 Registration data
