@@ -14,32 +14,30 @@ library(fs)
 library(gt)
 library(patchwork)
 library(scales)
+
+source("../R/functions.R")
 ```
 
 ```{r}
 #| message: false
 
-report_files <- list.files(path = "../data", 
-                           pattern = "am-reports", 
-                           full.names = TRUE)
+report_files <- list.files("../data", pattern = "am-reports", full.names = TRUE)
 
-report_data <- 
-  report_files |> 
-  map(read_csv) |> 
-  set_names(path_file(str_extract(report_files, "[^-]+(?=\\.[^.]+$)")) |> path_ext_remove())
+report_names <- report_files |> 
+  path_file() |> 
+  path_ext_remove() |> 
+  str_extract("[^-]+$")
+
+report_data <- report_files |> 
+  set_names(report_names) |> 
+  map(read_csv)
 ```
 
 ```{r}
-registration <- 
-  registration |> 
-  mutate(
-    across(
-      starts_with("animal_breed"), 
-      ~ str_replace(.x, "^([^,]+),\\s*(.*)$", "\\2 \\1")
-    )
-  )
+registration <- registration  |> 
+  clean_breed_names(starts_with("animal_breed")) |> 
+  rename(suburb = suburb_name)
 
-registration <- rename(registration, suburb = suburb_name)
 rfs <- rename(rfs, suburb = location_suburb_name)
 ```
 
@@ -56,15 +54,8 @@ reg_2025 <-
 Top 10 primary breeds as at FY2025:
 
 ```{r}
-primary_breed <-
-  reg_2025 |> 
-  group_by(animal_breed_description) |> 
-  count(name = "primary_breed") |> 
-  ungroup() |> 
-  mutate(
-    prop = primary_breed / sum(primary_breed)
-  ) |> 
-  arrange(desc(prop))
+primary_breed <- reg_2025 |> 
+  calc_proportions("animal_breed_description", count_name = "primary_breed")
 
 head(primary_breed, n = 10)
 ```
@@ -72,15 +63,8 @@ head(primary_breed, n = 10)
 Dog population secondary breed counts
 
 ```{r}
-secondary_breed <-
-  reg_2025 |> 
-  group_by(animal_breed2_description) |> 
-  count(name = "secondary_breed") |> 
-  ungroup() |> 
-  mutate(
-    prop = secondary_breed / sum(secondary_breed)
-  ) |> 
-  arrange(desc(prop))
+secondary_breed <- reg_2025 |> 
+  calc_proportions("animal_breed2_description", count_name = "secondary_breed")
 
 head(secondary_breed, n = 10)
 ```
@@ -182,7 +166,7 @@ impound_result$category <- factor(impound_result$category,
 
 ggplot(impound_result, aes(x = year, y = count, fill = category)) +
   geom_bar(position = "fill", stat = "identity") +
-  theme_minimal() +
+  theme_classic() +
   scale_fill_manual(values = c("lightblue", "lightgreen", "red")) +
   scale_y_continuous(labels = scales::label_percent()) +
   scale_x_continuous(breaks = unique(impound_result$year)) +
@@ -206,6 +190,11 @@ primary_breed_2024 <-
     prop = primary_breed / sum(primary_breed)
   ) |> 
   arrange(desc(prop))
+
+colours <- c(
+  "proportion_euthanised" = "#BF2F24", 
+  "proportion_population" = "#436685"
+)
 
 breed_processed_2024 <- 
   impounds |>
@@ -475,96 +464,36 @@ regions_breed <-
 Compare regional breed profiles statistically
 
 ```{r}
-# Chi-squared test of independence and Pearson residual analysis
-
-# Prepare contingency table
-breed_table <- 
-  regions_breed |> 
-  filter(!is.na(region), !is.na(animal_breed_description)) |> 
-  select(region, animal_breed_description, count) |> 
-  pivot_wider(names_from = region, values_from = count, values_fill = 0) |> 
-  column_to_rownames("animal_breed_description") |> 
-  as.matrix()
-
-# Perform Chi-Squared Test
-chi_test <- chisq.test(breed_table, simulate.p.value = TRUE)
-
-# Extract Pearson residuals to examine over/under-representation
-residuals <- as.data.frame(chi_test$residuals) |> 
-  rownames_to_column("breed") |> 
-  pivot_longer(-breed, names_to = "region", values_to = "residual")
-
-# Identify top over-represented breeds per region (Residual > 2)
-overrepresented <- residuals |> 
-  filter(residual > 2) |> 
-  arrange(region, desc(residual))
-```
-
-```{r}
-# Calculate % above expected
-
-# Extract Observed and Expected values from the test result
-observed_counts <- as.data.frame(chi_test$observed)  |> 
-  rownames_to_column("breed") |> 
-  pivot_longer(-breed, names_to = "region", values_to = "observed")
-
-expected_counts <- as.data.frame(chi_test$expected)  |> 
-  rownames_to_column("breed") |> 
-  pivot_longer(-breed, names_to = "region", values_to = "expected")
-
-# Join and calculate the percentage difference
-comparison_df <- observed_counts |> 
-  left_join(expected_counts, by = c("breed", "region")) |> 
-  mutate(
-    diff_raw = observed - expected,
-    percent_diff = (diff_raw / expected) * 100
+breeds_region <- regions_breed |>
+  perform_chisq(
+    group_var = "region", 
+    cat_var = "animal_breed_description", 
+    count_var = "count"
   )
 
-# View the top over-represented breeds by percentage
-breed_over <- comparison_df |> 
-  filter(observed > 50)  |>  
-  arrange(desc(percent_diff))
-
-write_csv(breed_over, "../data/breed_over.csv")
+write_csv(breeds_region, "../data/breed_over.csv")
 ```
 
 ```{r}
-# Visualise over-represented breeds in each region
-
-over_breeds <- observed_counts |> 
-  left_join(expected_counts, by = c("breed", "region")) |> 
-  left_join(residuals, by = c("breed", "region")) |> 
-  mutate(
-    diff_raw = observed - expected,
-    percent_diff = (diff_raw / expected) * 100
-  ) |> 
-  filter(residual > 2 & observed >= 50) |> 
-  group_by(region) |> 
+breeds_region |> 
+  group_by(group) |> 
   slice_max(percent_diff, n = 5) |> 
-  ungroup()
-
-ggplot(over_breeds, aes(x = reorder_within(breed, percent_diff, region),
-                        y = percent_diff, 
-                        fill = region)) +
+  ungroup() |> 
+  ggplot(aes(x = reorder_within(category, percent_diff, group), 
+             y = percent_diff, 
+             fill = group)) +
   geom_col() +
   geom_text(aes(label = paste0("+", round(percent_diff), "%")), 
             hjust = -0.1, size = 3.5, fontface = "bold") +
   scale_x_reordered() +
   coord_flip() +
-  facet_wrap(~region, scales = "free_y") +
-  scale_y_continuous(expand = expansion(mult = c(0, .25))) + 
+  facet_wrap(~group, scales = "free_y") +
+  # add custom theme here
   labs(
     title = "Regional Dog Breed 'Hotspots'",
-    subtitle = "Breeds with the highest % overrepresentation (where Residual > 2)",
-    x = NULL,
-    y = "% More Common than Expected"
-  ) +
-  theme_minimal() +
-  theme(
-    strip.text = element_text(face = "bold", size = 12),
-    panel.grid.minor = element_blank()
-  ) +
-  guides(fill = "none")
+    subtitle = "Breeds significantly more common than expected (Residual > 2)",
+    x = NULL, y = "% Above Expected"
+  )
 ```
 
 Impounds per 1,000 dogs (FY2024 data)
