@@ -179,7 +179,8 @@ impound_result$category <- factor(impound_result$category,
 
 ggplot(impound_result, aes(x = year, y = count, fill = category)) +
   geom_bar(position = "fill", stat = "identity") +
-  scale_fill_manual(values = c("lightblue", "lightgreen", "red")) +
+  scale_fill_manual(values = c("#08519c", "#006d2c", "#a50f15"),
+                    labels = tools::toTitleCase) +
   scale_y_continuous(labels = scales::label_percent()) +
   scale_x_continuous(breaks = unique(impound_result$year)) +
   xlab("") +
@@ -422,14 +423,24 @@ plot_data <- regions_reg |>
   select(local_board, metric, p_board) |>
   distinct()
 
+metric_labels <- c(
+  "animal_desexed" = "Desexed",
+  "classification" = "Classification",
+  "current_reg" = "Registered",
+  "owner_reg" = "RDOL"
+)
+
 ggplot(plot_data, aes(x = p_board, y = fct_reorder(local_board, p_board), fill = metric)) +
   geom_col(show.legend = FALSE) +
-  facet_wrap(~metric, scales = "free_x", nrow = 1) +
+  facet_wrap(~metric, scales = "free_x", nrow = 1,
+             labeller = as_labeller(metric_labels)) +
   scale_x_continuous(labels = scales::label_percent()) +
+  scale_fill_manual(values = plot_colours$regions[1:4]) +
   plot_theme() +
+  theme(panel.spacing.x = unit(1, "lines")) +
+  theme(plot.title = element_text(hjust = 1)) +
   labs(
     title = "Animal Registration Metrics by Local Board (FY25)",
-    subtitle = "Proportions calculated against known totals per board",
     x = NULL,
     y = NULL
   )
@@ -518,6 +529,7 @@ breeds_region |>
              y = percent_diff, 
              fill = group)) +
   geom_col() +
+  scale_fill_manual(values = plot_colours$regions) +
   geom_text(aes(label = paste0("+", round(percent_diff), "%")), 
             hjust = -0.1, size = 3.5, fontface = "bold") +
   scale_x_reordered() +
@@ -527,8 +539,8 @@ breeds_region |>
   plot_theme() +
   theme(legend.position = "none") +
   labs(
-    title = "Regional Dog Breed 'Hotspots'",
-    subtitle = "Breeds significantly more common than expected (Residual > 2)",
+    title = "Regional Primary Breed Profiles",
+    subtitle = "Top 5 breeds more common than expected",
     x = NULL, y = "% Above Expected"
   )
 ```
@@ -615,10 +627,16 @@ write_csv(regions_impounds_outcome, "../data/regions_impounds_outcome.csv")
 
 regions_impounds_outcome |> 
   filter(status == "Euthanised" & !is.na(local_board)) |> 
-  ggplot(aes(x = fct_reorder(local_board, proportion), y = proportion)) +
+  ggplot(aes(x = fct_reorder(local_board, proportion), y = proportion, fill = region)) +
   geom_col() +
   coord_flip() +
-  plot_theme()
-# Colour bars by region
-
+  scale_fill_manual(values = plot_colours$regions) +
+  scale_y_continuous(labels = scales::label_percent()) +
+  plot_theme() +
+  theme(plot.title = element_text(hjust = 1)) +
+  labs(title = "Proportion of Impounded Dogs Euthanised By Local Board",
+       subtitle = "") +
+  xlab("") +
+  ylab("")
+```
 

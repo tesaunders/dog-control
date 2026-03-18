@@ -1,5 +1,13 @@
 # Pallettes
 
+plot_colours <- list(
+  central = c("#74c476", "#41ab5d", "#238b45", "#006d2c","#00441b"),
+  east    = c("#f16913"),
+  north   = c("#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"),
+  south   = c("#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d"),
+  west    = c("#cb181d", "#a50f15", "#67000d"),
+  regions = c("#006d2c", "#f16913", "#08519c", "#54278f", "#a50f15")
+)
 
 # Plotting theme
 
@@ -28,8 +36,3 @@ plot_theme <- function(base_size = 12, base_family = "sans") {
       plot.margin = margin(20, 20, 20, 20)
     )
 }
-
-# Scales
-
-fmt_pct <- function(x) scales::label_percent(accuracy = 0.1)(x)
-fmt_num <- function(x) scales::label_number(big.mark = ",")(x)

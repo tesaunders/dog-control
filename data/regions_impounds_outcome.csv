@@ -1,123 +1,123 @@
-local_board,status,count,board_total,proportion
-Albert-Eden Local Board Area,Adopted,4,219,0.0182648401826484
-Albert-Eden Local Board Area,Euthanised,70,219,0.319634703196347
-Albert-Eden Local Board Area,Other,8,219,0.0365296803652968
-Albert-Eden Local Board Area,RTO by AMO,20,219,0.091324200913242
-Albert-Eden Local Board Area,Released,113,219,0.5159817351598174
-Albert-Eden Local Board Area,Rescued,4,219,0.0182648401826484
-Aotea/Great Barrier Local Board Area,Euthanised,6,6,1
-Devonport-Takapuna Local Board Area,Adopted,1,63,0.015873015873015872
-Devonport-Takapuna Local Board Area,Euthanised,12,63,0.19047619047619047
-Devonport-Takapuna Local Board Area,Other,1,63,0.015873015873015872
-Devonport-Takapuna Local Board Area,RTO by AMO,6,63,0.09523809523809523
-Devonport-Takapuna Local Board Area,Released,37,63,0.5873015873015873
-Devonport-Takapuna Local Board Area,Rescued,6,63,0.09523809523809523
-Franklin Local Board Area,Adopted,5,400,0.0125
-Franklin Local Board Area,Euthanised,206,400,0.515
-Franklin Local Board Area,Other,21,400,0.0525
-Franklin Local Board Area,RTO by AMO,29,400,0.0725
-Franklin Local Board Area,Released,134,400,0.335
-Franklin Local Board Area,Rescued,5,400,0.0125
-Henderson-Massey Local Board Area,Adopted,16,850,0.018823529411764704
-Henderson-Massey Local Board Area,Euthanised,331,850,0.38941176470588235
-Henderson-Massey Local Board Area,Other,25,850,0.029411764705882353
-Henderson-Massey Local Board Area,RTO by AMO,34,850,0.04
-Henderson-Massey Local Board Area,Released,410,850,0.4823529411764706
-Henderson-Massey Local Board Area,Rescued,34,850,0.04
-Hibiscus and Bays Local Board Area,Adopted,13,244,0.05327868852459016
-Hibiscus and Bays Local Board Area,Euthanised,74,244,0.30327868852459017
-Hibiscus and Bays Local Board Area,Other,3,244,0.012295081967213115
-Hibiscus and Bays Local Board Area,RTO by AMO,12,244,0.04918032786885246
-Hibiscus and Bays Local Board Area,Released,120,244,0.4918032786885246
-Hibiscus and Bays Local Board Area,Rescued,22,244,0.09016393442622951
-Howick Local Board Area,Adopted,4,389,0.010282776349614395
-Howick Local Board Area,Euthanised,132,389,0.3393316195372751
-Howick Local Board Area,Other,12,389,0.030848329048843187
-Howick Local Board Area,RTO by AMO,55,389,0.14138817480719795
-Howick Local Board Area,Released,181,389,0.4652956298200514
-Howick Local Board Area,Rescued,5,389,0.012853470437017995
-Kaipātiki Local Board Area,Adopted,3,128,0.0234375
-Kaipātiki Local Board Area,Euthanised,42,128,0.328125
-Kaipātiki Local Board Area,Other,3,128,0.0234375
-Kaipātiki Local Board Area,RTO by AMO,4,128,0.03125
-Kaipātiki Local Board Area,Released,76,128,0.59375
-Manurewa Local Board Area,Adopted,34,1209,0.028122415219189414
-Manurewa Local Board Area,Euthanised,681,1209,0.5632754342431762
-Manurewa Local Board Area,Other,36,1209,0.02977667493796526
-Manurewa Local Board Area,RTO by AMO,39,1209,0.03225806451612903
-Manurewa Local Board Area,Released,376,1209,0.3110008271298594
-Manurewa Local Board Area,Rescued,43,1209,0.03556658395368073
-Maungakiekie-Tāmaki Local Board Area,Adopted,13,557,0.02333931777378815
-Maungakiekie-Tāmaki Local Board Area,Euthanised,289,557,0.518850987432675
-Maungakiekie-Tāmaki Local Board Area,Other,7,557,0.012567324955116697
-Maungakiekie-Tāmaki Local Board Area,RTO by AMO,38,557,0.06822262118491922
-Maungakiekie-Tāmaki Local Board Area,Released,178,557,0.31956912028725315
-Maungakiekie-Tāmaki Local Board Area,Rescued,32,557,0.05745062836624776
-Māngere-Ōtāhuhu Local Board Area,Adopted,25,1101,0.022706630336058128
-Māngere-Ōtāhuhu Local Board Area,Euthanised,605,1101,0.5495004541326067
-Māngere-Ōtāhuhu Local Board Area,Other,43,1101,0.03905540417801998
-Māngere-Ōtāhuhu Local Board Area,RTO by AMO,60,1101,0.05449591280653951
-Māngere-Ōtāhuhu Local Board Area,Released,340,1101,0.30881017257039056
-Māngere-Ōtāhuhu Local Board Area,Rescued,28,1101,0.025431425976385105
-Papakura Local Board Area,Adopted,29,824,0.03519417475728155
-Papakura Local Board Area,Euthanised,443,824,0.537621359223301
-Papakura Local Board Area,Other,29,824,0.03519417475728155
-Papakura Local Board Area,RTO by AMO,33,824,0.04004854368932039
-Papakura Local Board Area,Released,252,824,0.3058252427184466
-Papakura Local Board Area,Rescued,38,824,0.04611650485436893
-Puketāpapa Local Board Area,Adopted,7,157,0.044585987261146494
-Puketāpapa Local Board Area,Euthanised,56,157,0.35668789808917195
-Puketāpapa Local Board Area,Other,7,157,0.044585987261146494
-Puketāpapa Local Board Area,RTO by AMO,14,157,0.08917197452229299
-Puketāpapa Local Board Area,Released,64,157,0.40764331210191085
-Puketāpapa Local Board Area,Rescued,9,157,0.05732484076433121
-Rodney Local Board Area,Adopted,3,122,0.02459016393442623
-Rodney Local Board Area,Euthanised,50,122,0.4098360655737705
-Rodney Local Board Area,Other,1,122,0.00819672131147541
-Rodney Local Board Area,RTO by AMO,13,122,0.10655737704918032
-Rodney Local Board Area,Released,53,122,0.4344262295081967
-Rodney Local Board Area,Rescued,2,122,0.01639344262295082
-Upper Harbour Local Board Area,Adopted,4,86,0.046511627906976744
-Upper Harbour Local Board Area,Euthanised,28,86,0.32558139534883723
-Upper Harbour Local Board Area,Other,1,86,0.011627906976744186
-Upper Harbour Local Board Area,RTO by AMO,5,86,0.05813953488372093
-Upper Harbour Local Board Area,Released,47,86,0.5465116279069767
-Upper Harbour Local Board Area,Rescued,1,86,0.011627906976744186
-Waiheke Local Board Area,Euthanised,4,8,0.5
-Waiheke Local Board Area,RTO by AMO,1,8,0.125
-Waiheke Local Board Area,Rescued,3,8,0.375
-Waitematā Local Board Area,Adopted,2,80,0.025
-Waitematā Local Board Area,Euthanised,15,80,0.1875
-Waitematā Local Board Area,Other,3,80,0.0375
-Waitematā Local Board Area,RTO by AMO,11,80,0.1375
-Waitematā Local Board Area,Released,48,80,0.6
-Waitematā Local Board Area,Rescued,1,80,0.0125
-Waitākere Ranges Local Board Area,Adopted,4,190,0.021052631578947368
-Waitākere Ranges Local Board Area,Euthanised,69,190,0.3631578947368421
-Waitākere Ranges Local Board Area,Other,2,190,0.010526315789473684
-Waitākere Ranges Local Board Area,RTO by AMO,12,190,0.06315789473684211
-Waitākere Ranges Local Board Area,Released,99,190,0.5210526315789473
-Waitākere Ranges Local Board Area,Rescued,4,190,0.021052631578947368
-Whau Local Board Area,Adopted,10,263,0.03802281368821293
-Whau Local Board Area,Euthanised,93,263,0.35361216730038025
-Whau Local Board Area,Other,4,263,0.015209125475285171
-Whau Local Board Area,RTO by AMO,12,263,0.045627376425855515
-Whau Local Board Area,Released,141,263,0.5361216730038023
-Whau Local Board Area,Rescued,3,263,0.011406844106463879
-Ōrākei Local Board Area,Euthanised,39,139,0.2805755395683453
-Ōrākei Local Board Area,Other,1,139,0.007194244604316547
-Ōrākei Local Board Area,RTO by AMO,33,139,0.23741007194244604
-Ōrākei Local Board Area,Released,63,139,0.45323741007194246
-Ōrākei Local Board Area,Rescued,3,139,0.02158273381294964
-Ōtara-Papatoetoe Local Board Area,Adopted,18,1003,0.01794616151545364
-Ōtara-Papatoetoe Local Board Area,Euthanised,597,1003,0.5952143569292123
-Ōtara-Papatoetoe Local Board Area,Other,44,1003,0.04386839481555334
-Ōtara-Papatoetoe Local Board Area,RTO by AMO,37,1003,0.036889332003988036
-Ōtara-Papatoetoe Local Board Area,Released,282,1003,0.2811565304087737
-Ōtara-Papatoetoe Local Board Area,Rescued,25,1003,0.024925224327018942
-NA,Adopted,1,169,0.005917159763313609
-NA,Euthanised,113,169,0.6686390532544378
-NA,Other,12,169,0.07100591715976332
-NA,RTO by AMO,2,169,0.011834319526627219
-NA,Released,36,169,0.21301775147928995
-NA,Rescued,5,169,0.029585798816568046
+region,local_board,status,count,board_total,proportion
+central,Albert-Eden Local Board Area,Adopted,4,219,0.0182648401826484
+central,Albert-Eden Local Board Area,Euthanised,70,219,0.319634703196347
+central,Albert-Eden Local Board Area,Other,8,219,0.0365296803652968
+central,Albert-Eden Local Board Area,RTO by AMO,20,219,0.091324200913242
+central,Albert-Eden Local Board Area,Released,113,219,0.5159817351598174
+central,Albert-Eden Local Board Area,Rescued,4,219,0.0182648401826484
+central,Maungakiekie-Tāmaki Local Board Area,Adopted,13,557,0.02333931777378815
+central,Maungakiekie-Tāmaki Local Board Area,Euthanised,289,557,0.518850987432675
+central,Maungakiekie-Tāmaki Local Board Area,Other,7,557,0.012567324955116697
+central,Maungakiekie-Tāmaki Local Board Area,RTO by AMO,38,557,0.06822262118491922
+central,Maungakiekie-Tāmaki Local Board Area,Released,178,557,0.31956912028725315
+central,Maungakiekie-Tāmaki Local Board Area,Rescued,32,557,0.05745062836624776
+central,Puketāpapa Local Board Area,Adopted,7,157,0.044585987261146494
+central,Puketāpapa Local Board Area,Euthanised,56,157,0.35668789808917195
+central,Puketāpapa Local Board Area,Other,7,157,0.044585987261146494
+central,Puketāpapa Local Board Area,RTO by AMO,14,157,0.08917197452229299
+central,Puketāpapa Local Board Area,Released,64,157,0.40764331210191085
+central,Puketāpapa Local Board Area,Rescued,9,157,0.05732484076433121
+central,Waitematā Local Board Area,Adopted,2,80,0.025
+central,Waitematā Local Board Area,Euthanised,15,80,0.1875
+central,Waitematā Local Board Area,Other,3,80,0.0375
+central,Waitematā Local Board Area,RTO by AMO,11,80,0.1375
+central,Waitematā Local Board Area,Released,48,80,0.6
+central,Waitematā Local Board Area,Rescued,1,80,0.0125
+central,Ōrākei Local Board Area,Euthanised,39,139,0.2805755395683453
+central,Ōrākei Local Board Area,Other,1,139,0.007194244604316547
+central,Ōrākei Local Board Area,RTO by AMO,33,139,0.23741007194244604
+central,Ōrākei Local Board Area,Released,63,139,0.45323741007194246
+central,Ōrākei Local Board Area,Rescued,3,139,0.02158273381294964
+east,Howick Local Board Area,Adopted,4,389,0.010282776349614395
+east,Howick Local Board Area,Euthanised,132,389,0.3393316195372751
+east,Howick Local Board Area,Other,12,389,0.030848329048843187
+east,Howick Local Board Area,RTO by AMO,55,389,0.14138817480719795
+east,Howick Local Board Area,Released,181,389,0.4652956298200514
+east,Howick Local Board Area,Rescued,5,389,0.012853470437017995
+north,Aotea/Great Barrier Local Board Area,Euthanised,6,6,1
+north,Devonport-Takapuna Local Board Area,Adopted,1,63,0.015873015873015872
+north,Devonport-Takapuna Local Board Area,Euthanised,12,63,0.19047619047619047
+north,Devonport-Takapuna Local Board Area,Other,1,63,0.015873015873015872
+north,Devonport-Takapuna Local Board Area,RTO by AMO,6,63,0.09523809523809523
+north,Devonport-Takapuna Local Board Area,Released,37,63,0.5873015873015873
+north,Devonport-Takapuna Local Board Area,Rescued,6,63,0.09523809523809523
+north,Hibiscus and Bays Local Board Area,Adopted,13,244,0.05327868852459016
+north,Hibiscus and Bays Local Board Area,Euthanised,74,244,0.30327868852459017
+north,Hibiscus and Bays Local Board Area,Other,3,244,0.012295081967213115
+north,Hibiscus and Bays Local Board Area,RTO by AMO,12,244,0.04918032786885246
+north,Hibiscus and Bays Local Board Area,Released,120,244,0.4918032786885246
+north,Hibiscus and Bays Local Board Area,Rescued,22,244,0.09016393442622951
+north,Kaipātiki Local Board Area,Adopted,3,128,0.0234375
+north,Kaipātiki Local Board Area,Euthanised,42,128,0.328125
+north,Kaipātiki Local Board Area,Other,3,128,0.0234375
+north,Kaipātiki Local Board Area,RTO by AMO,4,128,0.03125
+north,Kaipātiki Local Board Area,Released,76,128,0.59375
+north,Rodney Local Board Area,Adopted,3,122,0.02459016393442623
+north,Rodney Local Board Area,Euthanised,50,122,0.4098360655737705
+north,Rodney Local Board Area,Other,1,122,0.00819672131147541
+north,Rodney Local Board Area,RTO by AMO,13,122,0.10655737704918032
+north,Rodney Local Board Area,Released,53,122,0.4344262295081967
+north,Rodney Local Board Area,Rescued,2,122,0.01639344262295082
+north,Upper Harbour Local Board Area,Adopted,4,86,0.046511627906976744
+north,Upper Harbour Local Board Area,Euthanised,28,86,0.32558139534883723
+north,Upper Harbour Local Board Area,Other,1,86,0.011627906976744186
+north,Upper Harbour Local Board Area,RTO by AMO,5,86,0.05813953488372093
+north,Upper Harbour Local Board Area,Released,47,86,0.5465116279069767
+north,Upper Harbour Local Board Area,Rescued,1,86,0.011627906976744186
+north,Waiheke Local Board Area,Euthanised,4,8,0.5
+north,Waiheke Local Board Area,RTO by AMO,1,8,0.125
+north,Waiheke Local Board Area,Rescued,3,8,0.375
+south,Franklin Local Board Area,Adopted,5,400,0.0125
+south,Franklin Local Board Area,Euthanised,206,400,0.515
+south,Franklin Local Board Area,Other,21,400,0.0525
+south,Franklin Local Board Area,RTO by AMO,29,400,0.0725
+south,Franklin Local Board Area,Released,134,400,0.335
+south,Franklin Local Board Area,Rescued,5,400,0.0125
+south,Manurewa Local Board Area,Adopted,34,1209,0.028122415219189414
+south,Manurewa Local Board Area,Euthanised,681,1209,0.5632754342431762
+south,Manurewa Local Board Area,Other,36,1209,0.02977667493796526
+south,Manurewa Local Board Area,RTO by AMO,39,1209,0.03225806451612903
+south,Manurewa Local Board Area,Released,376,1209,0.3110008271298594
+south,Manurewa Local Board Area,Rescued,43,1209,0.03556658395368073
+south,Māngere-Ōtāhuhu Local Board Area,Adopted,25,1101,0.022706630336058128
+south,Māngere-Ōtāhuhu Local Board Area,Euthanised,605,1101,0.5495004541326067
+south,Māngere-Ōtāhuhu Local Board Area,Other,43,1101,0.03905540417801998
+south,Māngere-Ōtāhuhu Local Board Area,RTO by AMO,60,1101,0.05449591280653951
+south,Māngere-Ōtāhuhu Local Board Area,Released,340,1101,0.30881017257039056
+south,Māngere-Ōtāhuhu Local Board Area,Rescued,28,1101,0.025431425976385105
+south,Papakura Local Board Area,Adopted,29,824,0.03519417475728155
+south,Papakura Local Board Area,Euthanised,443,824,0.537621359223301
+south,Papakura Local Board Area,Other,29,824,0.03519417475728155
+south,Papakura Local Board Area,RTO by AMO,33,824,0.04004854368932039
+south,Papakura Local Board Area,Released,252,824,0.3058252427184466
+south,Papakura Local Board Area,Rescued,38,824,0.04611650485436893
+south,Ōtara-Papatoetoe Local Board Area,Adopted,18,1003,0.01794616151545364
+south,Ōtara-Papatoetoe Local Board Area,Euthanised,597,1003,0.5952143569292123
+south,Ōtara-Papatoetoe Local Board Area,Other,44,1003,0.04386839481555334
+south,Ōtara-Papatoetoe Local Board Area,RTO by AMO,37,1003,0.036889332003988036
+south,Ōtara-Papatoetoe Local Board Area,Released,282,1003,0.2811565304087737
+south,Ōtara-Papatoetoe Local Board Area,Rescued,25,1003,0.024925224327018942
+west,Henderson-Massey Local Board Area,Adopted,16,850,0.018823529411764704
+west,Henderson-Massey Local Board Area,Euthanised,331,850,0.38941176470588235
+west,Henderson-Massey Local Board Area,Other,25,850,0.029411764705882353
+west,Henderson-Massey Local Board Area,RTO by AMO,34,850,0.04
+west,Henderson-Massey Local Board Area,Released,410,850,0.4823529411764706
+west,Henderson-Massey Local Board Area,Rescued,34,850,0.04
+west,Waitākere Ranges Local Board Area,Adopted,4,190,0.021052631578947368
+west,Waitākere Ranges Local Board Area,Euthanised,69,190,0.3631578947368421
+west,Waitākere Ranges Local Board Area,Other,2,190,0.010526315789473684
+west,Waitākere Ranges Local Board Area,RTO by AMO,12,190,0.06315789473684211
+west,Waitākere Ranges Local Board Area,Released,99,190,0.5210526315789473
+west,Waitākere Ranges Local Board Area,Rescued,4,190,0.021052631578947368
+west,Whau Local Board Area,Adopted,10,263,0.03802281368821293
+west,Whau Local Board Area,Euthanised,93,263,0.35361216730038025
+west,Whau Local Board Area,Other,4,263,0.015209125475285171
+west,Whau Local Board Area,RTO by AMO,12,263,0.045627376425855515
+west,Whau Local Board Area,Released,141,263,0.5361216730038023
+west,Whau Local Board Area,Rescued,3,263,0.011406844106463879
+NA,NA,Adopted,1,169,0.005917159763313609
+NA,NA,Euthanised,113,169,0.6686390532544378
+NA,NA,Other,12,169,0.07100591715976332
+NA,NA,RTO by AMO,2,169,0.011834319526627219
+NA,NA,Released,36,169,0.21301775147928995
+NA,NA,Rescued,5,169,0.029585798816568046
