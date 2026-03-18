@@ -70,11 +70,3 @@ perform_chisq <- function(data, group_var, cat_var, count_var,
   
   return(results)
 }
-
-# Clean PB / APB breed names 
-clean_pb <- function(data, col_name) {
-  data |> 
-    mutate({{col_name}} := str_replace(.data[[col_name]], "^([^,]+),\\s*(.*)$", "\\2 \\1"),
-           {{col_name}} := if_else(str_detect(.data[[col_name]], "Pit Bull Terrier"), 
-                                   "American Pit Bull Terrier", .data[[col_name]]))
-}
