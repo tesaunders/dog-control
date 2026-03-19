@@ -70,3 +70,31 @@ perform_chisq <- function(data, group_var, cat_var, count_var,
   
   return(results)
 }
+
+# Plot local board data onto maps
+plot_local_board <- function(base_df, 
+                             map_df, 
+                             fill_var, 
+                             title = waiver(),
+                             subtitle = waiver(),
+                             legend_title = waiver(), 
+                             labels = waiver()) {
+  ggplot() +
+    geom_sf(data = base_df, colour = NA) +
+    geom_sf(data = map_df, aes(fill = {{ fill_var }}), colour = "#EEEEEE") + 
+    scale_fill_gradient(low = "green", high = "red", name = legend_title, labels = labels) +
+    coord_sf(
+      xlim = c(1700000, 1830000),
+      ylim = c(5869755, 6010000),
+      expand = FALSE
+    ) +
+    theme_void() +
+    labs(title = title,
+         subtitle = subtitle) +
+    theme(plot.title = element_text(face = "bold",
+                                    size = 15,
+                                    hjust = 0.5,
+                                    margin = margin(10, 0, 00, 0)),
+          plot.subtitle = element_text(hjust = 0.5,
+                                       margin = margin(10, 0, 10, 0)))
+}

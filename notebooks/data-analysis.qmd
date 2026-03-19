@@ -46,13 +46,13 @@ rfs <- rename(rfs, suburb = location_suburb_name)
 
 ## Auckland Dog Population Overview
 
-There were `{r} format(nrow(reg_2025), big.mark = ",")` known dogs as at FY2025.
-
 ```{r}
 reg_2025 <-
   registration |> 
   filter(sheet_name == "FY25")
 ```
+
+There were `{r} format(nrow(reg_2025), big.mark = ",")` known dogs as at FY2025.
 
 As the dog population has increased, rates of registration and desexing have fallen, while rates of menacing dog ownership have increased.
 
@@ -435,7 +435,7 @@ ggplot(plot_data, aes(x = p_board, y = fct_reorder(local_board, p_board), fill =
   facet_wrap(~metric, scales = "free_x", nrow = 1,
              labeller = as_labeller(metric_labels)) +
   scale_x_continuous(labels = scales::label_percent()) +
-  scale_fill_manual(values = plot_colours$regions[1:4]) +
+  scale_fill_manual(values = region_colours[1:4]) +
   plot_theme() +
   theme(panel.spacing.x = unit(1, "lines")) +
   theme(plot.title = element_text(hjust = 1)) +
@@ -529,7 +529,7 @@ breeds_region |>
              y = percent_diff, 
              fill = group)) +
   geom_col() +
-  scale_fill_manual(values = plot_colours$regions) +
+  scale_fill_manual(values = region_colours) +
   geom_text(aes(label = paste0("+", round(percent_diff), "%")), 
             hjust = -0.1, size = 3.5, fontface = "bold") +
   scale_x_reordered() +
@@ -630,7 +630,7 @@ regions_impounds_outcome |>
   ggplot(aes(x = fct_reorder(local_board, proportion), y = proportion, fill = region)) +
   geom_col() +
   coord_flip() +
-  scale_fill_manual(values = plot_colours$regions) +
+  scale_fill_manual(values = region_colours) +
   scale_y_continuous(labels = scales::label_percent()) +
   plot_theme() +
   theme(plot.title = element_text(hjust = 1)) +

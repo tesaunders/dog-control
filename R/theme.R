@@ -1,12 +1,40 @@
-# Pallettes
+# Palettes
 
-plot_colours <- list(
-  central = c("#74c476", "#41ab5d", "#238b45", "#006d2c","#00441b"),
-  east    = c("#f16913"),
-  north   = c("#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c", "#08306b"),
-  south   = c("#9e9ac8", "#807dba", "#6a51a3", "#54278f", "#3f007d"),
-  west    = c("#cb181d", "#a50f15", "#67000d"),
-  regions = c("#006d2c", "#f16913", "#08519c", "#54278f", "#a50f15")
+region_colours <- c(
+  central = "#006d2c", 
+  east = "#f16913", 
+  north = "#08519c", 
+  south = "#54278f", 
+  west = "#a50f15"
+)
+
+board_colours <- c(
+  "Waitematā Local Board Area" = "#74c476", 
+  "Albert-Eden Local Board Area" = "#41ab5d", 
+  "Puketāpapa Local Board Area"= "#238b45", 
+  "Ōrākei Local Board Area" = "#006d2c", 
+  "Maungakiekie-Tāmaki Local Board Area" = "#00441b", 
+  "Howick Local Board Area" = "#f16913",
+  "Rodney Local Board Area" = "#c6dbef", 
+  "Hibiscus and Bays Local Board Area" = "#9ecae1", 
+  "Upper Harbour Local Board Area" = "#6baed6",
+  "Kaipātiki Local Board Area" = "#4292c6",
+  "Devonport-Takapuna Local Board Area" = "#2171b5",
+  "Aotea/Great Barrier Local Board Area" = "#08519c",
+  "Waiheke Local Board Area" = "#08306b",
+  "Māngere-Ōtāhuhu Local Board Area" = "#9e9ac8",
+  "Ōtara-Papatoetoe Local Board Area" = "#807dba",
+  "Manurewa Local Board Area" = "#6a51a3",
+  "Papakura Local Board Area" = "#54278f",
+  "Franklin Local Board Area" = "#3f007d",
+  "Henderson-Massey Local Board Area" = "#cb181d",
+  "Waitākere Ranges Local Board Area" = "#a50f15",
+  "Whau Local Board Area" = "#67000d",
+  "Whangarei District" = "#EEEEEE",
+  "Kaipara District" = "#EEEEEE",
+  "Thames-Coromandel District" = "#EEEEEE",
+  "Hauraki District" = "#EEEEEE",
+  "Waikato District" = "#EEEEEE"
 )
 
 # Plotting theme
