@@ -15,6 +15,9 @@ library(ggnewscale)
 library(colorspace)
 library(scales)
 library(patchwork)
+
+source("../R/functions.R")
+source("../R/theme.R")
 ```
 
 Read in regional data created in Data Analysis notebook
@@ -29,12 +32,15 @@ regional_files <- list.files(path = "../data",
 regional_data <- 
   regional_files |> 
   map(read_csv) |> 
-  set_names(path_file(str_extract(regional_files, "[^-]+(?=\\.[^.]+$)")) |> path_ext_remove())
+  set_names(path_file(str_extract(regional_files, "[^-]+(?=\\.[^.]+$)")) |>
+              path_ext_remove())
 ```
 
 Get Auckland human population by Local Board
 
 ```{r}
+#| message: false
+
 # Source: https://figure.nz/chart/bSr6yQmn9V9BFrXK
 
 auck_pop <- 
@@ -69,7 +75,7 @@ Join locality data to shapefile data
 ```{r}
 auckland <-
   shape_nz |>
-  st_simplify(dTolerance = 500) |> 
+  st_simplify(dTolerance = 100) |> 
   mutate(
     include = case_when(local_board %in% auck_pop$local_board ~ TRUE,
                         local_board %in% c("Kaipara District", 
@@ -89,44 +95,6 @@ auckland <-
   filter(include == TRUE)
 
 auckland$region <- as.factor(auckland$region)
-```
-
-Create a plotting function for Local Board-level data
-
-```{r}
-plot_local_board <- function(base_df, 
-                             map_df, 
-                             fill_var, 
-                             title = waiver(),
-                             subtitle = waiver(),
-                             legend_title = waiver(), 
-                             labels = waiver()) {
-  ggplot() +
-    geom_sf(data = base_df, 
-            fill = "#EEEEEE", 
-            colour = NA) +
-    new_scale_fill() +
-    geom_sf(data = map_df, 
-            aes(fill = {{ fill_var }})) + 
-    scale_fill_gradient(low = "green",
-                        high = "red",
-                        name = legend_title,
-                        labels = labels) +
-    coord_sf(
-      xlim = c(1700000, 1830000),
-      ylim = c(5869755, 6010000),
-      expand = FALSE
-    ) +
-    theme_void() +
-    labs(title = title,
-         subtitle = subtitle) +
-    theme(plot.title = element_text(face = "bold",
-                                    size = 15,
-                                    hjust = 0.5,
-                                    margin = margin(10, 0, 00, 0)),
-          plot.subtitle = element_text(hjust = 0.5,
-                                       margin = margin(10, 0, 10, 0)))
-}
 ```
 
 ## Maps
@@ -152,33 +120,14 @@ shape_nz |>
         panel.background = element_rect(fill = "lightblue"))
 ```
 
-Auckland Local Boards
+Auckland regions
 
 ```{r}
-# Map 2: Auckland local boards  
-
 ggplot() +
-  geom_sf(data = auckland, fill = "#EEEEEE", colour = NA) +
-  new_scale_fill() +
-  geom_sf(data = auckland |> filter(region == "north"),
-          aes(fill = local_board)) + 
-  scale_fill_manual(values = col_north) +
-  new_scale_fill() +
-  geom_sf(data = auckland |> filter(region == "east"),
-          aes(fill = local_board)) +
-  scale_fill_manual(values = col_east) +
-  new_scale_fill() +
-  geom_sf(data = auckland |> filter(region == "south"),
-          aes(fill = local_board)) + 
-  scale_fill_manual(values = col_south) +
-  new_scale_fill() +
-  geom_sf(data = auckland |> filter(region == "west"),
-          aes(fill = local_board)) + 
-  scale_fill_manual(values = col_west) +
-  new_scale_fill() +
-  geom_sf(data = auckland |> filter(region == "central"),
-          aes(fill = local_board)) + 
-  scale_fill_manual(values = col_central) +
+  geom_sf(data = auckland, colour = NA) +
+  geom_sf(data = auckland |> 
+            filter(!is.na(region)), aes(fill = region), colour = NA) + 
+  scale_fill_manual(values = region_colours) +
   coord_sf(
     xlim = c(1700000, 1830000),
     ylim = c(5869755, 6010000),
@@ -188,15 +137,12 @@ ggplot() +
   theme(legend.position = "none")
 ```
 
-Auckland regions
+Auckland Local Boards
 
 ```{r}
 ggplot() +
-  geom_sf(data = auckland, fill = "#EEEEEE", colour = NA) +
-  new_scale_fill() +
-  geom_sf(data = auckland |> 
-            filter(!is.na(region)), aes(fill = region, colour = NA)) + 
-  scale_fill_manual(values = col_regions) +
+  geom_sf(data = auckland, aes(fill = local_board), colour = NA) + 
+  scale_fill_manual(values = board_colours) +
   coord_sf(
     xlim = c(1700000, 1830000),
     ylim = c(5869755, 6010000),
@@ -255,10 +201,8 @@ map_attacks <-
   auckland |> 
   left_join(regional_data$regions_attacks |> 
               select(local_board, rate_board) |> 
-              unique() |> 
-              mutate(
-                local_board = paste0(local_board, " Area")
-              ), by = join_by(local_board)) |> 
+              unique(),
+            by = join_by(local_board)) |> 
   select(local_board, rate_board, geometry) |> 
   filter(!is.na(rate_board))
 
