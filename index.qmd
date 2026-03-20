@@ -16,15 +16,80 @@ bibliography: references.bib
 
 ## Introduction
 
-## Auckland's Dogs
+The Dog Control Act 1996 [@departmentofinternalaffairs1996] defines the obligations of dog owners and the functions, duties, and powers of territorial authorities with respect to implementing and enforcing the Act. Auckland Council is responsible for enforcing the Act in Auckland, New Zealand's largest city, and the surrounding Auckland Region. It's Dog Management Bylaw 2019 [@aucklandcouncil2025] and Policy on Dogs 2019 have both recently been updated. Auckland Council's Animal Management division has around 150 permanent staff, including five area-based field teams (Central, East, North, South and West), a regional Barking and Registration team, a Proactive team, four animal shelters (Henderson, Manukau, Silverdale, and Pukekohe), a Veterinary Services team, and management, legal, and operation support staff.
+
+Four fatal dog attacks in New Zealand in the last four years have highlighted the increase in roaming and aggressive dogs in communities across the country.
+
+-   Neville Thomson was killed in Katikati in August 2022 after being mauled by a pack of dogs owned by Abel Wira, whose property Thomson was staying at [@anonymous2025].
+-   Elizabeth Whittaker was killed in October 2023 in Moerewa, Northland, in her backyard by dogs owned by another resident at the property [@anonymous2023].
+-   Timothy Tu'uaki Rolleston-Bryan, a four-year-old boy, died in March 2025 following an attack on a Katikati property [@womanch2026].
+-   Mihiata Te Rore died following an attack by three dogs while visiting a property in Kaihu, Northland, in February 2026 [@anonymous2026].
+
+As part of the Dog Control Act 1996, territorial authorities are required to collect and publish data relating to dog control policies and practices. However, the data reported by Auckland Council's Animal Management division in it's annual reports is only a high-level summary of the full dataset. I made a request under the Local Government Official Information and Meetings Act 1987 [@departmentofinternalaffairs1987] on 20 November 2025 for the full dataset compiled by the Council, which was fulfilled on 18 December 2025 (request #8140017948). The raw data is available as an R package called `akldogs`[@saunders2026], and the data is also available as cleaned .csv files in the package's GitHub repository. Below is an exploration of the complete dataset in an attempt to understand Auckland's dog population and it's management.
+
+## Auckland Dog Population
+
+There were 131,123 known dogs in the Auckland region as at FY2025. As the dog population has increased, rates of registration and desexing have fallen. The proportion of dogs classified as 'menacing' under the Dog Control Act 1996, either due to their breed or behaviour, has doubled since 2016 to 1 in 20 dogs.
+
+{{< embed notebooks/data-analysis.qmd#ownership-trends >}}
+
+Over 200 breeds are represented in the Auckland dog population. Labrador Retrievers remain the most popular at 11% of the Auckland dog population, with the top 10 also including the Staffordshire Bull Terrier and American Pit Bull Terrier, both automatically classified as 'menacing' under the Dog Control Act 1996.
+
+{{< embed notebooks/data-analysis.qmd#top-breeds >}}
+
+## Dog Attacks
+
+The rate of dog attacks have almost doubled since 2016, from 6 attacks for every 1,000 dogs, to 10 attacks for every 1,000 dogs in 2025.
+
+{{< embed notebooks/data-analysis.qmd#attacks-plot >}}
+
+When Auckland Council Animal Management officers impound a dog because it has attacked a person, the attack severity is measured on a scale from 0 to 5. In all impounds for attacks in 2024 (the most recent year for the full impound data), Pit Bull Terriers or Staffordshire Terriers were responsible for the highest or second highest numbers of attacks in each severity category.
+
+## Impounds
+
+The rate of impounds per 1,000 dogs in the population reached 77.9 in 2025, the highest ever. The proportion of impounded dogs that were euthanised was steadily dropping between 2014 and 2021, when it reached a low of 21.7%. However, since then it climbed dramatically to reach 60.8% in 2025.
+
+{{< embed notebooks/data-analysis.qmd#impound-outcome >}}
+
+Impounded dogs that were not collected by their owners were euthanised in the majority of cases (50.1%) because they failed a temperament test, and were therefore unsuitable for adoption. Animal Shelters also appear to be stretched to capacity, as 24% of euthanised dogs in 2024 were put down because the shelter was full.
+
+There is a striking discrepancy between the breed profile of euthanised dogs, and the proportion of the dog population made up by those breeds. For example, Staffordshire Bull Terriers make up just over 6% of the dog population, but account for just over 30% of euthanised dogs in animal shelters. On the other hand, breeds like Labrador Retrievers make up just over 11% of the population but account for just under 8% of euthanised dogs.
+
+{{< embed notebooks/data-analysis.qmd#euth-breed >}}
+
+## Infringements
+
+The number of infringements issued by Animal Management officers under the Dog Control Act 1996 tripled between 2024 and 2025, from 6,387 to 17,430, the majority of which were failure to register a dog. Despite this, the number of prosecutions and appeals brought by Animal Management has dropped from around 197 in 2016 to 141 in 2025.
+
+## Regional Statistics
 
 
 
-## 
+{{< embed notebooks/data-analysis.qmd#region-pop >}}
+
+Between 2021 and 2025, all Local Board areas experienced an increase in their dog population. While the median increase was 9%, Māngere-Ōtāhuhu and Ōtara-Papatoetoe Local Boards had significantly higher growth based on an analysis of the interquartile range.
+
+{{< embed notebooks/data-analysis.qmd#board-pop >}}
+
+Local Board areas differed greatly on rates of registration, desexing, dogs classified as menacing or dangerous, and the proportion of owners with a Responsible Dog Owner Licence.
+
+{{< embed notebooks/data-analysis.qmd#board-reg >}}
+
+A Spearman rank correlation analysis shows that Local Boards with high current registrations tend to have high rates of desexing and low rates of classified animals, while those with high rates of classifications tend to have lower rates of desexing.
+
+{{< embed notebooks/data-analysis.qmd#spearman >}}
+
+A Chi-squared test revealed which dog breeds were over represented in each region, providing a snapshot of each region's unique breed profile.
+
+{{< embed notebooks/data-analysis.qmd#region-breeds >}}
+
+Rates of euthanisation differed by Local Board.
+
+{{< embed notebooks/data-analysis.qmd#euth-board >}}
+
 
 
 ## References
 
-:::{#refs}
-
+::: {#refs}
 :::

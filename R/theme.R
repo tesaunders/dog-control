@@ -39,7 +39,7 @@ board_colours <- c(
 
 # Plotting theme
 
-plot_theme <- function(base_size = 12, base_family = "sans") {
+plot_theme <- function(base_size = 10, base_family = "sans") {
   theme_classic(base_size = base_size, base_family = base_family) %+replace%
     theme(
       plot.title    = element_text(face = "bold", size = rel(1.3), margin = margin(b = 10), hjust = 0.5),

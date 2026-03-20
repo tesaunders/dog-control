@@ -11,7 +11,8 @@ library(akldogs)
 library(tidyverse)
 library(tidytext)
 library(fs)
-library(gt)
+library(knitr)
+library(kableExtra)
 library(patchwork)
 library(scales)
 library(Hmisc)
@@ -52,11 +53,12 @@ reg_2025 <-
   filter(sheet_name == "FY25")
 ```
 
-There were `{r} format(nrow(reg_2025), big.mark = ",")` known dogs as at FY2025.
-
 As the dog population has increased, rates of registration and desexing have fallen, while rates of menacing dog ownership have increased.
 
 ```{r}
+#| label: ownership-trends
+#| fig-cap: "A drop in the recorded dog population in 2018 was due to the removal of duplicate entries in the Auckland Council dog database, and in 2025 was due to the updating of the database during a registration campaign."
+
 ownership_trends <-
   report_data$ownership |>
   pivot_wider(
@@ -73,35 +75,38 @@ ownership_trends <-
     men_pc = menacing / dogs
   ) |>
   select(year, dogs, pc_change:men_pc) |> 
-  arrange(desc(year))
-
-ownership_trends |>
-  rename("Year" = year,
-         "Known Dogs" = dogs,
-         "Pop. Change (%)" = pc_change,
-         "Registered (%)" = reg_pc,
-         "Desexed (%)" = desex_pc,
-         "Menacing (%)" = men_pc) |> 
-  arrange(desc(`Year`)) |> 
-  gt() |> 
-  fmt_percent(columns = contains("%"),
-              decimals = 1) |>
-  fmt_number(columns = `Known Dogs`,
-             sep_mark = ",",
-             decimals = 0) |> 
-  sub_missing(
-    columns = `Desexed (%)`,
-    missing_text = "-"
+  arrange(desc(year)) |> 
+  rename(
+    "Year" = year,
+    "Known Dogs" = dogs,
+    "Pop. Change (%)" = pc_change,
+    "Registered (%)" = reg_pc,
+    "Desexed (%)" = desex_pc,
+    "Menacing (%)" = men_pc
+  ) |> 
+  mutate(
+    across(contains("%"),
+           ~ scales::percent(., accuracy = 0.1)),
+    "Known Dogs" = format(`Known Dogs`, big.mark = ",")
   )
+
+ownership_trends |> 
+  kable() |> 
+  kable_styling()
 ```
 
 Top 10 primary breeds as at FY2025:
 
 ```{r}
+#| label: top-breeds
+
 primary_breed <- reg_2025 |> 
   calc_proportions("animal_breed_description", count_name = "primary_breed")
 
-head(primary_breed, n = 10)
+primary_breed |> 
+  head(n = 10) |> 
+  kable() |> 
+  kable_styling()
 ```
 
 Dog population secondary breed counts
@@ -149,6 +154,42 @@ attack_rate <-
 head(attack_rate, n = 10)
 ```
 
+```{r}
+#| label: attacks-plot
+
+ggplot(attack_rate |> filter(year > 2015), aes(x = year, y = attack_rate)) +
+  geom_line() +
+  scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, by = 1)) +
+  scale_x_continuous(breaks = 2016:max(attack_rate$year)) +
+  xlab("") +
+  ylab("Attacks Per 1,000 Dogs") +
+  plot_theme() +
+  labs(title = "Auckland Dog Attack Rate Over Time")
+```
+
+Impounds
+
+```{r}
+impound_rate <-
+  report_data$ownership |> 
+  filter(category == "dogs") |> 
+  rename("dogs" = "count") |> 
+  select(-category) |> 
+  left_join(report_data$impounds |> filter(category == "impounds"),
+            by = join_by(year)) |> 
+  rename("impounds" = "count") |> 
+  select(-category) |> 
+  mutate(
+    impound_rate = (impounds / dogs) * 1000
+  )
+
+impound_rate |> 
+  kable() |> 
+  kable_styling()
+  
+```
+
+
 Top 3 primary breeds for each attack severity rating for impounded dogs in FY2024
 
 ```{r}
@@ -169,6 +210,7 @@ The overall rate of euthanising impounded dogs was dropping between 2014-2019. B
 
 ```{r}
 #| warning: FALSE
+#| label: impound-outcome
 
 impound_result <-
   report_data$impounds |> 
@@ -187,12 +229,14 @@ ggplot(impound_result, aes(x = year, y = count, fill = category)) +
   ylab("") +
   plot_theme() +
   labs(title = "Outcome For Impounded Dogs Over Time",
-       subtitle = "Euthanasia increases since COVID")
+       subtitle = "Euthanasia increases since COVID lockdowns")
 ```
 
 Impound outcome by primary breed (population and impound data are both FY2024)
 
 ```{r}
+#| label: euth-breed
+
 breed_data <- registration |>
   filter(sheet_name == "FY24") |>
   count(primary_breed = animal_breed_description, name = "n_pop") |>
@@ -236,7 +280,7 @@ p1 <- breed_data |>
   scale_color_manual(values = colours) +
   coord_cartesian(xlim = c(-0.02, 0.45), ylim = c(1, n_breeds + 1), clip = "off") +
   labs(title = "Breed Profile: Auckland Dog Population vs Euthanised",
-       subtitle = "Breeds with >1% difference", x = NULL, y = NULL) +
+       subtitle = "Red 'differences' indicate higher euthanisation than expected", x = NULL, y = NULL) +
   theme_minimal() +
   theme(
     legend.position = "none", 
@@ -311,6 +355,8 @@ report_data$enforcement |>
 Known dogs
 
 ```{r}
+#| label: region-pop
+
 regions_dogs <- 
   registration |>
   filter(sheet_name == "FY25") |> 
@@ -325,11 +371,27 @@ regions_dogs <-
   unique() |> 
   arrange(desc(known_suburb)) |> 
   ungroup()
+
+regions_dogs |> 
+  select(region, known_region) |> 
+  distinct() |> 
+  arrange(desc(known_region)) |> 
+  rename(
+    "Region" = "region",
+    "Dogs" = "known_region"
+  ) |> 
+  mutate(
+    Dogs = format(Dogs, big.mark = ",")
+  ) |> 
+  kable() |> 
+  kable_styling()
 ```
 
 Dog population trends in each Local Board
 
 ```{r}
+#| label: board-pop
+
 dogs_board <-
   registration |> 
   select(sheet_name, suburb) |> 
@@ -344,7 +406,22 @@ dogs_board <-
   arrange(desc(change)) |> 
   ungroup()
 
-dogs_board
+dogs_board |> 
+  mutate(
+    across(contains("FY"), comma),
+    change = scales::percent(change, accuracy = 0.1)
+  ) |> 
+  rename(
+    "2021" = "FY21",
+    "2022" = "FY22",
+    "2023" = "FY23",
+    "2024" = "FY24",
+    "2025" = "FY25",
+    "Change" = "change",
+    "Local Board" = "local_board"
+  ) |> 
+  kable() |> 
+  kable_styling()
 ```
 
 ```{r}
@@ -419,6 +496,8 @@ write_csv(regions_reg, "../data/regions_reg.csv")
 Compare Local Boards
 
 ```{r}
+#| label: board-reg
+
 plot_data <- regions_reg |>
   select(local_board, metric, p_board) |>
   distinct()
@@ -449,6 +528,8 @@ ggplot(plot_data, aes(x = p_board, y = fct_reorder(local_board, p_board), fill =
 The below Spearman rank correlation analysis shows that Local Boards with high current registrations tend to have high rates of desexing and low rates of classified animals, while those with high rates of classifications tend to have lower rates of desexing.
 
 ```{r}
+#| label: spearman
+
 corr <- plot_data |>
   pivot_wider(names_from = metric, values_from = p_board) |> 
   select(-local_board) |> 
@@ -521,6 +602,8 @@ write_csv(breeds_region, "../data/breed_over.csv")
 ```
 
 ```{r}
+#| label: region-breeds
+
 breeds_region |> 
   group_by(group) |> 
   slice_max(percent_diff, n = 5) |> 
@@ -601,8 +684,9 @@ write_csv(regions_impounds_attacks, "../data/regions_impounds_attacks.csv")
 
 Outcome of impound by area
 
-
 ```{r}
+#| label: euth-board
+
 regions_impounds_outcome <- impounds |>
   filter(impound_date > "2023-07-01") |>
   mutate(status = case_match(status, 

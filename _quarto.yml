@@ -10,5 +10,8 @@ execute:
 format:
   html:
     toc: true
+    other-links: 
+      - text: akldogs R Package
+        href: https://tesaunders.github.io/akldogs/
   docx: default
   pdf: default
