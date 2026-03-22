@@ -25,7 +25,7 @@ Read in regional data created in Data Analysis notebook
 ```{r}
 #| message: false
 
-regional_files <- list.files(path = "../data", 
+regional_files <- list.files(path = "../outputs", 
                            pattern = "regions|breed", 
                            full.names = TRUE)
 
@@ -102,7 +102,7 @@ auckland$region <- as.factor(auckland$region)
 Map of NZ with border around Auckland
 
 ```{r}
-shape_nz |> 
+map_nz <- shape_nz |> 
   st_simplify(dTolerance = 100) |>
   ggplot() +
   geom_sf(fill = "#b0bc6d", colour = "black") +
@@ -118,12 +118,14 @@ shape_nz |>
   theme_void() +
   theme(legend.position = "none",
         panel.background = element_rect(fill = "lightblue"))
+
+map_nz
 ```
 
 Auckland regions
 
 ```{r}
-ggplot() +
+map_regions <- ggplot() +
   geom_sf(data = auckland, colour = NA) +
   geom_sf(data = auckland |> 
             filter(!is.na(region)), aes(fill = region), colour = NA) + 
@@ -135,12 +137,14 @@ ggplot() +
   ) +
   theme_void() +
   theme(legend.position = "none")
+
+map_regions
 ```
 
 Auckland Local Boards
 
 ```{r}
-ggplot() +
+map_boards <- ggplot() +
   geom_sf(data = auckland, aes(fill = local_board), colour = NA) + 
   scale_fill_manual(values = board_colours) +
   coord_sf(
@@ -150,11 +154,24 @@ ggplot() +
   ) +
   theme_void() +
   theme(legend.position = "none")
+
+map_boards
+```
+
+Join maps together
+
+```{r}
+#| label: map-regions-boards
+#| fig-cap: "Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland's 21 Local Boards, coloured based on their parent region."
+
+map_regions + map_boards
 ```
 
 Proportion of desexed dogs by Local Board
 
 ```{r}
+#| label: map-desex
+
 map_desex <-
   auckland |> 
   left_join(regional_data$regions_reg |> filter(metric == "animal_desexed"), 
@@ -177,6 +194,8 @@ plot_local_board(auckland,
 Proportion of dogs with a classification under the Dog Control Act by Local Board
 
 ```{r}
+#| label: map-class
+
 map_class <-
   auckland |> 
   left_join(regional_data$regions_reg |> filter(metric == "classification"), 
@@ -197,6 +216,8 @@ plot_local_board(auckland,
 Rate of dog attacks by Local Board
 
 ```{r}
+#| label: map-attacks
+
 map_attacks <-
   auckland |> 
   left_join(regional_data$regions_attacks |> 
@@ -217,6 +238,8 @@ plot_local_board(auckland,
 Rate of dog impounds by Local Board
 
 ```{r}
+#| label: map-impounds
+
 map_impounds <-
   auckland |> 
   left_join(regional_data$regions_impounds, by = join_by(local_board)) |> 
@@ -253,6 +276,8 @@ plot_local_board(auckland,
 Proportion of impounded dogs euthanised by Local Board
 
 ```{r}
+#| label: map-euth
+
 map_impounds_euthanised <-
   auckland |> 
   left_join(regional_data$regions_impounds_outcome, by = join_by(local_board)) |> 

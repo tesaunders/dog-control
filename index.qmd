@@ -63,7 +63,11 @@ The number of infringements issued by Animal Management officers under the Dog C
 
 ## Regional Statistics
 
+Auckland's 21 Local Boards can be grouped into 5 regions (north, south, east, west, central).
 
+{{< embed notebooks/mapping.qmd#map-regions-boards >}}
+
+Regional dog population.
 
 {{< embed notebooks/data-analysis.qmd#region-pop >}}
 
@@ -73,21 +77,35 @@ Between 2021 and 2025, all Local Board areas experienced an increase in their do
 
 Local Board areas differed greatly on rates of registration, desexing, dogs classified as menacing or dangerous, and the proportion of owners with a Responsible Dog Owner Licence.
 
-{{< embed notebooks/data-analysis.qmd#board-reg >}}
+<iframe src="outputs/reg_metrics.html" width="100%" height="850px" frameborder="0"></iframe>
 
-A Spearman rank correlation analysis shows that Local Boards with high current registrations tend to have high rates of desexing and low rates of classified animals, while those with high rates of classifications tend to have lower rates of desexing.
+A Spearman rank correlation analysis showed that Local Boards with high current registrations tended to have higher rates of desexing and lower rates of classified animals, while those with higher rates of classifications tended to have lower rates of desexing.
 
 {{< embed notebooks/data-analysis.qmd#spearman >}}
+
+Boards differed in rates of desexing and classified dogs.
+
+{{< embed notebooks/mapping.qmd#map-desex >}}
+
+{{< embed notebooks/mapping.qmd#map-class >}}
 
 A Chi-squared test revealed which dog breeds were over represented in each region, providing a snapshot of each region's unique breed profile.
 
 {{< embed notebooks/data-analysis.qmd#region-breeds >}}
 
-Rates of euthanisation differed by Local Board.
+Boards differed in attacks.
+
+{{< embed notebooks/mapping.qmd#map-attacks >}}
+
+Boards differed in impound rates.
+
+{{< embed notebooks/mapping.qmd#map-impounds >}}
+
+Boards differed in rates of euthanasia of impounded dogs.
+
+{{< embed notebooks/mapping.qmd#map-euth >}}
 
 {{< embed notebooks/data-analysis.qmd#euth-board >}}
-
-
 
 ## References
 

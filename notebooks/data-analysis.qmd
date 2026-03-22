@@ -17,6 +17,10 @@ library(patchwork)
 library(scales)
 library(Hmisc)
 library(corrplot)
+library(plotly)
+library(forcats)
+library(purrr)
+library(stringr)
 
 source("../R/functions.R")
 source("../R/theme.R")
@@ -57,7 +61,6 @@ As the dog population has increased, rates of registration and desexing have fal
 
 ```{r}
 #| label: ownership-trends
-#| fig-cap: "A drop in the recorded dog population in 2018 was due to the removal of duplicate entries in the Auckland Council dog database, and in 2025 was due to the updating of the database during a registration campaign."
 
 ownership_trends <-
   report_data$ownership |>
@@ -91,7 +94,7 @@ ownership_trends <-
   )
 
 ownership_trends |> 
-  kable() |> 
+  kable(caption = "A drop in the recorded dog population in 2018 was due to the removal of duplicate entries in the Auckland Council dog database, and in 2025 was due to the updating of the database during a registration campaign.") |> 
   kable_styling()
 ```
 
@@ -490,39 +493,81 @@ regions_reg <-
   mutate(p_region = sum(count) / first(known_region)) |>
   ungroup()
 
-write_csv(regions_reg, "../data/regions_reg.csv")
+write_csv(regions_reg, "../outputs/regions_reg.csv")
 ```
 
 Compare Local Boards
 
 ```{r}
-#| label: board-reg
-
+# 1. Data Prep: Handle underscores and Title Case
 plot_data <- regions_reg |>
   select(local_board, metric, p_board) |>
-  distinct()
-
-metric_labels <- c(
-  "animal_desexed" = "Desexed",
-  "classification" = "Classification",
-  "current_reg" = "Registered",
-  "owner_reg" = "RDOL"
-)
-
-ggplot(plot_data, aes(x = p_board, y = fct_reorder(local_board, p_board), fill = metric)) +
-  geom_col(show.legend = FALSE) +
-  facet_wrap(~metric, scales = "free_x", nrow = 1,
-             labeller = as_labeller(metric_labels)) +
-  scale_x_continuous(labels = scales::label_percent()) +
-  scale_fill_manual(values = region_colours[1:4]) +
-  plot_theme() +
-  theme(panel.spacing.x = unit(1, "lines")) +
-  theme(plot.title = element_text(hjust = 1)) +
-  labs(
-    title = "Animal Registration Metrics by Local Board (FY25)",
-    x = NULL,
-    y = NULL
+  distinct() |> 
+  mutate(
+    metric = metric |> str_replace_all("_", " ") |> str_to_title(),
+    local_board = local_board |> str_replace_all("_", " ") |> str_to_title()
   )
+
+plots_list <- plot_data |> group_split(metric)
+
+# 2. Build Plot
+p <- plots_list |> 
+  reduce(\(p_obj, data_slice) {
+    p_obj |> 
+      add_bars(
+        data = data_slice,
+        x = ~p_board,
+        y = ~fct_reorder(local_board, p_board),
+        name = unique(data_slice$metric),
+        marker = list(color = region_colours[which(plots_list == list(data_slice))]),
+        visible = (identical(data_slice, plots_list[[1]])),
+        orientation = 'h',
+        showlegend = FALSE,
+        hovertemplate = "Board: %{y}<br>Value: %{x:.1%}<extra></extra>"
+      )
+  }, .init = plot_ly(height = 800))
+
+# 3. Create Buttons
+buttons <- plots_list |> 
+  imap(\(data_slice, idx) {
+    vis_vector <- rep(FALSE, length(plots_list))
+    vis_vector[idx] <- TRUE
+    list(
+      method = "restyle",
+      args = list("visible", as.list(vis_vector)),
+      label = unique(data_slice$metric)
+    )
+  })
+
+# 4. Final Layout & Config
+interactive_plot <- p |> 
+  layout(
+    title = list(
+      text = "Animal Registration Metrics by Local Board (FY25)",
+      x = 0.05,    
+      y = 0.98,       
+      xanchor = 'left',
+      yanchor = 'top',
+      font = list(size = 20)
+    ),
+    margin = list(l = 180, t = 100, r = 30, b = 50),
+    xaxis = list(title = "", tickformat = ".0%"),
+    yaxis = list(title = ""),
+    updatemenus = list(
+      list(
+        buttons = buttons,
+        direction = "down",
+        showactive = TRUE,
+        x = 0.10, 
+        y = 1.05, 
+        xanchor = 'left',
+        yanchor = 'top',
+        bgcolor = "#f8f9fa"
+      )
+    )
+  )
+
+htmlwidgets::saveWidget(interactive_plot, "../outputs/reg_metrics.html", selfcontained = TRUE)
 ```
 
 The below Spearman rank correlation analysis shows that Local Boards with high current registrations tend to have high rates of desexing and low rates of classified animals, while those with high rates of classifications tend to have lower rates of desexing.
@@ -569,7 +614,7 @@ regions_attacks <- rfs |>
   ) |>
   select(suburb, local_board, region, starts_with("attacks"), starts_with("known"), starts_with("rate"))
 
-write_csv(regions_attacks, "../data/regions_attacks.csv")
+write_csv(regions_attacks, "../outputs/regions_attacks.csv")
 ```
 
 Primary breed profile for each region
@@ -598,11 +643,12 @@ breeds_region <- regions_breed |>
     count_var = "count"
   )
 
-write_csv(breeds_region, "../data/breed_over.csv")
+write_csv(breeds_region, "../outputs/breed_over.csv")
 ```
 
 ```{r}
 #| label: region-breeds
+#| fig-height: 10
 
 breeds_region |> 
   group_by(group) |> 
@@ -648,7 +694,7 @@ regions_impounds <- impounds |>
   ) |>
   select(suburb, local_board, region, starts_with("impounds"), starts_with("known"), starts_with("rate"))
 
-write_csv(regions_impounds, "../data/regions_impounds.csv")
+write_csv(regions_impounds, "../outputs/regions_impounds.csv")
 ```
 
 Impound rate for attacks/rushing (FY2024 data)
@@ -679,7 +725,7 @@ regions_impounds_attacks <- impounds |>
   mutate(across(starts_with("rate"), ~if_else(is.infinite(.x), NA_real_, .x))) |>
   select(suburb, local_board, region, starts_with("impounds"), starts_with("known"), starts_with("rate_attack"))
 
-write_csv(regions_impounds_attacks, "../data/regions_impounds_attacks.csv")
+write_csv(regions_impounds_attacks, "../outputs/regions_impounds_attacks.csv")
 ```
 
 Outcome of impound by area
@@ -707,7 +753,7 @@ regions_impounds_outcome <- impounds |>
   ) |> 
   ungroup()
 
-write_csv(regions_impounds_outcome, "../data/regions_impounds_outcome.csv")
+write_csv(regions_impounds_outcome, "../outputs/regions_impounds_outcome.csv")
 
 regions_impounds_outcome |> 
   filter(status == "Euthanised" & !is.na(local_board)) |> 
