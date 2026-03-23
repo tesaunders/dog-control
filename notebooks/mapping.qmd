@@ -90,7 +90,8 @@ auckland <-
             by = join_by(local_board)) |>
   mutate(
     region = case_when(local_board == "Aotea/Great Barrier Local Board Area" ~ "north",
-                       .default = region)
+                       .default = region),
+    label = cumsum(!is.na(region))
   ) |> 
   filter(include == TRUE)
 

@@ -18,9 +18,6 @@ library(scales)
 library(Hmisc)
 library(corrplot)
 library(plotly)
-library(forcats)
-library(purrr)
-library(stringr)
 
 source("../R/functions.R")
 source("../R/theme.R")
@@ -94,7 +91,7 @@ ownership_trends <-
   )
 
 ownership_trends |> 
-  kable(caption = "A drop in the recorded dog population in 2018 was due to the removal of duplicate entries in the Auckland Council dog database, and in 2025 was due to the updating of the database during a registration campaign.") |> 
+  kable() |> 
   kable_styling()
 ```
 
@@ -107,6 +104,15 @@ primary_breed <- reg_2025 |>
   calc_proportions("animal_breed_description", count_name = "primary_breed")
 
 primary_breed |> 
+  rename(
+    "Breed" = animal_breed_description,
+    "Count" = primary_breed,
+    "Proportion" = prop
+  ) |> 
+  mutate(
+    Proportion = scales::percent(Proportion, accuracy = 0.1),
+    Count = format(Count, big.mark = ",")
+  ) |> 
   head(n = 10) |> 
   kable() |> 
   kable_styling()
@@ -151,7 +157,7 @@ attack_rate <-
       rename(count_dogs = count),
     by = join_by(year)) |> 
   mutate(
-    attack_rate = (count_attacks / count_dogs) * 1000,
+    attack_rate = round((count_attacks / count_dogs) * 1000, digits = 1),
   )
 
 head(attack_rate, n = 10)
@@ -173,6 +179,8 @@ ggplot(attack_rate |> filter(year > 2015), aes(x = year, y = attack_rate)) +
 Impounds
 
 ```{r}
+#| label: impound-rate
+
 impound_rate <-
   report_data$ownership |> 
   filter(category == "dogs") |> 
@@ -183,13 +191,21 @@ impound_rate <-
   rename("impounds" = "count") |> 
   select(-category) |> 
   mutate(
-    impound_rate = (impounds / dogs) * 1000
+    impound_rate = round((impounds / dogs) * 1000, digits = 1)
   )
 
 impound_rate |> 
+  rename(
+    "Year" = year,
+    "Known Dogs" = dogs,
+    "Impounded Dogs" = impounds,
+    "Impound Rate" = impound_rate
+  ) |> 
+  mutate(
+    across(c(`Known Dogs`, `Impounded Dogs`), ~ format(.,big.mark = ","))
+  ) |> 
   kable() |> 
   kable_styling()
-  
 ```
 
 
@@ -232,7 +248,7 @@ ggplot(impound_result, aes(x = year, y = count, fill = category)) +
   ylab("") +
   plot_theme() +
   labs(title = "Outcome For Impounded Dogs Over Time",
-       subtitle = "Euthanasia increases since COVID lockdowns")
+       subtitle = "Over half of impounded dogs are now euthanised")
 ```
 
 Impound outcome by primary breed (population and impound data are both FY2024)
@@ -499,7 +515,6 @@ write_csv(regions_reg, "../outputs/regions_reg.csv")
 Compare Local Boards
 
 ```{r}
-# 1. Data Prep: Handle underscores and Title Case
 plot_data <- regions_reg |>
   select(local_board, metric, p_board) |>
   distinct() |> 
@@ -510,7 +525,6 @@ plot_data <- regions_reg |>
 
 plots_list <- plot_data |> group_split(metric)
 
-# 2. Build Plot
 p <- plots_list |> 
   reduce(\(p_obj, data_slice) {
     p_obj |> 
@@ -527,7 +541,6 @@ p <- plots_list |>
       )
   }, .init = plot_ly(height = 800))
 
-# 3. Create Buttons
 buttons <- plots_list |> 
   imap(\(data_slice, idx) {
     vis_vector <- rep(FALSE, length(plots_list))
@@ -539,7 +552,6 @@ buttons <- plots_list |>
     )
   })
 
-# 4. Final Layout & Config
 interactive_plot <- p |> 
   layout(
     title = list(
@@ -585,7 +597,7 @@ cor_results <- rcorr(corr, type = "spearman")
 corrplot(cor_results$r, 
          method = "color", 
          type = "upper", 
-         addCoef.col = "black", # Show the actual correlation number
+         addCoef.col = "black", 
          tl.col = "black", 
          diag = FALSE,
          sig.level = 0.05, 
@@ -663,7 +675,10 @@ breeds_region |>
             hjust = -0.1, size = 3.5, fontface = "bold") +
   scale_x_reordered() +
   coord_flip() +
-  facet_wrap(~group, scales = "free_y", ncol = 1) +
+  facet_wrap(~group, scales = "free_y", ncol = 1,
+             labeller = function(labels) {
+      lapply(labels, tools::toTitleCase)
+    }) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
   plot_theme() +
   theme(legend.position = "none") +
@@ -768,5 +783,34 @@ regions_impounds_outcome |>
        subtitle = "") +
   xlab("") +
   ylab("")
+```
+
+Impounds by breed
+
+```{r}
+#| label: impounds-breed
+
+impounds_breed <- impounds |>
+  filter(impound_date > "2023-07-01") |>
+  count(primary_breed, name = "impound_count") |>
+  inner_join(
+    primary_breed |> select(-prop),
+    by = join_by(primary_breed == animal_breed_description)
+  ) |>
+  mutate(impound_rate = round((impound_count / primary_breed.y) * 1000, digits = 1)) |>
+  filter(primary_breed.y > 99) |>
+  arrange(desc(impound_rate)) |> 
+  head(n = 10)
+
+impounds_breed |> 
+  rename("Breed" = primary_breed,
+         "Impounds" = impound_count,
+         "Population" = primary_breed.y,
+         "Impound Rate" = impound_rate) |> 
+  mutate(
+    across(c(`Impounds`, `Population`), ~ format(.,big.mark = ","))
+  ) |> 
+  kable() |> 
+  kable_styling()
 ```
 

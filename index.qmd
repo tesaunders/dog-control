@@ -14,6 +14,10 @@ key-points:
 bibliography: references.bib
 ---
 
+## Executive Summary
+
+Over the last 10 years: - Auckland's dog population has increased by 14.5%, and most of this growth has occurred since FY2020. - Registration and desexing rates have fallen, while the proportion of dogs classified as menacing has doubled to 1 in 20. - Dog attack rates have almost doubled from 6 to 10 attacks for every 1,000 dogs. - Impound rates reduced but then increased to the second highest ever in FY 2025. - Euthanasia rates of impounded dogs have risen from 22% to 60%, mostly due to failed temperament tests and full shelters. - A small number of breeds have become disproportionately represented in attacks and impounds. - Local Boards in South Auckland have experienced lower rates of registration and desexing, and higher rates of attacks and impounds.
+
 ## Introduction
 
 The Dog Control Act 1996 [@departmentofinternalaffairs1996] defines the obligations of dog owners and the functions, duties, and powers of territorial authorities with respect to implementing and enforcing the Act. Auckland Council is responsible for enforcing the Act in Auckland, New Zealand's largest city, and the surrounding Auckland Region. It's Dog Management Bylaw 2019 [@aucklandcouncil2025] and Policy on Dogs 2019 have both recently been updated. Auckland Council's Animal Management division has around 150 permanent staff, including five area-based field teams (Central, East, North, South and West), a regional Barking and Registration team, a Proactive team, four animal shelters (Henderson, Manukau, Silverdale, and Pukekohe), a Veterinary Services team, and management, legal, and operation support staff.
@@ -29,7 +33,7 @@ As part of the Dog Control Act 1996, territorial authorities are required to col
 
 ## Auckland Dog Population
 
-There were 131,123 known dogs in the Auckland region as at FY2025. As the dog population has increased, rates of registration and desexing have fallen. The proportion of dogs classified as 'menacing' under the Dog Control Act 1996, either due to their breed or behaviour, has doubled since 2016 to 1 in 20 dogs.
+There were 131,123 known dogs in the Auckland region as at FY2025. As the dog population has increased, rates of registration and desexing have fallen. The proportion of dogs classified as 'menacing' under the Dog Control Act 1996, either due to their breed or behaviour, has doubled since 2016 to 1 in 20 dogs. A drop in the recorded dog population in 2018 was due to the removal of duplicate entries in the Auckland Council dog database, and in 2025 was due to the updating of the database during a registration campaign.
 
 {{< embed notebooks/data-analysis.qmd#ownership-trends >}}
 
@@ -47,17 +51,25 @@ When Auckland Council Animal Management officers impound a dog because it has at
 
 ## Impounds
 
-The rate of impounds per 1,000 dogs in the population reached 77.9 in 2025, the highest ever. The proportion of impounded dogs that were euthanised was steadily dropping between 2014 and 2021, when it reached a low of 21.7%. However, since then it climbed dramatically to reach 60.8% in 2025.
+The rate of impounds per 1,000 dogs in the population reached 77.9 in 2025, the highest ever.
+
+{{< embed notebooks/data-analysis.qmd#impound-rate >}}
+
+The rate of impounds differed markedly by breed, with a 3 times difference even within the top 10.
+
+{{< embed notebooks/data-analysis.qmd#impounds-breed >}}
+
+The proportion of impounded dogs that were euthanised was steadily dropping between 2014 and 2021, when it reached a low of 21.7%. However, since then it climbed dramatically to reach 60.8% in 2025.
 
 {{< embed notebooks/data-analysis.qmd#impound-outcome >}}
 
-Impounded dogs that were not collected by their owners were euthanised in the majority of cases (50.1%) because they failed a temperament test, and were therefore unsuitable for adoption. Animal Shelters also appear to be stretched to capacity, as 24% of euthanised dogs in 2024 were put down because the shelter was full.
+Most seized or uncollected dogs were euthanised because they failed a temperament test (50.1%), and were therefore unsuitable for adoption. But a quarter of euthanised dogs were put down because the animal shelter was full.
 
-There is a striking discrepancy between the breed profile of euthanised dogs, and the proportion of the dog population made up by those breeds. For example, Staffordshire Bull Terriers make up just over 6% of the dog population, but account for just over 30% of euthanised dogs in animal shelters. On the other hand, breeds like Labrador Retrievers make up just over 11% of the population but account for just under 8% of euthanised dogs.
+Some dog breeds were significantly over-represented in euthanised dogs compared to the overall dog population. For example, Staffordshire Bull Terriers made up just over 6% of the dog population in 2024, but accounted for just over 30% of euthanised dogs in animal shelters. On the other hand, breeds like Labrador Retrievers were under-represented, making up just over 11% of the population but accounting for under 8% of euthanised dogs.
 
 {{< embed notebooks/data-analysis.qmd#euth-breed >}}
 
-## Infringements
+## Compliance
 
 The number of infringements issued by Animal Management officers under the Dog Control Act 1996 tripled between 2024 and 2025, from 6,387 to 17,430, the majority of which were failure to register a dog. Despite this, the number of prosecutions and appeals brought by Animal Management has dropped from around 197 in 2016 to 141 in 2025.
 
@@ -77,7 +89,9 @@ Between 2021 and 2025, all Local Board areas experienced an increase in their do
 
 Local Board areas differed greatly on rates of registration, desexing, dogs classified as menacing or dangerous, and the proportion of owners with a Responsible Dog Owner Licence.
 
-<iframe src="outputs/reg_metrics.html" width="100%" height="850px" frameborder="0"></iframe>
+<iframe src="outputs/reg_metrics.html" width="100%" height="850px" frameborder="0">
+
+</iframe>
 
 A Spearman rank correlation analysis showed that Local Boards with high current registrations tended to have higher rates of desexing and lower rates of classified animals, while those with higher rates of classifications tended to have lower rates of desexing.
 
@@ -93,15 +107,11 @@ A Chi-squared test revealed which dog breeds were over represented in each regio
 
 {{< embed notebooks/data-analysis.qmd#region-breeds >}}
 
-Boards differed in attacks.
+Local Boards differed greatly in the rate of dog attacks, impounds, and euthanasia of impounded dogs.
 
 {{< embed notebooks/mapping.qmd#map-attacks >}}
 
-Boards differed in impound rates.
-
 {{< embed notebooks/mapping.qmd#map-impounds >}}
-
-Boards differed in rates of euthanasia of impounded dogs.
 
 {{< embed notebooks/mapping.qmd#map-euth >}}
 
