@@ -299,7 +299,7 @@ p1 <- breed_data |>
   scale_color_manual(values = colours) +
   coord_cartesian(xlim = c(-0.02, 0.45), ylim = c(1, n_breeds + 1), clip = "off") +
   labs(title = "Breed Profile: Auckland Dog Population vs Euthanised",
-       subtitle = "Red 'differences' indicate higher euthanisation than expected", x = NULL, y = NULL) +
+       subtitle = "Red 'differences' indicate higher euthanasia than expected", x = NULL, y = NULL) +
   theme_minimal() +
   theme(
     legend.position = "none", 
@@ -308,8 +308,8 @@ p1 <- breed_data |>
     plot.subtitle = element_text(hjust = 0.5),
     axis.line.x = element_line(color = "black", linewidth = 0.5),
     axis.ticks.x = element_line(color = "black", linewidth = 0.5),
-    axis.ticks.length.x = unit(3, "pt") # Controls how "small" the ticks are
-  )
+    axis.ticks.length.x = unit(3, "pt")
+    )
 
 p2 <- ggplot(breed_data, aes(x = 0, y = primary_breed)) +
   geom_text(aes(label = percent(diff, 0.1), color = if_else(diff > 0, "prop_euth", "prop_pop")),
@@ -813,4 +813,3 @@ impounds_breed |>
   kable() |> 
   kable_styling()
 ```
-

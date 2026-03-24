@@ -1,26 +1,31 @@
 ---
-title: Dog Control
+title: "A Decade of Decline: Confronting the Reality of Auckland's Dog Control Crisis Using Auckland Council Data"
 date: last-modified
 author:
   - name: Thomas E. Saunders
     orcid: 0000-0003-1780-0314
     corresponding: true
     affiliation: University of Auckland
-keywords: keywords
-abstract: abstract
+keywords: dog control, dog attacks, Auckland, euthanasia
+abstract: A spate of fatal dog attacks have focussed attention on New Zealand's growing problem with roaming and aggressive dogs. Under the Dog Control Act 1996, Territorial Authorities are resposible for managing the harms associated with dogs in communities. Auckland Council's Animal Management division publishes selected high-level statistics related to it's dog control practices, but an examination of the underlying raw data in combination with data from it's annual reports reveals troubling trends for some of the most important metrics. The rate of attacks, impounds, and euthanasia of impounded dogs are all increasing due to an explosion in the dog population and a stretched shelter system. Attack rates are highest in South Auckland, and several breeds are over-represented in negative statistics. 
 number-sections: true
-key-points:
-  - Key points.
 bibliography: references.bib
+csl: ama.csl
 ---
 
-## Executive Summary
+## Key Points
 
-Over the last 10 years: - Auckland's dog population has increased by 14.5%, and most of this growth has occurred since FY2020. - Registration and desexing rates have fallen, while the proportion of dogs classified as menacing has doubled to 1 in 20. - Dog attack rates have almost doubled from 6 to 10 attacks for every 1,000 dogs. - Impound rates reduced but then increased to the second highest ever in FY 2025. - Euthanasia rates of impounded dogs have risen from 22% to 60%, mostly due to failed temperament tests and full shelters. - A small number of breeds have become disproportionately represented in attacks and impounds. - Local Boards in South Auckland have experienced lower rates of registration and desexing, and higher rates of attacks and impounds.
+Over the last 10 years:
+
+-   Auckland's dog population has increased by 14.5%, mostly since FY2020.
+-   Registration and desexing rates have fallen, while the proportion of 'menacing' dogs has doubled to 1 in 20.
+-   Dog attack rates have almost doubled from 6 to 10 attacks for every 1,000 dogs.
+-   Impound rates in FY2025 are the second highest ever.
+-   Euthanasia rates of impounded dogs have risen from 22% to 60%, mostly due to failed temperament tests and full shelters.
+-   A small number of breeds are over-represented in attacks and impounds.
+-   Local Boards in South Auckland have experienced lower rates of registration and desexing, and higher rates of attacks and impounds.
 
 ## Introduction
-
-The Dog Control Act 1996 [@departmentofinternalaffairs1996] defines the obligations of dog owners and the functions, duties, and powers of territorial authorities with respect to implementing and enforcing the Act. Auckland Council is responsible for enforcing the Act in Auckland, New Zealand's largest city, and the surrounding Auckland Region. It's Dog Management Bylaw 2019 [@aucklandcouncil2025] and Policy on Dogs 2019 have both recently been updated. Auckland Council's Animal Management division has around 150 permanent staff, including five area-based field teams (Central, East, North, South and West), a regional Barking and Registration team, a Proactive team, four animal shelters (Henderson, Manukau, Silverdale, and Pukekohe), a Veterinary Services team, and management, legal, and operation support staff.
 
 Four fatal dog attacks in New Zealand in the last four years have highlighted the increase in roaming and aggressive dogs in communities across the country.
 
@@ -29,7 +34,11 @@ Four fatal dog attacks in New Zealand in the last four years have highlighted th
 -   Timothy Tu'uaki Rolleston-Bryan, a four-year-old boy, died in March 2025 following an attack on a Katikati property [@womanch2026].
 -   Mihiata Te Rore died following an attack by three dogs while visiting a property in Kaihu, Northland, in February 2026 [@anonymous2026].
 
-As part of the Dog Control Act 1996, territorial authorities are required to collect and publish data relating to dog control policies and practices. However, the data reported by Auckland Council's Animal Management division in it's annual reports is only a high-level summary of the full dataset. I made a request under the Local Government Official Information and Meetings Act 1987 [@departmentofinternalaffairs1987] on 20 November 2025 for the full dataset compiled by the Council, which was fulfilled on 18 December 2025 (request #8140017948). The raw data is available as an R package called `akldogs`[@saunders2026], and the data is also available as cleaned .csv files in the package's GitHub repository. Below is an exploration of the complete dataset in an attempt to understand Auckland's dog population and it's management.
+Recent media reports have drawn attention to dog attacks on other animals: from packs of roaming dogs killing sheep and calves in Northland [@anonymous2022], to the killing of dozens of pets in an Auckland suburb [@walton2024]. Blind Low Vision NZ is no longer placing guide dogs in certain South Auckland areas due to the high rates of dog attacks on guide dogs and their handlers [@anonymous2025a]. Residents in South Auckland communities report living in fear [@afemata2025], with elderly residents afraid to leave their homes, and children missing school for fear of encountering roaming aggressive dogs on their way to school, or within school grounds [@paddygower2025].
+
+The Dog Control Act 1996 [@departmentofinternalaffairs1996] defines the obligations of dog owners, which include registering their dog, controlling their dog at all times, and ensuring their dog "does not injure, endanger, intimidate, or otherwise cause distress to any person." The Act also lays out the functions, duties, and powers of territorial authorities, which include minimising the dangers presented by dogs in the community and ensuring the public can "use streets and public amenities without fear of attack or intimidation by dogs." Auckland Council's approach to dog control is set out in it's Dog Management Bylaw [@aucklandcouncil2025a] and Policy on Dogs [@aucklandcouncil2025b]. Auckland Council's Animal Management division has around 150 permanent staff, including five area-based field teams (Central, East, North, South and West), a regional Barking and Registration team, a Proactive team, four animal shelters (Henderson, Manukau, Silverdale, and Pukekohe), a Veterinary Services team, and management, legal, and operational support staff.
+
+Territorial authorities are required to collect and publish data relating to dog control policies and practices. Auckland Council's Animal Management division publishes a high-level summary of selected data in it's annual reports. I made a request under the Local Government Official Information and Meetings Act 1987 [@departmentofinternalaffairs1987] on 20 November 2025 for the full dataset compiled by the Council, which was fulfilled on 18 December 2025 (request #8140017948). The raw data is available as an R package called `akldogs`[@saunders2026], and the data is also available as cleaned .csv files in the package's [GitHub repository](https://github.com/tesaunders/akldogs/tree/main/data-raw). I also compiled data from Auckland Council Animal Management annual reports going back to FY2016, and this data can be found [here](/data). Below is an exploration of both data sources to understand Auckland's dog population and it's management.
 
 ## Auckland Dog Population
 
@@ -97,7 +106,7 @@ A Spearman rank correlation analysis showed that Local Boards with high current 
 
 {{< embed notebooks/data-analysis.qmd#spearman >}}
 
-Boards differed in rates of desexing and classified dogs.
+Local Boards differed in rates of desexing and classified dogs.
 
 {{< embed notebooks/mapping.qmd#map-desex >}}
 
