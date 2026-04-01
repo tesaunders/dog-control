@@ -200,7 +200,7 @@
 \title{A Decade of Decline: Confronting the Reality of Auckland's Dog
 Control Crisis Using Auckland Council Data}
 \author{Thomas E. Saunders}
-\date{2026-03-24}
+\date{2026-04-01}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -311,25 +311,26 @@ and the data is also available as cleaned .csv files in the package's
 repository}. I also compiled data from Auckland Council Animal
 Management annual reports going back to FY2016, and this data can be
 found \href{./data}{here}. Below is an exploration of both data sources
-to understand Auckland's dog population and it's management.
+to understand Auckland's dog population and it's management. All years
+are financial years (1 July prev - 30 June current).
 
 \section{Auckland Dog Population}\label{auckland-dog-population}
 
-There were 131,123 known dogs in the Auckland region as at FY2025. As
-the dog population has increased, rates of registration and desexing
-have fallen. The proportion of dogs classified as `menacing' under the
-Dog Control Act 1996, either due to their breed or behaviour, has
-doubled since 2016 to 1 in 20 dogs. A drop in the recorded dog
-population in 2018 was due to the removal of duplicate entries in the
-Auckland Council dog database, and in 2025 was due to the updating of
-the database during a registration campaign.
+There were 131,123 known dogs in the Auckland region as at 2025. As the
+dog population has increased, rates of registration and desexing have
+fallen. The proportion of dogs classified as `menacing' under the Dog
+Control Act 1996, either due to their breed or behaviour, has doubled
+since 2016 to 1 in 20 dogs. A drop in the recorded dog population in
+2018 was due to the removal of duplicate entries in the Auckland Council
+dog database, and in 2025 was due to the updating of the database during
+a registration campaign.
 
-\protect\phantomsection\label{ownership-trends}
-{\def\LTcaptype{none} % do not increment counter
+{
+
 \begin{longtable}[]{@{}rlllll@{}}
+
 \toprule\noalign{}
-Year & Known Dogs & Pop. Change (\%) & Registered (\%) & Desexed (\%) &
-Menacing (\%) \\
+Year & Known Dogs & Pop. Change & Registered & Desexed & Menacing \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -346,11 +347,18 @@ Menacing (\%) \\
 2016 & 114,519 & 4.1\% & 93.2\% & NA & 2.4\% \\
 2015 & 109,840 & 4.3\% & 91.2\% & NA & 2.7\% \\
 2014 & 105,095 & NA & 95.9\% & NA & 0.7\% \\
+
+\caption{\label{tbl-ownership}Source: Auckland Council Animal Management
+data.}
+
+\tabularnewline
+
 \end{longtable}
+
 }
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-ownership-trends}{Data
+\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-tbl-ownership}{Data
 Analysis}}
 
 Over 200 breeds are represented in the Auckland dog population. Labrador
@@ -359,9 +367,10 @@ population, with the top 10 also including the Staffordshire Bull
 Terrier and American Pit Bull Terrier, both automatically classified as
 `menacing' under the Dog Control Act 1996.
 
-\protect\phantomsection\label{top-breeds}
-{\def\LTcaptype{none} % do not increment counter
+{
+
 \begin{longtable}[]{@{}lll@{}}
+
 \toprule\noalign{}
 Breed & Count & Proportion \\
 \midrule\noalign{}
@@ -378,11 +387,18 @@ Shih Tzu & 4,216 & 3.2\% \\
 German Shepherd & 4,196 & 3.2\% \\
 American Pit Bull Terrier & 3,908 & 3.0\% \\
 Jack Russell Terrier & 3,641 & 2.8\% \\
+
+\caption{\label{tbl-top-breeds}Source: Auckland Council Animal
+Management data.}
+
+\tabularnewline
+
 \end{longtable}
+
 }
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-top-breeds}{Data
+\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-tbl-top-breeds}{Data
 Analysis}}
 
 \section{Dog Attacks}\label{dog-attacks}
@@ -408,9 +424,10 @@ each severity category.
 The rate of impounds per 1,000 dogs in the population reached 77.9 in
 2025, the highest ever.
 
-\protect\phantomsection\label{impound-rate}
-{\def\LTcaptype{none} % do not increment counter
+{
+
 \begin{longtable}[]{@{}rllr@{}}
+
 \toprule\noalign{}
 Year & Known Dogs & Impounded Dogs & Impound Rate \\
 \midrule\noalign{}
@@ -429,19 +446,27 @@ Year & Known Dogs & Impounded Dogs & Impound Rate \\
 2016 & 114,519 & 8,614 & 75.2 \\
 2015 & 109,840 & 9,432 & 85.9 \\
 2014 & 105,095 & 7,373 & 70.2 \\
+
+\caption{\label{tbl-impound-rate}Source: Auckland Council Animal
+Management data.}
+
+\tabularnewline
+
 \end{longtable}
+
 }
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-impound-rate}{Data
+\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-tbl-impound-rate}{Data
 Analysis}}
 
 The rate of impounds differed markedly by breed, with a 3 times
 difference even within the top 10.
 
-\protect\phantomsection\label{impounds-breed}
-{\def\LTcaptype{none} % do not increment counter
+{
+
 \begin{longtable}[]{@{}lllr@{}}
+
 \toprule\noalign{}
 Breed & Impounds & Population & Impound Rate \\
 \midrule\noalign{}
@@ -458,11 +483,18 @@ Siberian Husky & 149 & 1,330 & 112.0 \\
 Catahoula Leopard & 24 & 228 & 105.3 \\
 Neapolitan Mastiff & 29 & 293 & 99.0 \\
 Huntaway & 300 & 3,191 & 94.0 \\
+
+\caption{\label{tbl-impounds-breed}Source: Auckland Council Animal
+Management data.}
+
+\tabularnewline
+
 \end{longtable}
+
 }
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-impounds-breed}{Data
+\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-tbl-impounds-breed}{Data
 Analysis}}
 
 The proportion of impounded dogs that were euthanised was steadily
@@ -475,10 +507,9 @@ However, since then it climbed dramatically to reach 60.8\% in 2025.
 \href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-impound-outcome}{Data
 Analysis}}
 
-Most seized or uncollected dogs were euthanised because they failed a
-temperament test (50.1\%), and were therefore unsuitable for adoption.
-But a quarter of euthanised dogs were put down because the animal
-shelter was full.
+Most uncollected dogs were euthanised because they failed a temperament
+test (50.1\%), and were therefore unsuitable for adoption. But a quarter
+of euthanised dogs were put down because the animal shelter was full.
 
 Some dog breeds were significantly over-represented in euthanised dogs
 compared to the overall dog population. For example, Staffordshire Bull
@@ -494,45 +525,63 @@ of euthanised dogs.
 \href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-euth-breed}{Data
 Analysis}}
 
-\section{Compliance}\label{compliance}
-
 The number of infringements issued by Animal Management officers under
 the Dog Control Act 1996 tripled between 2024 and 2025, from 6,387 to
-17,430, the majority of which were failure to register a dog. Despite
+17,430. The majority were issued for failing to register a dog. Despite
 this, the number of prosecutions and appeals brought by Animal
 Management has dropped from around 197 in 2016 to 141 in 2025.
 
 \section{Regional Statistics}\label{regional-statistics}
 
-Auckland's 21 Local Boards can be grouped into 5 regions (north, south,
-east, west, central).
+Auckland's 21 Local Boards can be grouped into 5 regions (North, South,
+East, West, and Central).
 
-\protect\phantomsection\label{map-regions-boards}
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-mapping-fig-regions-boards-output-1.png}}
+
+}
+
+\caption{\label{fig-regions-boards}Left: Auckland regions (North = blue,
+West = red, Central = green, East = orange, South = purple). Right:
+Auckland's 21 Local Boards, coloured based on their parent region.}
+
+\end{figure}%
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/mapping-preview.html\#cell-map-regions-boards}{Mapping}}
+\href{https://tesaunders.github.io/dog-control/notebooks/mapping-preview.html\#cell-fig-regions-boards}{Mapping}}
 
-Regional dog population.
+Most known dogs are found in the north, and the fewest are in the east.
 
-\protect\phantomsection\label{region-pop}
-{\def\LTcaptype{none} % do not increment counter
+{
+
 \begin{longtable}[]{@{}ll@{}}
+
 \toprule\noalign{}
 Region & Dogs \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-north & 43,051 \\
-south & 33,754 \\
-central & 25,368 \\
-west & 20,046 \\
-east & 8,904 \\
+North & 43,051 \\
+South & 33,754 \\
+Central & 25,368 \\
+West & 20,046 \\
+East & 8,904 \\
+
+\caption{\label{tbl-region-pop}Source: Auckland Council Animal
+Management data.}
+
+\tabularnewline
+
 \end{longtable}
+
 }
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-region-pop}{Data
+\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-tbl-region-pop}{Data
 Analysis}}
 
 Between 2021 and 2025, all Local Board areas experienced an increase in
@@ -540,9 +589,10 @@ their dog population. While the median increase was 9\%, Māngere-Ōtāhuhu
 and Ōtara-Papatoetoe Local Boards had significantly higher growth based
 on an analysis of the interquartile range.
 
-\protect\phantomsection\label{board-pop}
-{\def\LTcaptype{none} % do not increment counter
+{
+
 \begin{longtable}[]{@{}lllllll@{}}
+
 \toprule\noalign{}
 Local Board & 2021 & 2022 & 2023 & 2024 & 2025 & Change \\
 \midrule\noalign{}
@@ -591,11 +641,18 @@ Rodney Local Board Area & 12,152 & 12,555 & 12,976 & 13,245 & 12,635 &
 4.0\% \\
 Waiheke Local Board Area & 1,180 & 1,200 & 1,271 & 1,272 & 1,207 &
 2.3\% \\
+
+\caption{\label{tbl-board-pop}Source: Auckland Council Animal Management
+data.}
+
+\tabularnewline
+
 \end{longtable}
+
 }
 
 \textsubscript{Source:
-\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-board-pop}{Data
+\href{https://tesaunders.github.io/dog-control/notebooks/data-analysis-preview.html\#cell-tbl-board-pop}{Data
 Analysis}}
 
 Local Board areas differed greatly on rates of registration, desexing,

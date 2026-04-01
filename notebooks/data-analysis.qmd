@@ -38,9 +38,10 @@ report_data <- report_files |>
   map(read_csv)
 ```
 
+Simplify some column names
+
 ```{r}
 registration <- registration  |> 
-  clean_breed_names(starts_with("animal_breed")) |> 
   rename(suburb = suburb_name)
 
 rfs <- rename(rfs, suburb = location_suburb_name)
@@ -48,16 +49,12 @@ rfs <- rename(rfs, suburb = location_suburb_name)
 
 ## Auckland Dog Population Overview
 
-```{r}
-reg_2025 <-
-  registration |> 
-  filter(sheet_name == "FY25")
-```
-
 As the dog population has increased, rates of registration and desexing have fallen, while rates of menacing dog ownership have increased.
 
 ```{r}
-#| label: ownership-trends
+#| label: tbl-ownership
+#| tbl-cap: "Source: Auckland Council Animal Management data."
+#| tbl-cap-location: bottom
 
 ownership_trends <-
   report_data$ownership |>
@@ -79,33 +76,89 @@ ownership_trends <-
   rename(
     "Year" = year,
     "Known Dogs" = dogs,
-    "Pop. Change (%)" = pc_change,
-    "Registered (%)" = reg_pc,
-    "Desexed (%)" = desex_pc,
-    "Menacing (%)" = men_pc
+    "Pop. Change" = pc_change,
+    "Registered" = reg_pc,
+    "Desexed" = desex_pc,
+    "Menacing" = men_pc
   ) |> 
   mutate(
-    across(contains("%"),
+    across("Pop. Change":"Menacing",
            ~ scales::percent(., accuracy = 0.1)),
     "Known Dogs" = format(`Known Dogs`, big.mark = ",")
   )
 
 ownership_trends |> 
   kable() |> 
-  kable_styling()
+  kable_styling(full_width = FALSE)
+```
+
+Standarise the spelling of primary breeds
+
+```{r}
+breed_lookup <- akldogs::breeds
+
+registration <- registration |>
+  left_join(breed_lookup, by = c("animal_breed_description" = "raw_name")) |>
+  rename(breed_standardised = standardised_name) |> 
+  relocate(breed_standardised, .after = animal_breed_description)
+
+impounds <- impounds |>
+  left_join(breed_lookup, by = c("primary_breed" = "raw_name")) |>
+  rename(breed_standardised = standardised_name) |> 
+  relocate(breed_standardised, .after = primary_breed)
+```
+
+Investigate breed mismatches between registration and impound data. 
+
+The breed recorded in impound data does not match the breed for the dog with the same animal_id in the registration data, in over 6,000 cases. The rest of the analyses in this notebook use the data as provided by Animal Management, but noting this for follow up.
+
+```{r}
+comparison_by_id <- inner_join(
+  registration |> select(animal_id, breed_reg = clean_name),
+  impounds     |> select(dog_id, breed_imp = clean_name),
+  by = c("animal_id" = "dog_id")
+) |>
+  unique() |> 
+  mutate(is_match = (breed_reg == breed_imp))
+
+comparison_by_id |> 
+  filter(is_match == FALSE) |> 
+  write_csv("../outputs/breed_mismatches.csv")
+
+match_summary <- comparison_by_id |>
+  summarise(
+    total_dogs_checked = n(),
+    perfect_matches = sum(is_match),
+    mismatches = sum(!is_match),
+    accuracy_rate = mean(is_match) * 100
+  )
+
+top_mismatches <- comparison_by_id |>
+  filter(!is_match) |>
+  count(breed_reg, breed_imp, sort = TRUE) |>
+  rename(
+    reg_says = breed_reg,
+    impound_says = breed_imp,
+    frequency = n
+  )
+
+head(top_mismatches, 10)
 ```
 
 Top 10 primary breeds as at FY2025:
 
 ```{r}
-#| label: top-breeds
+#| label: tbl-top-breeds
+#| tbl-cap: "Source: Auckland Council Animal Management data."
+#| tbl-cap-location: bottom
 
-primary_breed <- reg_2025 |> 
-  calc_proportions("animal_breed_description", count_name = "primary_breed")
+primary_breed <- registration |> 
+  filter(sheet_name == "FY25") |> 
+  calc_proportions("breed_standardised", count_name = "primary_breed")
 
 primary_breed |> 
   rename(
-    "Breed" = animal_breed_description,
+    "Breed" = breed_standardised,
     "Count" = primary_breed,
     "Proportion" = prop
   ) |> 
@@ -121,7 +174,8 @@ primary_breed |>
 Dog population secondary breed counts
 
 ```{r}
-secondary_breed <- reg_2025 |> 
+secondary_breed <- registration |> 
+  filter(sheet_name == "FY25") |> 
   calc_proportions("animal_breed2_description", count_name = "secondary_breed")
 
 head(secondary_breed, n = 10)
@@ -131,10 +185,11 @@ Primary breeds most commonly classified as 'menacing' due to behaviour
 
 ```{r}
 menacing_breed <-
-  reg_2025 |>
+  registration |> 
+  filter(sheet_name == "FY25") |> 
   filter(classification == "Menacing - observed or reported behaviour of dog") |> 
-  count(animal_breed_description, name = "menacing") |>
-  left_join(primary_breed |> rename(primary_prop = prop), by = join_by(animal_breed_description)) |>
+  count(breed_standardised, name = "menacing") |>
+  left_join(primary_breed |> rename(primary_prop = prop), by = join_by(breed_standardised)) |>
   filter(primary_breed > 100) |> 
   mutate(menacing_prop = menacing / primary_breed) |> 
   arrange(desc(menacing_prop)) 
@@ -179,7 +234,9 @@ ggplot(attack_rate |> filter(year > 2015), aes(x = year, y = attack_rate)) +
 Impounds
 
 ```{r}
-#| label: impound-rate
+#| label: tbl-impound-rate
+#| tbl-cap: "Source: Auckland Council Animal Management data."
+#| tbl-cap-location: bottom
 
 impound_rate <-
   report_data$ownership |> 
@@ -208,6 +265,29 @@ impound_rate |>
   kable_styling()
 ```
 
+Look at repeat impounds
+
+```{r}
+rep_impounds <- impounds |> 
+  drop_na(dog_id) |> 
+  group_by(dog_id) |> 
+  add_count(name = "impounded_n") |> 
+  ungroup() |> 
+  select(dog_id, impounded_n, impound_date, impound_reason, status, suburb, desexed, clean_name) |> 
+  group_by(dog_id) |> 
+  reframe(
+    impounded_n = impounded_n,
+    reason = impound_reason,
+    breed = clean_name
+  ) |> 
+  arrange(desc(impounded_n)) |> 
+  select(dog_id, impounded_n, breed) |> 
+  unique()
+
+rep_impounds |> 
+  count(impounded_n) |> 
+  mutate(proportion = n / sum(n))
+```
 
 Top 3 primary breeds for each attack severity rating for impounded dogs in FY2024
 
@@ -216,7 +296,7 @@ attack_severity <-
   impounds |> 
   filter(impound_date > "2023-07-01" & !is.na(severity)) |> 
   group_by(severity) |> 
-  count(primary_breed) |> 
+  count(breed_standardised) |> 
   arrange(desc(severity), desc(n))
 
 attack_severity |> 
@@ -258,7 +338,7 @@ Impound outcome by primary breed (population and impound data are both FY2024)
 
 breed_data <- registration |>
   filter(sheet_name == "FY24") |>
-  count(primary_breed = animal_breed_description, name = "n_pop") |>
+  count(primary_breed = breed_standardised, name = "n_pop") |>
   mutate(prop_pop = n_pop / sum(n_pop)) |>
   inner_join(
     impounds |>
@@ -374,7 +454,9 @@ report_data$enforcement |>
 Known dogs
 
 ```{r}
-#| label: region-pop
+#| label: tbl-region-pop
+#| tbl-cap: "Source: Auckland Council Animal Management data."
+#| tbl-cap-location: bottom
 
 regions_dogs <- 
   registration |>
@@ -400,7 +482,8 @@ regions_dogs |>
     "Dogs" = "known_region"
   ) |> 
   mutate(
-    Dogs = format(Dogs, big.mark = ",")
+    Dogs = format(Dogs, big.mark = ","),
+    Region = tools::toTitleCase(Region)
   ) |> 
   kable() |> 
   kable_styling()
@@ -409,7 +492,9 @@ regions_dogs |>
 Dog population trends in each Local Board
 
 ```{r}
-#| label: board-pop
+#| label: tbl-board-pop
+#| tbl-cap: "Source: Auckland Council Animal Management data."
+#| tbl-cap-location: bottom
 
 dogs_board <-
   registration |> 
@@ -482,7 +567,7 @@ regions_2025 <-
                                str_detect(classification, "Menacing|Dangerous") ~ TRUE)
   ) |> 
   left_join(regions_dogs, by = join_by(suburb)) |> 
-  select(current_reg, owner_reg, animal_breed_description, animal_desexed, classification, suburb, local_board:known_region) 
+  select(current_reg, owner_reg, breed_standardised, animal_desexed, classification, suburb, local_board:known_region) 
   
 regions_reg <- 
   regions_2025 |>
@@ -637,7 +722,7 @@ regions_breed <-
   filter(sheet_name == "FY25") |> 
   left_join(locality, by = join_by(suburb)) |> 
   group_by(region) |> 
-  count(animal_breed_description, name = "count") |> 
+  count(breed_standardised, name = "count") |> 
   arrange(desc(count), .by_group = TRUE) |> 
   left_join(regions_dogs |> select(region, known_region) |> unique(), by = join_by(region)) |>
   mutate(
@@ -651,7 +736,7 @@ Compare regional breed profiles statistically
 breeds_region <- regions_breed |>
   perform_chisq(
     group_var = "region", 
-    cat_var = "animal_breed_description", 
+    cat_var = "breed_standardised", 
     count_var = "count"
   )
 
@@ -775,7 +860,8 @@ regions_impounds_outcome |>
   ggplot(aes(x = fct_reorder(local_board, proportion), y = proportion, fill = region)) +
   geom_col() +
   coord_flip() +
-  scale_fill_manual(values = region_colours) +
+  scale_fill_manual(values = region_colours,
+                    labels = stringr::str_to_title) +
   scale_y_continuous(labels = scales::label_percent()) +
   plot_theme() +
   theme(plot.title = element_text(hjust = 1)) +
@@ -788,14 +874,16 @@ regions_impounds_outcome |>
 Impounds by breed
 
 ```{r}
-#| label: impounds-breed
+#| label: tbl-impounds-breed
+#| tbl-cap: "Source: Auckland Council Animal Management data."
+#| tbl-cap-location: bottom
 
 impounds_breed <- impounds |>
   filter(impound_date > "2023-07-01") |>
   count(primary_breed, name = "impound_count") |>
   inner_join(
     primary_breed |> select(-prop),
-    by = join_by(primary_breed == animal_breed_description)
+    by = join_by(primary_breed == breed_standardised)
   ) |>
   mutate(impound_rate = round((impound_count / primary_breed.y) * 1000, digits = 1)) |>
   filter(primary_breed.y > 99) |>

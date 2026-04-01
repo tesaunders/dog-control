@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.10.0">
+    <meta name="generator" content="quarto-1.10.1">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -158,10 +158,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9c5e1a58ae97b3faeeb5cca0e0e2eaf1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc6d6016adaf1c7a86dcaac46e77afcc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-133a0a4dda30ced7f07b755c880e46a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e785223f05d10701a9450850344a1947.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -282,7 +282,16 @@ The following object is masked from 'package:readr':
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(<span class="fu">path_file</span>(<span class="fu">str_extract</span>(regional_files, <span class="st">"[^-]+(?=</span><span class="sc">\\</span><span class="st">.[^.]+$)"</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>              <span class="fu">path_ext_remove</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Rows: 105 Columns: 6
+<pre><code>Rows: 2284 Columns: 4
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (2): breed_reg, breed_imp
+dbl (1): animal_id
+lgl (1): is_match
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 105 Columns: 6
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
 chr (2): category, group
@@ -451,16 +460,7 @@ Projected CRS: NZGD2000 / New Zealand Transverse Mercator 2000</code></pre>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="cn">FALSE</span></span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>map_regions</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="mapping_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="mapping_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <p>Auckland Local Boards</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [8]:</pre></div><div class="cell">
@@ -473,26 +473,21 @@ Projected CRS: NZGD2000 / New Zealand Transverse Mercator 2000</code></pre>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="cn">FALSE</span></span>
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>map_boards</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="mapping_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="mapping_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <p>Join maps together</p>
-<div class="cell-container"><div class="cell-decorator"><pre>In [9]:</pre></div><div class="cell">
+<div class="cell-container"><div class="cell-decorator"><pre>In [9]:</pre></div><div id="cell-fig-regions-boards" class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>map_regions <span class="sc">+</span> map_boards</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p class=""><a href="mapping_files/figure-html/map-regions-boards-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland’s 21 Local Boards, coloured based on their parent region."><img src="mapping_files/figure-html/map-regions-boards-1.png" class="img-fluid figure-img" width="672" alt="Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland’s 21 Local Boards, coloured based on their parent region."></a></p>
-<figcaption>Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland’s 21 Local Boards, coloured based on their parent region.</figcaption>
+<div id="fig-regions-boards" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-regions-boards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
+<a href="mapping_files/figure-html/fig-regions-boards-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland’s 21 Local Boards, coloured based on their parent region."><img src="mapping_files/figure-html/fig-regions-boards-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regions-boards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland’s 21 Local Boards, coloured based on their parent region.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -524,7 +519,7 @@ Adding another scale for fill, which will replace the existing scale.</code></pr
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="mapping_files/figure-html/map-desex-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="mapping_files/figure-html/map-desex-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="mapping_files/figure-html/map-desex-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="mapping_files/figure-html/map-desex-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -550,7 +545,7 @@ Adding another scale for fill, which will replace the existing scale.</code></pr
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="mapping_files/figure-html/map-class-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="mapping_files/figure-html/map-class-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="mapping_files/figure-html/map-class-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="mapping_files/figure-html/map-class-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -576,7 +571,7 @@ Adding another scale for fill, which will replace the existing scale.</code></pr
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="mapping_files/figure-html/map-attacks-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="mapping_files/figure-html/map-attacks-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="mapping_files/figure-html/map-attacks-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="mapping_files/figure-html/map-attacks-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -600,7 +595,7 @@ Adding another scale for fill, which will replace the existing scale.</code></pr
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="mapping_files/figure-html/map-impounds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="mapping_files/figure-html/map-impounds-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="mapping_files/figure-html/map-impounds-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="mapping_files/figure-html/map-impounds-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -623,7 +618,7 @@ Adding another scale for fill, which will replace the existing scale.</code></pr
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="mapping_files/figure-html/unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="mapping_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="mapping_files/figure-html/unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="mapping_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -648,7 +643,7 @@ Adding another scale for fill, which will replace the existing scale.</code></pr
 <div class="cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="mapping_files/figure-html/map-euth-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="mapping_files/figure-html/map-euth-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p class=""><a href="mapping_files/figure-html/map-euth-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="mapping_files/figure-html/map-euth-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
