@@ -1,10 +1,3 @@
-# Standardise breed strings by swapping "Last, First" to "First Last"
-clean_breed_names <- function(data, columns) {
-  data |> 
-    mutate(across(all_of(columns), 
-                  ~ stringr::str_replace(.x, "^([^,]+),\\s*(.*)$", "\\2 \\1")))
-}
-
 # Group by a variable, count, and add a proportion column
 calc_proportions <- function(data, group_var, count_name = "n") {
   data |> 

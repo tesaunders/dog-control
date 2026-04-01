@@ -1,0 +1,2285 @@
+animal_id,breed_reg,breed_imp,is_match
+40000792200,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000764584,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000731120,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000760066,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000662965,American Pit Bull Terrier,American Bully,FALSE
+40000587461,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000674860,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000687164,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000730531,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000657958,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000587968,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000790631,American Pit Bull Terrier,Mastiff,FALSE
+40000743676,Rottweiler,Welsh Cardigan Corgi,FALSE
+40000805604,Mastiff,Staffordshire Bull Terrier,FALSE
+40000677304,American Pit Bull Terrier,Mastiff,FALSE
+40000738915,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000693814,Mastiff,Staffordshire Bull Terrier,FALSE
+40000592252,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000709753,Hungarian Vizsla,Dogue De Bordeaux,FALSE
+40000792073,American Staffordshire Terrier,Mastiff,FALSE
+40000595626,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000794076,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000655416,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000738295,Rhodesian Ridgeback,American Staffordshire Terrier,FALSE
+40000679773,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000557511,Staffordshire Bull Terrier,Mastiff,FALSE
+40000773524,Rottweiler,Pit Bull Terrier,FALSE
+40000195253,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000728103,Labrador Retriever,American Staffordshire Terrier,FALSE
+40000829465,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000794106,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000848346,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000730264,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000570550,Dogue de Bordeaux,Mastiff,FALSE
+40000771203,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000771211,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000771211,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000539173,German Shepherd,Staffordshire Bull Terrier,FALSE
+40000790879,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000790887,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000695361,Rottweiler,Shar Pei,FALSE
+40000753167,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000776906,American Bulldog,Staffordshire Bull Terrier,FALSE
+40000788963,Mastiff,American Bulldog,FALSE
+40000790917,Jack Russell Terrier,Pit Bull Terrier,FALSE
+40000827098,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000738044,German Shepherd,Border Collie,FALSE
+40000790100,Greyhound,Border Collie,FALSE
+40000646204,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000655459,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000726348,Staffordshire Bull Terrier,American Bulldog,FALSE
+40000726356,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000822231,Rhodesian Ridgeback,Labrador Retriever,FALSE
+40000684866,Shar Pei,Mastiff,FALSE
+40000742238,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000207057,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000579566,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000844847,Staffordshire Bull Terrier,Mastiff,FALSE
+40000730965,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000804802,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000262341,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000437362,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000738923,Labrador Retriever,Pit Bull Terrier,FALSE
+40000647286,Mastiff,American Staffordshire Terrier,FALSE
+40000730590,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000270069,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000473210,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000730545,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000290574,Boxer,Pit Bull Terrier,FALSE
+40000706231,Bull Mastiff,Pit Bull Terrier,FALSE
+40000717314,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000713845,Maltese,Shih Tzu,FALSE
+40000798063,American Bulldog,Pit Bull Terrier,FALSE
+40000511562,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000777260,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000820433,Border Collie,Bearded Collie,FALSE
+40000741088,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000294642,American Bulldog,Mastiff,FALSE
+40000692826,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000680143,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000393950,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000547635,Labrador Retriever,Mastiff,FALSE
+40000429343,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000832135,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000786502,Labrador Retriever,Pit Bull Terrier,FALSE
+40000451055,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000396119,Staffordshire Bull Terrier,Australian Cattle,FALSE
+40000529542,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000265057,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000353185,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000495958,Boxer,Mastiff,FALSE
+40000677975,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000833519,Shar Pei,Pit Bull Terrier,FALSE
+40000685226,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000838745,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000759130,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000584942,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000495451,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000391893,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000329136,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000499139,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000499139,Jack Russell Terrier,Whippet,FALSE
+40000743035,Shar Pei,Pit Bull Terrier,FALSE
+40000359256,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000789560,Staffordshire Bull Terrier,American Bulldog,FALSE
+40000583466,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000695345,Rottweiler,Shar Pei,FALSE
+40000751474,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000751474,Staffordshire Bull Terrier,Mastiff,FALSE
+40000782329,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000037348,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000716237,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000689337,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000305644,Shar Pei,Labrador Retriever,FALSE
+40000671314,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000600514,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000299326,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000773176,Labrador Retriever,Mastiff,FALSE
+40000803768,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000843697,Shar Pei,Rhodesian Ridgeback,FALSE
+40000608515,Mastiff,Staffordshire Bull Terrier,FALSE
+40000684173,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000556094,Bichon Frise,Shih Tzu,FALSE
+40000270697,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000475361,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000827667,Huntaway,Rottweiler,FALSE
+40000729223,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000516289,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000251900,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000687547,Bull Mastiff,Pit Bull Terrier,FALSE
+40000808298,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000802710,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000710625,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000791595,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000602975,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091020825,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000565336,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000663117,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000650422,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000325602,American Pit Bull Terrier,Border Collie,FALSE
+40000506240,Dobermann,Bull Mastiff,FALSE
+40091120633,German (Klein) Spitz,German Spitz,FALSE
+40090509685,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000787452,Labrador Retriever,Mastiff,FALSE
+40000785379,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000776426,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000275524,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000499449,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000696562,Labrador Retriever,Pit Bull Terrier,FALSE
+40000829317,Huntaway,Border Collie,FALSE
+40091116180,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000401355,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000462421,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000526276,Labrador Retriever,Pit Bull Terrier,FALSE
+40000663656,Staffordshire Bull Terrier,Mastiff,FALSE
+40000751024,American Bulldog,American Staffordshire Terrier,FALSE
+40000390803,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000827735,Staffordshire Bull Terrier,Welsh Pembroke Corgi,FALSE
+40000827735,Staffordshire Bull Terrier,Border Collie,FALSE
+40000753612,Australian Kelpie,Pit Bull Terrier,FALSE
+40000764797,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000639097,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000404413,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000567754,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000842127,Bull Mastiff,Pit Bull Terrier,FALSE
+40000654355,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000545017,Bull Mastiff,Mastiff,FALSE
+40000772862,Rhodesian Ridgeback,Staffordshire Bull Terrier,FALSE
+40000685412,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000779670,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000598390,Greyhound,Mastiff,FALSE
+40000723918,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000517544,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000703976,Labrador Retriever,Huntaway,FALSE
+40090855494,Bull Terrier,American Staffordshire Terrier,FALSE
+40000647502,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000761437,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000038158,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000759394,Rhodesian Ridgeback,Mastiff,FALSE
+40000096689,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000379923,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000586031,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000778542,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000566618,Mastiff,American Bulldog,FALSE
+40000349617,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000762832,Huntaway,Pit Bull Terrier,FALSE
+40000762832,Huntaway,Mastiff,FALSE
+40090870841,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000523838,Labrador Retriever,Mastiff,FALSE
+40000579930,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000273572,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000602525,Staffordshire Bull Terrier,Huntaway,FALSE
+40000535925,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000771483,Jack Russell Terrier,Chihuahua Smooth Coat,FALSE
+40000666728,Standard Smooth Haired Dachshund,Min. Smooth Haired Dachshund,FALSE
+40000730221,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091112037,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000303935,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000255604,Boxer,Shar Pei,FALSE
+40000591078,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000155251,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091124094,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000417922,Dobermann,Staffordshire Bull Terrier,FALSE
+40000788823,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000830862,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40091136705,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000644058,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000644058,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000785697,Labrador Retriever,Pit Bull Terrier,FALSE
+40000749828,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091115015,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090601980,Staffordshire Bull Terrier,Mastiff,FALSE
+40000302866,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000625908,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000780148,Shar Pei,Rottweiler,FALSE
+40000267084,Huntaway,Border Collie,FALSE
+40000727285,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000848680,Bull Miniature Terrier,Bull Terrier,FALSE
+40000401791,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000149537,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000011578,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090974132,Golden Retriever,Labrador Retriever,FALSE
+40000444275,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000424007,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40090985525,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000745806,Labrador Retriever,Huntaway,FALSE
+40090445180,Bull Mastiff,Mastiff,FALSE
+40000752403,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000568092,Bull Terrier,Australian Kelpie,FALSE
+40000574195,Labrador Retriever,Ridgeback,FALSE
+40000574195,Labrador Retriever,Rhodesian Ridgeback,FALSE
+40000430449,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000416527,American Staffordshire Terrier,Australian Kelpie,FALSE
+40000739601,German Short Haired Pointer,English Pointer,FALSE
+40000551408,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000602673,Standard Smooth Haired Dachshund,Labrador Retriever,FALSE
+40000602681,Standard Smooth Haired Dachshund,Min. Long Haired Dachshund,FALSE
+40000689302,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090996098,Bull Terrier,German Shepherd,FALSE
+40000735509,Bull Mastiff,Pit Bull Terrier,FALSE
+40000412378,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000361447,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40000784704,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000391877,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090379935,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000527329,Staffordshire Bull Terrier,Mastiff,FALSE
+40091037140,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000332277,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000649394,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000713661,Labrador Retriever,Pit Bull Terrier,FALSE
+40090428731,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40090989601,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000477771,Australian Cattle,Staffordshire Bull Terrier,FALSE
+40000537111,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000686532,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000570577,Labrador Retriever,Mastiff,FALSE
+40000747418,Smooth Collie,Border Collie,FALSE
+40000455581,Bull Mastiff,Dogue De Bordeaux,FALSE
+40000729592,Huntaway,Bull Terrier,FALSE
+40000405819,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000232221,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000784887,Rhodesian Ridgeback,Rough Collie,FALSE
+40000750621,Staffordshire Bull Terrier,Shar Pei,FALSE
+40091113211,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000787967,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000797296,Dogue de Bordeaux,Pit Bull Terrier,FALSE
+40090415015,Mastiff,Staffordshire Bull Terrier,FALSE
+40000792022,Mastiff,Rottweiler,FALSE
+40000747450,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000801005,Mastiff,Siberian Husky,FALSE
+40000832482,Labrador Retriever,Mastiff,FALSE
+40000802945,Greyhound,Rhodesian Ridgeback,FALSE
+40000476449,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000496445,Staffordshire Bull Terrier,Heading Dog,FALSE
+40000755119,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000207529,Huntaway,Labrador Retriever,FALSE
+40000685617,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000685617,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000766595,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000778895,Mastiff,Staffordshire Bull Terrier,FALSE
+40000234976,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000250365,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000841600,Bull Mastiff,Mastiff,FALSE
+40000841600,Bull Mastiff,Labrador Retriever,FALSE
+40000794289,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000367461,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000567207,Mastiff,American Staffordshire Terrier,FALSE
+40090750595,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000219403,Staffordshire Bull Terrier,Bull Mastiff,FALSE
+40000496415,Boxer,Staffordshire Bull Terrier,FALSE
+40000799388,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091105162,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000704565,Labrador Retriever,Boxer,FALSE
+40000307825,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000307825,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000768407,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000195040,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000827322,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000712436,Greyhound,Staffordshire Bull Terrier,FALSE
+40000239447,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000624367,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000618265,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755666,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000377785,Bull Mastiff,Pit Bull Terrier,FALSE
+40000064434,Bull Mastiff,Pit Bull Terrier,FALSE
+40000263925,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090353820,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000679633,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000055648,Catahoula Leopard,Pit Bull Terrier,FALSE
+40000622747,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000697645,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000351409,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000773389,Rottweiler,Shar Pei,FALSE
+40000773745,Rottweiler,Labrador Retriever,FALSE
+40000773745,Rottweiler,Mastiff,FALSE
+40000765858,Bulldog,Boxer,FALSE
+40000438180,Bull Terrier,Australian Cattle,FALSE
+40000193684,Rhodesian Ridgeback,Mastiff,FALSE
+40000278558,Siberian Husky,Labrador Retriever,FALSE
+40091028257,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000783783,Toy Poodle,Shih Tzu,FALSE
+40000740944,Rottweiler,Pit Bull Terrier,FALSE
+40000260926,Staffordshire Bull Terrier,Rottweiler,FALSE
+40000231691,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090888457,American Pit Bull Terrier,Rottweiler,FALSE
+40000224350,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000734030,German Shepherd,Border Collie,FALSE
+40000583229,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000779336,Shar Pei,Pit Bull Terrier,FALSE
+40000286909,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000341845,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000341853,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000361196,Long Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000583275,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000407803,Bulldog,American Bulldog,FALSE
+40000057292,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000849946,Labrador Retriever,American Staffordshire Terrier,FALSE
+40000534015,American Bulldog,Pit Bull Terrier,FALSE
+40000534015,American Bulldog,Staffordshire Bull Terrier,FALSE
+40000390838,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000464246,Mastiff,Staffordshire Bull Terrier,FALSE
+40000177530,Bull Mastiff,Mastiff,FALSE
+40000816053,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000781543,American Bulldog,Boxer,FALSE
+40091092583,Neapolitan Mastiff,Mastiff,FALSE
+40000751318,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000820344,Bull Mastiff,Pit Bull Terrier,FALSE
+40000772420,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40090353952,American Bulldog,Shar Pei,FALSE
+40000685676,German Shepherd,Belgian Shepherd (Malinois),FALSE
+40000366856,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090997353,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000741231,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000742475,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000743404,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000808697,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000772188,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000777724,Huntaway,Pit Bull Terrier,FALSE
+40000763804,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000779255,Bull Mastiff,Mastiff,FALSE
+40091105065,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000153070,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000404014,Golden Retriever,Labrador Retriever,FALSE
+40000683245,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000085261,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000821790,Labrador Retriever,Pit Bull Terrier,FALSE
+40000834337,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000585892,Labrador Retriever,Pit Bull Terrier,FALSE
+40000633655,Bulldog,Mastiff,FALSE
+40000652905,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40090847424,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000482309,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000437451,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000651461,Labrador Retriever,Pit Bull Terrier,FALSE
+40000686850,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000694101,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000281699,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000011462,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000783236,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000165265,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755658,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000755658,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755658,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40091066604,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000633633,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000816105,Whippet,Australian Cattle,FALSE
+40000173721,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000802419,Canaan,Cavalier King Charles Spaniel,FALSE
+40000077404,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000662773,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000781772,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000558097,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000530931,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000271413,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000819990,Rottweiler,Mastiff,FALSE
+40000790259,Siberian Husky,Pit Bull Terrier,FALSE
+40000465978,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091066256,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000844332,American Bulldog,Boxer,FALSE
+40000844340,American Bulldog,Boxer,FALSE
+40090913664,German Shepherd,Labrador Retriever,FALSE
+40090924577,Bull Mastiff,Mastiff,FALSE
+40000534449,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000015883,Labrador Retriever,Greyhound,FALSE
+40091106797,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000361854,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090549601,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000671101,Staffordshire Bull Terrier,Mastiff,FALSE
+40000423329,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000195776,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000780717,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000240194,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000582451,Labrador Retriever,Golden Retriever,FALSE
+40000508235,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000696546,Huntaway,Bearded Collie,FALSE
+40000552447,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000499597,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000428533,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000428541,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000255124,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000843972,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000753604,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000721222,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000782957,Border Collie,Rough Collie,FALSE
+40090469489,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000526217,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000780615,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000834035,Staffordshire Bull Terrier,Mastiff,FALSE
+40090296363,Schnauzer,Standard Poodle,FALSE
+40000481248,Bulldog,Brittish Bulldog,FALSE
+40000816886,American Cocker Spaniel,Cocker Spaniel,FALSE
+40090628250,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000848338,Nova Scotia Duck Tolling Retriever,Labrador Retriever,FALSE
+40000835185,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000578225,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000355676,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000534783,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000700357,Huntaway,Border Collie,FALSE
+40000742572,Bull Mastiff,Mastiff,FALSE
+40000153100,Boxer,Staffordshire Bull Terrier,FALSE
+40000433480,Huntaway,Border Collie,FALSE
+40000582192,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000829643,Shar Pei,Pit Bull Terrier,FALSE
+40090991843,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000418430,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000817777,Staffordshire Bull Terrier,Mastiff,FALSE
+40000817777,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000168280,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000699715,Shar Pei,Mastiff,FALSE
+40000699715,Shar Pei,Labrador Retriever,FALSE
+40000654401,Smooth Collie,Greyhound,FALSE
+40000758134,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000494528,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000480395,Bull Mastiff,Mastiff,FALSE
+40000382134,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000784712,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000771467,Foxhound,Fox Terrier (Smooth),FALSE
+40000295231,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000593399,Labrador Retriever,Rottweiler,FALSE
+40000532659,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000632645,Australian Terrier,Australian Silky Terrier,FALSE
+40000421474,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755785,Bull Terrier,Pit Bull Terrier,FALSE
+40000273084,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091113955,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000517035,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000543073,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000773109,Staffordshire Bull Terrier,American Bully,FALSE
+40000296815,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000557767,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000626572,Staffordshire Bull Terrier,Shar Pei,FALSE
+40000560989,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000535658,Shar Pei,Labrador Retriever,FALSE
+40000776545,Huntaway,Labrador Retriever,FALSE
+40000174787,Staffordshire Bull Terrier,Stumpy Tail Cattle Dog,FALSE
+40000570372,Shar Pei,Pit Bull Terrier,FALSE
+40000766889,Shar Pei,Pit Bull Terrier,FALSE
+40090989135,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000580602,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000785867,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000705006,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000544126,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000392512,Jack Russell Terrier,Staffordshire Bull Terrier,FALSE
+40000557341,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000400426,Basenji,Jack Russell Terrier,FALSE
+40000795811,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000354122,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000798446,Bull Mastiff,Mastiff,FALSE
+40000407587,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000557694,Labrador Retriever,Pit Bull Terrier,FALSE
+40090347553,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000199577,Siberian Husky,Border Collie,FALSE
+40000758657,Mastiff,Rhodesian Ridgeback,FALSE
+40000847965,Heading,Heading Dog,FALSE
+40000669727,Mastiff,Pit Bull Terrier,FALSE
+40000840116,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40000557783,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090973565,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000324134,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000826547,Huntaway,Staffordshire Bull Terrier,FALSE
+40090908598,German (Mittel) Spitz,German Spitz,FALSE
+40091099745,American Pit Bull Terrier,Siberian Husky,FALSE
+40091099745,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000702740,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000776736,Anatolian Shepherd,White Swiss Shepherd Dog,FALSE
+40000632661,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000773451,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000848419,Dalmatian,Australian Cattle,FALSE
+40000848419,Dalmatian,Boxer,FALSE
+40000655068,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000783856,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000783864,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000697739,Labrador Retriever,Pit Bull Terrier,FALSE
+40000677088,Neapolitan Mastiff,Bull Mastiff,FALSE
+40000633161,Huntaway,Labrador Retriever,FALSE
+40000540155,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090828241,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000549675,Border Collie,Heading Dog,FALSE
+40091057117,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000610035,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000711774,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000001785,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000416098,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000355056,German (Klein) Spitz,German Spitz,FALSE
+40000662293,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000480055,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000486865,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000815480,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000844095,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000795655,Labrador Retriever,Mastiff,FALSE
+40090246515,Miniature Smooth Haired Dachshund,Min. Smooth Haired Dachshund,FALSE
+40000497179,Smooth Collie,American Staffordshire Terrier,FALSE
+40000830064,Huntaway,Border Collie,FALSE
+40000252672,Bull Mastiff,Labrador Retriever,FALSE
+40000775861,German Shepherd,Border Collie,FALSE
+40000667139,Huntaway,Staffordshire Bull Terrier,FALSE
+40000208118,Smooth Coat Chihuahua,Chihuahua Long Coat,FALSE
+40000510086,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091092478,American Bulldog,Staffordshire Bull Terrier,FALSE
+40000459358,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091020078,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090998996,Standard Long Haired Dachshund,Min. Smooth Haired Dachshund,FALSE
+40000622534,American Staffordshire Terrier,American Bulldog,FALSE
+40000500269,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000778577,American Staffordshire Terrier,Smooth Collie,FALSE
+40000605486,Mastiff,Shar Pei,FALSE
+40000231675,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000717489,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000722806,Boxer,American Bulldog,FALSE
+40000727484,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090526172,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000174701,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000059244,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000578047,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000818455,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000789668,American Bulldog,American Bully,FALSE
+40000557945,Australian Kelpie,Pit Bull Terrier,FALSE
+40090935153,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000738656,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40091121397,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000360866,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000746985,Bull Mastiff,Pit Bull Terrier,FALSE
+40000226566,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000746209,American Bulldog,Shar Pei,FALSE
+40000787770,Bull Mastiff,Bull Terrier,FALSE
+40000787770,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40000489915,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000220789,Golden Retriever,Standard Poodle,FALSE
+40000802958,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000786642,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000804233,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40090498780,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000061907,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090853017,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40000671136,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40091091854,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090371233,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090302924,Miniature Schnauzer,Schnauzer,FALSE
+40000396046,Labrador Retriever,Australian Cattle,FALSE
+40090486626,Miniature Poodle,Miniature Schnauzer,FALSE
+40091132577,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000759785,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090550575,Standard Poodle,Toy Poodle,FALSE
+40000561810,Staffordshire Bull Terrier,Greyhound,FALSE
+40000650074,Border Collie,Shetland Sheepdog,FALSE
+40000669085,Mastiff,Bull Mastiff,FALSE
+40000775756,Basenji,Staffordshire Bull Terrier,FALSE
+40000739377,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090617224,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000526837,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40090961499,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000756522,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000839398,Cross,Labrador Retriever,FALSE
+40000840108,Cross,Staffordshire Bull Terrier,FALSE
+40000302416,American Pit Bull Terrier,English Pointer,FALSE
+40090945825,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000844960,Rottweiler,Mastiff,FALSE
+40000553664,Labrador Retriever,Pit Bull Terrier,FALSE
+40000791891,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000485073,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000805639,Bull Mastiff,Boxer,FALSE
+40000747043,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000804853,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000804861,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000804861,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091021198,Maltese,Australian Silky Terrier,FALSE
+40000079342,Miniature Schnauzer,Toy Poodle,FALSE
+40000234127,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090861346,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40090871341,Huntaway,Border Collie,FALSE
+40000735231,German Short Haired Pointer,Pit Bull Terrier,FALSE
+40000814042,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000783694,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000525615,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090907737,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000808239,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000288189,Labrador Retriever,Pit Bull Terrier,FALSE
+40090345976,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40000695655,Mastiff,Staffordshire Bull Terrier,FALSE
+40000480241,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000743943,Bull Mastiff,Dogue De Bordeaux,FALSE
+40000194796,Labrador Retriever,American Staffordshire Terrier,FALSE
+40000513077,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000601103,Huntaway,Greyhound,FALSE
+40090818629,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000746470,Staffordshire Bull Terrier,Shar Pei,FALSE
+40090549989,Pug,Fox Terrier (Smooth),FALSE
+40090487010,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000713963,Labrador Retriever,Mastiff,FALSE
+40090757204,Labrador Retriever,Mastiff,FALSE
+40000772617,American Bulldog,Pit Bull Terrier,FALSE
+40000116167,Labrador Retriever,Greyhound,FALSE
+40000247261,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000005675,German Shepherd,Labrador Retriever,FALSE
+40000462723,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090726058,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000222498,Bichon Frise,Maltese,FALSE
+40000429548,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090901720,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000719945,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40000766471,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000430821,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000824655,American Staffordshire Terrier,Mastiff,FALSE
+40000732100,Boxer,American Bulldog,FALSE
+40090996004,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000814255,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091114463,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091114463,American Pit Bull Terrier,Siberian Husky,FALSE
+40000246214,Greyhound,Heading Dog,FALSE
+40000172585,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090610580,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090460554,Mastiff,Staffordshire Bull Terrier,FALSE
+40000706037,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000022766,Toy Poodle,Mastiff,FALSE
+40000850553,Miniature Schnauzer,Schnauzer,FALSE
+40090807627,Bichon Frise,Maltese,FALSE
+40091066736,Maltese,Bichon Frise,FALSE
+40000723322,American Staffordshire Terrier,Mastiff,FALSE
+40090628374,Standard Poodle,Miniature Poodle,FALSE
+40000274838,Hungarian Vizsla,Huntaway,FALSE
+40090988729,Neapolitan Mastiff,Shar Pei,FALSE
+40000851428,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000594182,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000212212,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000453503,Bearded Collie,Cairn Terrier,FALSE
+40000595316,Labrador Retriever,Pit Bull Terrier,FALSE
+40090931336,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000403727,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000076300,Shar Pei,Rottweiler,FALSE
+40090658893,Bichon Frise,Maltese,FALSE
+40090279000,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000735495,Staffordshire Bull Terrier,Mastiff,FALSE
+40000699235,American Bulldog,Boxer,FALSE
+40000819915,Border Collie,Labrador Retriever,FALSE
+40000004865,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000180043,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000167519,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090947941,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000372856,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000800408,Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000590969,Shar Pei,Pit Bull Terrier,FALSE
+40000221327,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000319467,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090455089,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000795485,Shar Pei,Mastiff,FALSE
+40000795485,Shar Pei,Bull Mastiff,FALSE
+40091006466,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090991118,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000741843,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000047009,Border Collie,Bearded Collie,FALSE
+40000592503,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000590500,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000689698,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000699324,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000676715,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000340318,Labrador Retriever,German Shepherd,FALSE
+40091109168,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000751615,American Bulldog,Staffordshire Bull Terrier,FALSE
+40090684436,Samoyed,Border Collie,FALSE
+40000837565,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40090360495,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000826040,Neapolitan Mastiff,Mastiff,FALSE
+40000826059,Neapolitan Mastiff,Border Collie,FALSE
+40000640834,Boxer,Mastiff,FALSE
+40091099049,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000055753,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000256975,Shih Tzu,Maltese,FALSE
+40091038120,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000221195,Dalmatian,Australian Cattle,FALSE
+40090758073,King Charles Spaniel,Cavalier King Charles Spaniel,FALSE
+40090758073,King Charles Spaniel,Shih Tzu,FALSE
+40000713939,Jack Russell Terrier,Whippet,FALSE
+40000430252,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000267971,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000576753,Huntaway,Staffordshire Bull Terrier,FALSE
+40000671993,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40000757138,Pomeranian,Chihuahua Smooth Coat,FALSE
+40090831609,Belgian (Tervueren) Shepherd,Belgian Shepherd (Malinois),FALSE
+40090374941,Shih Tzu,Maltese,FALSE
+40000394116,Labrador Retriever,Shar Pei,FALSE
+40000345522,Dalmatian,Staffordshire Bull Terrier,FALSE
+40000702309,Huntaway,Hungarian Puli,FALSE
+40090696590,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000672655,Labrador Retriever,Huntaway,FALSE
+40090478410,Siberian Husky,Mastiff,FALSE
+40000346618,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090523653,Standard Poodle,Miniature Poodle,FALSE
+40000745925,Golden Retriever,Labrador Retriever,FALSE
+40000809265,Mastiff,Pit Bull Terrier,FALSE
+40000290884,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000843387,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000240577,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091071578,Standard Wire Haired Dachshund,Std. Wire Haired Dachshund,FALSE
+40000733875,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000238084,Fox (Smooth) Terrier,Jack Russell Terrier,FALSE
+40000789080,Jack Russell Terrier,Beagle,FALSE
+40000202314,Australian Cattle,Mastiff,FALSE
+40091141959,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091117020,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000340725,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000340733,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090769393,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000081096,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000544142,Pyrenean Mountain,Pyrenean Mountain Dog,FALSE
+40000266878,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000757901,Shih Tzu,Tibetan Spaniel,FALSE
+40000266479,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000755100,Staffordshire Bull Terrier,Mastiff,FALSE
+40090294123,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000723837,Australian Kelpie,Pit Bull Terrier,FALSE
+40090664907,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000343708,Labrador Retriever,Pit Bull Terrier,FALSE
+40090889178,Labrador Retriever,Rottweiler,FALSE
+40000454283,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000760422,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000704646,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090879032,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000397336,Border Collie,German Shepherd,FALSE
+40000097960,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000370748,Bichon Frise,Toy Poodle,FALSE
+40090170092,Cavalier King Charles Spaniel,Maltese,FALSE
+40090235615,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000727875,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40091136807,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000620035,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090382081,Miniature Schnauzer,Schnauzer,FALSE
+40000579531,Labrador Retriever,Mastiff,FALSE
+40000691188,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000389975,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000457118,Greyhound,Bearded Collie,FALSE
+40000181929,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40091017182,Border Collie,Staffordshire Bull Terrier,FALSE
+40091083223,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000378528,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000839509,Boxer,Staffordshire Bull Terrier,FALSE
+40000829333,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40091013888,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000709265,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000709273,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090975880,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000524133,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000842291,Border Collie,Staffordshire Bull Terrier,FALSE
+40000843506,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000408273,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000259278,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000699265,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000640427,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40090435865,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000606318,Great Dane,Pit Bull Terrier,FALSE
+40000658369,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000307914,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091027485,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000629563,Heading,Border Collie,FALSE
+40090913214,Rottweiler,Mastiff,FALSE
+40000464882,Rottweiler,Labrador Retriever,FALSE
+40000271111,American Bulldog,Pit Bull Terrier,FALSE
+40000367372,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091051178,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000308031,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000786863,American Staffordshire Terrier,Mastiff,FALSE
+40000378307,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090959370,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000821758,Miniature Poodle,Bichon Frise,FALSE
+40000238055,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090671520,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090601948,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000775268,Rhodesian Ridgeback,Pit Bull Terrier,FALSE
+40091096287,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000247946,Schnauzer,Miniature Schnauzer,FALSE
+40090347014,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000556892,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000818536,Cross,Mastiff,FALSE
+40000593364,Rottweiler,Pit Bull Terrier,FALSE
+40000168450,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090770197,Greyhound,Staffordshire Bull Terrier,FALSE
+40000774275,Maltese,Miniature Poodle,FALSE
+40000558607,Labrador Retriever,Australian Kelpie,FALSE
+40090567265,Siberian Husky,Alaskan Malamute,FALSE
+40000280404,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000285495,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000792723,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000814285,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000773370,Golden Retriever,Staffordshire Bull Terrier,FALSE
+40090400845,Dalmatian,Staffordshire Bull Terrier,FALSE
+40090933428,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000844405,Huntaway,German Shepherd,FALSE
+40090883978,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000811051,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000597416,Shih Tzu,Maltese,FALSE
+40090655304,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000837476,Pug,Chihuahua Smooth Coat,FALSE
+40090972857,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090616155,Dogue de Bordeaux,Mastiff,FALSE
+40000840035,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000322455,Australian Cattle,Miniature Schnauzer,FALSE
+40000843050,Huntaway,Pit Bull Terrier,FALSE
+40000730396,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091114064,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000596266,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000716164,Staffordshire Bull Terrier,Huntaway,FALSE
+40000771815,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000789501,Mastiff,Staffordshire Bull Terrier,FALSE
+40000674895,Belgian (Malinois) Shepherd,Belgian Shepherd (Tervuren),FALSE
+40000674335,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000590977,Dobermann,Australian Kelpie,FALSE
+40000784186,Welsh Cardigan Corgi,Welsh Pembroke Corgi,FALSE
+40000261590,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000643715,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000643715,Labrador Retriever,Mastiff,FALSE
+40000585825,Miniature Poodle,Toy Poodle,FALSE
+40090465270,Australian Terrier,Australian Silky Terrier,FALSE
+40000455387,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090331649,Smooth Collie,Border Collie,FALSE
+40090846555,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090870418,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090524250,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000180685,Cocker Spaniel,Miniature Poodle,FALSE
+40000566332,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090476825,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000152082,Huntaway,Heading Dog,FALSE
+40000706126,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000807410,Rhodesian Ridgeback,American Staffordshire Terrier,FALSE
+40000792480,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090730875,Labrador Retriever,Pit Bull Terrier,FALSE
+40000383408,Fox (Smooth) Terrier,Miniature Pinscher,FALSE
+40000764924,Shar Pei,Pit Bull Terrier,FALSE
+40090679998,Shar Pei,Staffordshire Bull Terrier,FALSE
+40090350856,Bichon Frise,Shih Tzu,FALSE
+40091022860,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40000773494,Mastiff,Labrador Retriever,FALSE
+40090975171,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090975295,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000564275,Shar Pei,Staffordshire Bull Terrier,FALSE
+40090710364,Whippet,Greyhound,FALSE
+40090103018,Miniature Schnauzer,Schnauzer,FALSE
+40090839731,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090816316,Standard Poodle,Miniature Poodle,FALSE
+40000077730,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000739962,Staffordshire Bull Terrier,Australian Kelpie,FALSE
+40000744524,Staffordshire Bull Terrier,Australian Cattle,FALSE
+40000517293,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090323557,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000650392,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000313027,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000190561,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000739482,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000675557,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000752136,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000159699,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000160107,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000771033,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000259871,Australian Kelpie,Australian Cattle,FALSE
+40090609493,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40091136675,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000286550,American Bulldog,Bulldog,FALSE
+40000672078,Jack Russell Terrier,Maltese,FALSE
+40090465475,Alaskan Malamute,Siberian Husky,FALSE
+40091066779,Labrador Retriever,Pit Bull Terrier,FALSE
+40090575726,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000249264,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000244041,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000495295,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090177941,King Charles Spaniel,Cavalier King Charles Spaniel,FALSE
+40000305687,American Bulldog,Mastiff,FALSE
+40000754589,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40090797842,Miniature Schnauzer,Schnauzer,FALSE
+40000378579,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090715102,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000145655,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000093065,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090445415,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40090802927,Portugese Podengo,Portuguese Water Dog,FALSE
+40000700306,Australian Shepherd,Australian Cattle,FALSE
+40091048312,Mastiff,Australian Cattle,FALSE
+40000556485,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090913524,Cocker Spaniel,Schnauzer,FALSE
+40000511368,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090631915,German (Klein) Spitz,German Spitz,FALSE
+40000734502,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40090451601,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000385338,Mastiff,Pit Bull Terrier,FALSE
+40090812876,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090615477,Neapolitan Mastiff,Mastiff,FALSE
+40000185762,Labrador Retriever,American Staffordshire Terrier,FALSE
+40000747685,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000725538,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000733935,Border Collie,Bearded Collie,FALSE
+40091037248,Bull Mastiff,Mastiff,FALSE
+40090601379,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000520189,Bichon Frise,Miniature Poodle,FALSE
+40000520745,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000494250,Huntaway,Mastiff,FALSE
+40000343376,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000535348,Dutch Shepherd,Staffordshire Bull Terrier,FALSE
+40000380948,Shar Pei,Staffordshire Bull Terrier,FALSE
+40090738307,Standard Smooth Haired Dachshund,Std. Smooth Haired Dachshund,FALSE
+40000072127,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000276636,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000160765,Bull Mastiff,Australian Cattle,FALSE
+40000781497,Staffordshire Bull Terrier,Mastiff,FALSE
+40000292178,Huntaway,Bull Terrier,FALSE
+40000396879,Huntaway,Greyhound,FALSE
+40090602928,Fox (Smooth) Terrier,Jack Russell Terrier,FALSE
+40090602928,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000220452,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000837352,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000116116,Heading,Heading Dog,FALSE
+40000743951,American Bulldog,Pit Bull Terrier,FALSE
+40090669690,American Pit Bull Terrier,Mastiff,FALSE
+40000273432,Labrador Retriever,Mastiff,FALSE
+40000473105,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40090712575,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000851045,Huntaway,Labrador Retriever,FALSE
+40000661378,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091075786,Jack Russell Terrier,Australian Kelpie,FALSE
+40090919735,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000069150,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090386397,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000523544,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090671334,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090671334,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40090518515,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000583385,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000390331,Bull Mastiff,Mastiff,FALSE
+40000440258,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000762204,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000069096,Mastiff,Staffordshire Bull Terrier,FALSE
+40090451504,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090866224,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000404480,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091120366,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000118785,Labrador Retriever,Pit Bull Terrier,FALSE
+40091114668,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000569366,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40090896514,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000332226,Shih Tzu,Bichon Frise,FALSE
+40000301193,Fox (Wire) Terrier,Fox Terrier (Smooth),FALSE
+40091069751,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000187307,Bulldog,Siberian Husky,FALSE
+40000493319,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000016340,German Shepherd,Rottweiler,FALSE
+40090618204,Standard Poodle,Toy Poodle,FALSE
+40000476007,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091051720,Shih Tzu,Shiba Inu,FALSE
+40090998414,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000734855,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000209777,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090748272,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000225098,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091005931,Smooth Coat Chihuahua,Lhasa Apso,FALSE
+40000083943,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090486435,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000654185,Staffordshire Bull Terrier,Mastiff,FALSE
+40000558505,Standard Smooth Haired Dachshund,Std. Smooth Haired Dachshund,FALSE
+40000579302,Shih Tzu,Tibetan Spaniel,FALSE
+40090366825,Labrador Retriever,Golden Retriever,FALSE
+40090772912,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000269729,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000649777,Heading,Australian Kelpie,FALSE
+40090851847,Shih Tzu,Maltese,FALSE
+40000792464,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000754848,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000527507,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000257607,American Bulldog,Pit Bull Terrier,FALSE
+40090252463,Standard Smooth Haired Dachshund,Std. Smooth Haired Dachshund,FALSE
+40000704689,Rottweiler,Pit Bull Terrier,FALSE
+40090914350,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000353304,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000650139,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000298656,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000820964,Golden Retriever,Mastiff,FALSE
+40090337086,Fox (Smooth) Terrier,Staffordshire Bull Terrier,FALSE
+40000141795,Basenji,Heading Dog,FALSE
+40000626653,Labrador Retriever,Shar Pei,FALSE
+40090503445,Belgian (Groenendael) Shepherd,Belgian Shepherd (Malinois),FALSE
+40091106940,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090923185,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090890826,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000545535,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40090990995,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000657966,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090617518,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000011799,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000848974,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000598412,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40091116105,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000763936,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40091053367,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000518775,English Springer Spaniel,Springer Spaniel,FALSE
+40000063268,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000348963,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090558406,Lagotto,Lagotto Romagnolo,FALSE
+40000776582,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000084710,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000298834,Huntaway,German Short Haired Pointer,FALSE
+40000775128,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40091085455,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000510728,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000435726,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000435726,American Pit Bull Terrier,American Bulldog,FALSE
+40090881363,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000112102,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000815125,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000330932,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000587755,Shih Tzu,Maltese,FALSE
+40091011451,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091084289,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000565182,Staffordshire Bull Terrier,Border Collie,FALSE
+40000471056,Labrador Retriever,Border Collie,FALSE
+40090502834,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090671822,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000608833,Heading,Heading Dog,FALSE
+40000450628,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40090542445,Bichon Frise,Maltese,FALSE
+40090933657,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000301282,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000106390,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000654177,Rhodesian Ridgeback,Pit Bull Terrier,FALSE
+40090708815,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091082383,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090616619,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090530358,Maltese,Shih Tzu,FALSE
+40000266932,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000462812,Mastiff,Boxer,FALSE
+40090478186,Fox (Smooth) Terrier,Staffordshire Bull Terrier,FALSE
+40090389698,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000364772,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000084635,Border Collie,Huntaway,FALSE
+40000359019,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000791379,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40090606141,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40091036446,Bichon Frise,Miniature Poodle,FALSE
+40000691110,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090816332,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090656548,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40090795858,Smooth Coat Chihuahua,Chihuahua Long Coat,FALSE
+40090856997,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000687628,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40000687628,Long Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000695375,Border Collie,Huntaway,FALSE
+40000523277,Fox (Wire) Terrier,Fox Terrier (Smooth),FALSE
+40090910959,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40090680961,Standard Smooth Haired Dachshund,Min. Long Haired Dachshund,FALSE
+40090530536,Shih Tzu,Maltese,FALSE
+40090836619,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090663935,Standard Poodle,Miniature Poodle,FALSE
+40090766882,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000103095,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000114083,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40090230869,Schnauzer,Miniature Schnauzer,FALSE
+40000729185,Staffordshire Bull Terrier,Australian Cattle,FALSE
+40000010768,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000034292,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000045265,Toy Poodle,Standard Poodle,FALSE
+40000055648,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000064434,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000067417,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40000076424,Toy Poodle,Schnauzer,FALSE
+40000076718,Rottweiler,Shar Pei,FALSE
+40000077617,Mastiff,Neapolitan Mastiff,FALSE
+40000161189,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000257607,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000281966,Heading,Border Collie,FALSE
+40000305342,Rhodesian Ridgeback,Staffordshire Bull Terrier,FALSE
+40000366716,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000374700,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000377985,American Staffordshire Terrier,Siberian Husky,FALSE
+40000385338,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000407390,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000420974,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000476244,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000492193,Heading,Heading Dog,FALSE
+40000526276,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000558860,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000570372,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000574195,Rhodesian Ridgeback,Ridgeback,FALSE
+40000595316,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000621112,Fox (Smooth) Terrier,Jack Russell Terrier,FALSE
+40000640427,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000641954,Greyhound,Staffordshire Bull Terrier,FALSE
+40000656544,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000657958,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000679633,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000687547,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000699839,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000701167,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000704646,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000706231,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000723322,Huntaway,Mastiff,FALSE
+40000732100,American Bulldog,Boxer,FALSE
+40000735231,American Pit Bull Terrier,German Short Haired Pointer,FALSE
+40000735231,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000738923,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000743404,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000751474,Mastiff,Pit Bull Terrier,FALSE
+40000753612,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755143,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000764924,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000766471,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000771467,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000778542,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000778577,Staffordshire Bull Terrier,Smooth Collie,FALSE
+40000790259,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000790917,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000795485,Mastiff,Bull Mastiff,FALSE
+40000797296,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000802710,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000804861,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000809265,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000817777,American Pit Bull Terrier,Mastiff,FALSE
+40000817777,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000820344,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000837476,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000839398,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000843050,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000848419,Boxer,Australian Cattle,FALSE
+40000851185,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000852610,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000853110,Shar Pei,Labrador Retriever,FALSE
+40000853269,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000854036,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000854214,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000854915,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000855067,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000857574,Boxer,Bull Mastiff,FALSE
+40000857620,Labrador Retriever,Mastiff,FALSE
+40000858678,Border Collie,Labrador Retriever,FALSE
+40000858856,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000858872,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000859771,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40000860923,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000864465,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000866026,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000866441,Staffordshire Bull Terrier,American Bulldog,FALSE
+40000867383,Labrador Retriever,English Pointer,FALSE
+40000867855,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000868193,Labrador Retriever,Bearded Collie,FALSE
+40000868681,Rottweiler,Mastiff,FALSE
+40000869939,Jack Russell Terrier,Fox Terrier (Wire),FALSE
+40000870236,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000870724,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000871739,Labrador Retriever,Pit Bull Terrier,FALSE
+40000872263,Bull Mastiff,Mastiff,FALSE
+40000873057,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000873839,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000873898,Bulldog,American Bulldog,FALSE
+40000873952,Staffordshire Bull Terrier,American Bulldog,FALSE
+40000874428,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000874843,Rhodesian Ridgeback,Mastiff,FALSE
+40000875165,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000875343,American Bulldog,Australian Cattle,FALSE
+40000875343,American Bulldog,Greyhound,FALSE
+40000875424,Bull Terrier,Greyhound,FALSE
+40000876129,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000876889,Labrador Retriever,Pit Bull Terrier,FALSE
+40000877354,Huntaway,Dobermann,FALSE
+40000877400,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000877508,German Shepherd,Staffordshire Bull Terrier,FALSE
+40000878059,Mastiff,Pit Bull Terrier,FALSE
+40000878075,Fox (Wire) Terrier,Jack Russell Terrier,FALSE
+40000878075,Fox (Wire) Terrier,Fox Terrier (Smooth),FALSE
+40000878938,Long Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000879748,Rottweiler,Shar Pei,FALSE
+40000880010,Labrador Retriever,Pit Bull Terrier,FALSE
+40000880517,Bichon Frise,Jack Russell Terrier,FALSE
+40000880657,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000881173,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000881319,German Shepherd,Labrador Retriever,FALSE
+40000881319,German Shepherd,Border Collie,FALSE
+40000884563,American Pit Bull Terrier,Rhodesian Ridgeback,FALSE
+40000884571,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000885675,Labrador Retriever,Greyhound,FALSE
+40000885934,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000886426,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000887147,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000887171,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000887643,Labrador Retriever,Pit Bull Terrier,FALSE
+40000887643,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000887988,Shar Pei,Mastiff,FALSE
+40000888100,American Bulldog,Boxer,FALSE
+40000888518,Shar Pei,Mastiff,FALSE
+40000888542,Bulldog,Pit Bull Terrier,FALSE
+40000888593,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000888631,German Shepherd,Fox Terrier (Smooth),FALSE
+40000888941,German Shepherd,Fox Terrier (Smooth),FALSE
+40000889050,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000889891,Whippet,Staffordshire Bull Terrier,FALSE
+40000889999,Staffordshire Bull Terrier,Welsh Cardigan Corgi,FALSE
+40000890938,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000891565,American Pit Bull Terrier,Labrador Retriever,FALSE
+40000891565,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000894275,Mastiff,Rottweiler,FALSE
+40000894712,Mastiff,Boxer,FALSE
+40000894836,Bull Mastiff,Mastiff,FALSE
+40000895727,German Shepherd,Staffordshire Bull Terrier,FALSE
+40000896448,Siberian Husky,Alaskan Malamute,FALSE
+40000896510,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000896790,Mastiff,Staffordshire Bull Terrier,FALSE
+40000896898,Catahoula Leopard,American Bulldog,FALSE
+40000896944,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000897533,Staffordshire Bull Terrier,Whippet,FALSE
+40000897878,Neapolitan Mastiff,Mastiff,FALSE
+40000897940,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000899358,Shar Pei,Pit Bull Terrier,FALSE
+40000899633,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000899757,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000901050,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000901182,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000903096,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000903592,Rottweiler,Mastiff,FALSE
+40000904181,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000904920,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000904939,Bull Mastiff,Mastiff,FALSE
+40000905021,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000905056,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000905498,Bichon Frise,Miniature Poodle,FALSE
+40000905870,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000906532,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000906842,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000907474,Greyhound,Whippet,FALSE
+40000908233,Smooth Coat Chihuahua,Chihuahua Smooth Coat,FALSE
+40000910165,Smooth Collie,Border Collie,FALSE
+40000910653,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000912524,Rottweiler,Bulldog,FALSE
+40000912532,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000912818,Rhodesian Ridgeback,Labrador Retriever,FALSE
+40000913334,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000914225,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000914551,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000914713,Huntaway,Pit Bull Terrier,FALSE
+40000914853,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000914950,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000915434,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000916031,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000916082,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000916090,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000916473,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000916686,Bulldog,American Bulldog,FALSE
+40000916740,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000917025,Labrador Retriever,American Bulldog,FALSE
+40000918085,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000918239,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000918476,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000919820,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000919915,Staffordshire Bull Terrier,Mastiff,FALSE
+40000920373,Sussex Spaniel,Heading Dog,FALSE
+40000920373,Sussex Spaniel,English Springer Spaniel,FALSE
+40000921515,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000922597,Whippet,Pit Bull Terrier,FALSE
+40000923165,Rottweiler,Shar Pei,FALSE
+40000923165,Rottweiler,Labrador Retriever,FALSE
+40000923917,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000923984,Alaskan Malamute,Siberian Husky,FALSE
+40000924190,Heading,Heading Dog,FALSE
+40000924352,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000924697,Neapolitan Mastiff,American Bulldog,FALSE
+40000925162,American Staffordshire Terrier,Shar Pei,FALSE
+40000926185,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000927386,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000928153,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000928544,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000929575,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000929842,American Pit Bull Terrier,Mastiff,FALSE
+40000929850,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000930247,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40000930387,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000930832,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000931596,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000931605,Maltese,Shih Tzu,FALSE
+40000931618,Maltese,Tibetan Spaniel,FALSE
+40000931634,Mastiff,Staffordshire Bull Terrier,FALSE
+40000931901,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000932193,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000932282,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000932428,Mastiff,American Bulldog,FALSE
+40000933750,Labrador Retriever,Australian Cattle,FALSE
+40000933750,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40000933939,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000934528,Shar Pei,Pit Bull Terrier,FALSE
+40000934730,Labrador Retriever,Mastiff,FALSE
+40000934781,Bull Mastiff,Pit Bull Terrier,FALSE
+40000935465,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000935885,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000936431,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000937152,Staffordshire Bull Terrier,Mastiff,FALSE
+40000937608,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000937632,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000937713,Labrador Retriever,Mastiff,FALSE
+40000937845,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000938124,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000938469,Bull Mastiff,Pit Bull Terrier,FALSE
+40000938582,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000939309,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000939643,Labrador Retriever,Border Collie,FALSE
+40000940099,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000940579,Bull Mastiff,Pit Bull Terrier,FALSE
+40000940692,Bull Terrier,Mastiff,FALSE
+40000940730,German Shepherd,Australian Kelpie,FALSE
+40000941591,Miniature Schnauzer,Schnauzer,FALSE
+40000942350,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000942474,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000942490,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000942687,Jack Russell Terrier,Staffordshire Bull Terrier,FALSE
+40000942725,Shar Pei,Mastiff,FALSE
+40000943225,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000943905,Bull Terrier,Pit Bull Terrier,FALSE
+40000944405,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000944434,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000945007,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000946712,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000946771,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000946925,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000947212,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000947484,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000947935,Bull Mastiff,Pit Bull Terrier,FALSE
+40000948219,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000948227,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000948332,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000948677,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40000948693,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000948863,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000949460,German Shepherd,Huntaway,FALSE
+40000949665,Rough Collie,Border Collie,FALSE
+40000949746,Bearded Collie,Irish Wolfhound,FALSE
+40000951457,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000951783,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000951813,Labrador Retriever,Mastiff,FALSE
+40000952003,Staffordshire Bull Terrier,Rough Collie,FALSE
+40000952003,Staffordshire Bull Terrier,Border Collie,FALSE
+40000952089,Labrador Retriever,Rhodesian Ridgeback,FALSE
+40000952216,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000952771,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000952798,Labrador Retriever,Border Collie,FALSE
+40000952895,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000953190,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000953285,Australian Cattle,Heading Dog,FALSE
+40000953360,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000954243,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000955029,Mastiff,Staffordshire Bull Terrier,FALSE
+40000955045,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000955517,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000955908,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000955908,Fox (Smooth) Terrier,Jack Russell Terrier,FALSE
+40000955959,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000956300,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000956556,Labrador Retriever,Mastiff,FALSE
+40000958818,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000958869,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000959261,Jack Russell Terrier,Pit Bull Terrier,FALSE
+40000959445,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000959776,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000960006,Bull Mastiff,Mastiff,FALSE
+40000960073,Great Dane,Pit Bull Terrier,FALSE
+40000960367,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000960758,Smooth Collie,Rough Collie,FALSE
+40000961105,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000961150,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000961169,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000961436,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000961444,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000961967,Labrador Retriever,Bearded Collie,FALSE
+40000962092,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000962225,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000962653,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000963056,Miniature Smooth Haired Dachshund,Min. Smooth Haired Dachshund,FALSE
+40000963226,Staffordshire Bull Terrier,Shar Pei,FALSE
+40000963382,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000963617,Huntaway,Labrador Retriever,FALSE
+40000963641,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000963668,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000964818,American Pit Bull Terrier,Mastiff,FALSE
+40000964842,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000964842,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000965121,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000965768,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000966217,Border Collie,Smooth Collie,FALSE
+40000966500,Bull Mastiff,Shar Pei,FALSE
+40000966896,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000967574,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40000967752,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000967906,Miniature Smooth Haired Dachshund,Fox Terrier (Smooth),FALSE
+40000967922,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000968058,Bull Mastiff,Mastiff,FALSE
+40000968082,Neapolitan Mastiff,Labrador Retriever,FALSE
+40000968090,Standard Wire Haired Dachshund,Jack Russell Terrier,FALSE
+40000968449,Staffordshire Bull Terrier,Boxer,FALSE
+40000968465,Siberian Husky,Rottweiler,FALSE
+40000968643,Irish Red & White Setter,Irish Setter,FALSE
+40000968848,Heading,Heading Dog,FALSE
+40000968856,Heading,Heading Dog,FALSE
+40000968856,Heading,Border Collie,FALSE
+40000969135,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000969143,American Pit Bull Terrier,Mastiff,FALSE
+40000969151,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000969372,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000969607,Welsh Cardigan Corgi,Welsh Pembroke Corgi,FALSE
+40000969712,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000969763,Rhodesian Ridgeback,Huntaway,FALSE
+40000969836,Bull Mastiff,Shar Pei,FALSE
+40000969844,Bull Mastiff,Shar Pei,FALSE
+40000969955,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40000970656,Catahoula Leopard,Huntaway,FALSE
+40000970796,Mastiff,Shar Pei,FALSE
+40000971067,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000971687,German Shepherd,Huntaway,FALSE
+40000971725,Japanese Spitz,Toy Poodle,FALSE
+40000971954,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000972543,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000972853,Bull Mastiff,Shar Pei,FALSE
+40000972985,Rhodesian Ridgeback,Pit Bull Terrier,FALSE
+40000973361,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000973604,Boxer,Staffordshire Bull Terrier,FALSE
+40000973715,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000973752,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000974503,German Shepherd,Staffordshire Bull Terrier,FALSE
+40000975119,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000975712,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000976935,Heading,Heading Dog,FALSE
+40000976999,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000977065,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000977197,Labrador Retriever,Pit Bull Terrier,FALSE
+40000977286,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000977294,Mastiff,Staffordshire Bull Terrier,FALSE
+40000977367,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000977537,Border Collie,Mastiff,FALSE
+40000977650,Staffordshire Bull Terrier,Mastiff,FALSE
+40000977693,Labrador Retriever,Mastiff,FALSE
+40000979365,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000979521,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000979947,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000980287,Jack Russell Terrier,Staffordshire Bull Terrier,FALSE
+40000980465,American Cocker Spaniel,Cocker Spaniel,FALSE
+40000980465,American Cocker Spaniel,Bearded Collie,FALSE
+40000981402,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000981437,Labrador Retriever,Pit Bull Terrier,FALSE
+40000981755,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000981941,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000982005,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000982646,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000982662,American Pit Bull Terrier,Shar Pei,FALSE
+40000983413,Shar Pei,Staffordshire Bull Terrier,FALSE
+40000983448,Beagle,Staffordshire Bull Terrier,FALSE
+40000984843,Labrador Retriever,Shar Pei,FALSE
+40000984851,Siberian Husky,Smooth Collie,FALSE
+40000984851,Siberian Husky,Rough Collie,FALSE
+40000985114,Fox (Wire) Terrier,Fox Terrier (Smooth),FALSE
+40000985114,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40000985122,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000985319,Australian Terrier,Australian Silky Terrier,FALSE
+40000985653,Neapolitan Mastiff,Mastiff,FALSE
+40000985963,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000986005,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000986175,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000986420,Mastiff,Bull Mastiff,FALSE
+40000986765,Huntaway,Whippet,FALSE
+40000987273,Bichon Frise,Shih Tzu,FALSE
+40000987869,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000987877,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000988040,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000989063,Shar Pei,Pit Bull Terrier,FALSE
+40000990495,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000990568,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000991300,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000991319,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000991535,Japanese Spitz,Maltese,FALSE
+40000991572,American Bulldog,Pit Bull Terrier,FALSE
+40000992404,Australian Cattle,Cattle Dog,FALSE
+40000993710,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000993931,French Bulldog,Bulldog,FALSE
+40000994229,Siberian Husky,Catahoula Leopard,FALSE
+40000994342,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000994881,Siberian Husky,Pit Bull Terrier,FALSE
+40000995136,Mastiff,Pit Bull Terrier,FALSE
+40000995160,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000995160,American Pit Bull Terrier,Mastiff,FALSE
+40000995608,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000995853,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000995861,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000995875,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000996264,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000996701,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000996715,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000996728,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000996736,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000997104,Huntaway,English Pointer,FALSE
+40000997627,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000998712,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000998968,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40000999077,Bull Terrier,Labrador Retriever,FALSE
+40000999891,Bull Mastiff,Pit Bull Terrier,FALSE
+40001000197,German Shepherd,Staffordshire Bull Terrier,FALSE
+40001000197,German Shepherd,Mastiff,FALSE
+40001001010,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001001029,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001001169,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001001312,Bull Miniature Terrier,Bull Terrier,FALSE
+40001003110,American Pit Bull Terrier,German Shepherd,FALSE
+40001003595,Black Russian Terrier,Russian Black Terrier,FALSE
+40001003641,Boxer,Staffordshire Bull Terrier,FALSE
+40001003655,Boxer,Labrador Retriever,FALSE
+40001005679,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001006209,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001007515,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001008341,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001008376,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001008775,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40001009984,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001010036,Maltese,Shih Tzu,FALSE
+40001010745,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001012446,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001012535,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090192460,Smooth Coat Chihuahua,Papillon,FALSE
+40090465742,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40090472277,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090636687,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090709714,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090805616,Staffordshire Bull Terrier,Shar Pei,FALSE
+40090881363,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090894171,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090972806,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000076424,Miniature Schnauzer,Schnauzer,FALSE
+40000095879,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000140440,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000206093,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000271111,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000354122,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000367335,Australian Cattle,Australian Shepherd,FALSE
+40000371620,Bull Mastiff,Pit Bull Terrier,FALSE
+40000377785,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000411541,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000421091,Australian Kelpie,Pit Bull Terrier,FALSE
+40000446558,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000455816,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000523765,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000531512,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000538401,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000560989,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000600514,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000606318,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000673368,Bull Mastiff,Mastiff,FALSE
+40000684173,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000709753,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40000728103,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40000740944,Siberian Husky,Pit Bull Terrier,FALSE
+40000755119,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755785,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000762832,Mastiff,Huntaway,FALSE
+40000762832,Mastiff,Pit Bull Terrier,FALSE
+40000763804,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000772420,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000777724,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000787770,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40000794289,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000805715,Greyhound,Australian Cattle,FALSE
+40000805728,Greyhound,Australian Cattle,FALSE
+40000827735,Border Collie,Staffordshire Bull Terrier,FALSE
+40000827735,Border Collie,Welsh Pembroke Corgi,FALSE
+40000839509,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40000853374,Border Collie,Huntaway,FALSE
+40000859623,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000859623,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40000875343,Greyhound,Australian Cattle,FALSE
+40000878059,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000878075,Fox (Smooth) Terrier,Jack Russell Terrier,FALSE
+40000878075,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40000887643,American Bulldog,Pit Bull Terrier,FALSE
+40000887643,American Bulldog,Staffordshire Bull Terrier,FALSE
+40000888542,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000890881,Greyhound,Whippet,FALSE
+40000925278,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000933750,Staffordshire Bull Terrier,Australian Cattle,FALSE
+40000934528,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000952216,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000960073,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000961169,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000971954,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000979365,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000980465,Bearded Collie,Cocker Spaniel,FALSE
+40000987877,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000991572,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000994881,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000996264,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001007515,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001012950,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001013442,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001016298,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001018053,American Pit Bull Terrier,Mastiff,FALSE
+40001019009,Boxer,American Bulldog,FALSE
+40001020961,Heading,Border Collie,FALSE
+40001020975,Heading,Border Collie,FALSE
+40001021496,Heading,Heading Dog,FALSE
+40001022328,Border Collie,Rough Collie,FALSE
+40001022328,Border Collie,Huntaway,FALSE
+40001022344,Labrador Retriever,Shar Pei,FALSE
+40001027222,Rhodesian Ridgeback,Shar Pei,FALSE
+40001028275,Labrador Retriever,Shar Pei,FALSE
+40001028318,Bull Terrier,Bull Mastiff,FALSE
+40001028946,Maltese,Miniature Poodle,FALSE
+40001028954,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001031165,Irish Terrier,Labrador Retriever,FALSE
+40001032064,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001032072,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001032315,Pharaoh Hound,Pharoah Hound,FALSE
+40001032633,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001033052,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40001033389,Staffordshire Bull Terrier,Mastiff,FALSE
+40001033974,German Shepherd,Labrador Retriever,FALSE
+40001034615,Staffordshire Bull Terrier,Fox Terrier (Smooth),FALSE
+40001034776,Fox (Smooth) Terrier,Jack Russell Terrier,FALSE
+40001036752,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001037503,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001037538,Mastiff,Bull Mastiff,FALSE
+40001037724,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001038437,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001038569,Mastiff,Staffordshire Bull Terrier,FALSE
+40001038955,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001038968,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001040946,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001040989,Labrador Retriever,Pit Bull Terrier,FALSE
+40001041039,American Bulldog,Bull Mastiff,FALSE
+40001041217,Staffordshire Bull Terrier,Mastiff,FALSE
+40001041802,American Staffordshire Terrier,Mastiff,FALSE
+40001042507,Weimaraner,Thai Ridgeback,FALSE
+40001042507,Weimaraner,American Staffordshire Terrier,FALSE
+40001042558,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001042590,Labrador Retriever,Pit Bull Terrier,FALSE
+40001042701,Labrador Retriever,Pit Bull Terrier,FALSE
+40001042855,Heading,Heading Dog,FALSE
+40001043813,Labrador Retriever,Pit Bull Terrier,FALSE
+40001044593,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001045166,Labrador Retriever,Mastiff,FALSE
+40001045263,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40001047630,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001047695,Heading,Heading Dog,FALSE
+40001048211,Rottweiler,Pit Bull Terrier,FALSE
+40001048424,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001049730,Bull Mastiff,Mastiff,FALSE
+40001049803,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001050100,Maltese,Lhasa Apso,FALSE
+40001050224,Mastiff,German Shepherd,FALSE
+40001052200,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001052499,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001052901,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001052987,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001053436,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001053525,Greyhound,Australian Cattle,FALSE
+40001053865,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001054173,Border Collie,Siberian Husky,FALSE
+40001055676,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001055965,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001056079,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001056087,German Shepherd,Border Collie,FALSE
+40001056325,Staffordshire Bull Terrier,American Bulldog,FALSE
+40001056419,Staffordshire Bull Terrier,Mastiff,FALSE
+40001056656,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001057911,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001058055,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001058578,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001058799,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001059329,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001059337,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001059450,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001059469,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001060017,Italian Spinone,Spinone Italiano,FALSE
+40001060114,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001060424,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001060599,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001060815,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001061048,Smooth Collie,Huntaway,FALSE
+40001061064,Greyhound,Whippet,FALSE
+40001061072,Greyhound,Whippet,FALSE
+40001061080,Greyhound,Whippet,FALSE
+40001061175,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001061188,Shar Pei,Mastiff,FALSE
+40001061218,Huntaway,Labrador Retriever,FALSE
+40001061560,Bull Mastiff,Shar Pei,FALSE
+40001064365,Mastiff,Anatolian Shepherd,FALSE
+40001064373,Mastiff,Anatolian Shepherd,FALSE
+40001067645,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40001069219,Siberian Husky,Mastiff,FALSE
+40001069391,Rottweiler,Shar Pei,FALSE
+40001069863,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001070942,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001070950,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001070969,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001071116,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001071124,Fox (Smooth) Terrier,Miniature Pinscher,FALSE
+40001071329,Huntaway,Labrador Retriever,FALSE
+40001072279,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001072635,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40001072678,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001072732,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001072945,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40001072975,Maltese,Shar Pei,FALSE
+40001073089,Rottweiler,Staffordshire Bull Terrier,FALSE
+40001073356,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001073372,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001073992,American Bulldog,Mastiff,FALSE
+40001074595,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001074670,Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001074794,Staffordshire Bull Terrier,Border Collie,FALSE
+40001075618,Rottweiler,Staffordshire Bull Terrier,FALSE
+40001075626,Rottweiler,Staffordshire Bull Terrier,FALSE
+40001076029,Huntaway,Staffordshire Bull Terrier,FALSE
+40001076193,Smooth Collie,Rough Collie,FALSE
+40001076193,Smooth Collie,Pit Bull Terrier,FALSE
+40001076398,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001076800,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001076908,German Short Haired Pointer,English Pointer,FALSE
+40001077297,German Shepherd,Rhodesian Ridgeback,FALSE
+40001077548,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40001077777,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001077866,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001078765,Labrador Retriever,Mastiff,FALSE
+40001079117,American Staffordshire Terrier,Mastiff,FALSE
+40001079192,American Staffordshire Terrier,Labrador Retriever,FALSE
+40001079982,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001080285,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001080433,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001080455,Pharaoh Hound,Pharoah Hound,FALSE
+40001080468,Pharaoh Hound,Pharoah Hound,FALSE
+40001080530,Huntaway,Labrador Retriever,FALSE
+40001080751,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001083483,Labrador Retriever,Shar Pei,FALSE
+40001083947,Bulldog,Bull Mastiff,FALSE
+40001083947,Bulldog,Mastiff,FALSE
+40001084897,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001085044,Siberian Husky,Border Collie,FALSE
+40001085664,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001086245,Labrador Retriever,Border Collie,FALSE
+40001086385,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40001087735,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40001088604,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001088752,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001089589,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001090188,Mastiff,American Staffordshire Terrier,FALSE
+40001091230,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001091389,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001091494,Smooth Coat Chihuahua,Chihuahua Long Coat,FALSE
+40001091672,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001091680,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001092040,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001092075,American Pit Bull Terrier,Mastiff,FALSE
+40001092245,Labrador Retriever,Pit Bull Terrier,FALSE
+40001092709,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001092725,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001093497,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001093535,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001093578,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001093888,American Staffordshire Terrier,Huntaway,FALSE
+40001094388,Huntaway,Staffordshire Bull Terrier,FALSE
+40001094426,Staffordshire Bull Terrier,Greyhound,FALSE
+40001094515,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001094523,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001094531,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001094760,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001095716,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001096348,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001096372,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001097026,Bull Mastiff,Huntaway,FALSE
+40001097247,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001097315,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001097735,Staffordshire Bull Terrier,American Bulldog,FALSE
+40001098111,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001098138,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001099865,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001100329,American Staffordshire Terrier,Mastiff,FALSE
+40001101341,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001103174,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001104936,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40001106866,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001107205,Italian Corso Dog,Mastiff,FALSE
+40001108672,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001109199,Boxer,Bulldog,FALSE
+40001109253,Welsh Pembroke Corgi,Welsh Cardigan Corgi,FALSE
+40001110308,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001110308,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001110502,Staffordshire Bull Terrier,Huntaway,FALSE
+40001111045,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001111053,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001112165,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001113749,Labrador Retriever,Mastiff,FALSE
+40001114125,American Bulldog,Pit Bull Terrier,FALSE
+40001114699,American Staffordshire Terrier,Australian Cattle,FALSE
+40001116063,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001116802,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001117795,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001118090,German Short Haired Pointer,Staffordshire Bull Terrier,FALSE
+40001118215,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001118503,German Short Haired Pointer,Labrador Retriever,FALSE
+40001118643,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001119054,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001119410,American Staffordshire Terrier,American Bulldog,FALSE
+40001119836,Bull Mastiff,Mastiff,FALSE
+40001120155,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001121032,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001121709,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001121725,Siberian Husky,Akita,FALSE
+40001122489,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001123685,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001123698,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001124805,American Pit Bull Terrier,Shar Pei,FALSE
+40001125025,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001125038,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001125712,Shar Pei,Mastiff,FALSE
+40001126476,Greyhound,Staffordshire Bull Terrier,FALSE
+40001126530,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001126549,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001126573,American Bulldog,Staffordshire Bull Terrier,FALSE
+40001128177,Staffordshire Bull Terrier,Huntaway,FALSE
+40001128592,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001129548,Smooth Coat Chihuahua,Chihuahua Long Coat,FALSE
+40001130355,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001131534,American Bulldog,Staffordshire Bull Terrier,FALSE
+40001131577,Mastiff,Shar Pei,FALSE
+40001131704,Maltese,Tibetan Spaniel,FALSE
+40001131992,Shar Pei,Mastiff,FALSE
+40001132123,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001132123,Staffordshire Bull Terrier,American Bulldog,FALSE
+40001132263,Bull Mastiff,Catahoula Leopard,FALSE
+40001132595,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001132832,American Pit Bull Terrier,Shar Pei,FALSE
+40001133863,American Pit Bull Terrier,Shar Pei,FALSE
+40001134088,Shar Pei,Pit Bull Terrier,FALSE
+40001134193,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001134258,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001134304,Labrador Retriever,American Staffordshire Terrier,FALSE
+40001134495,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001134673,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001134703,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001135195,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001135645,Staffordshire Bull Terrier,Shar Pei,FALSE
+40001136795,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001137443,German Short Haired Pointer,English Pointer,FALSE
+40001137966,Neapolitan Mastiff,Mastiff,FALSE
+40001137974,Airedale Terrier,Bearded Collie,FALSE
+40001137990,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001138067,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001139225,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001139395,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001139543,Bull Mastiff,Mastiff,FALSE
+40001139616,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40001140126,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001140355,American Staffordshire Terrier,American Bulldog,FALSE
+40001140865,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001140878,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001141033,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001141675,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001142307,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001142404,Shar Pei,Labrador Retriever,FALSE
+40001142412,American Bulldog,Staffordshire Bull Terrier,FALSE
+40001142781,Boxer,Mastiff,FALSE
+40001142795,Boxer,Mastiff,FALSE
+40001142846,Mastiff,Staffordshire Bull Terrier,FALSE
+40001142862,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001143826,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001144326,Huntaway,Staffordshire Bull Terrier,FALSE
+40001144490,Border Collie,Staffordshire Bull Terrier,FALSE
+40001146272,Australian Kelpie,Pit Bull Terrier,FALSE
+40001146280,German Shepherd,Staffordshire Bull Terrier,FALSE
+40001146698,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001146906,English Pointer,Cattle Dog,FALSE
+40001147406,Dalmatian,Shar Pei,FALSE
+40001147546,American Staffordshire Terrier,Shar Pei,FALSE
+40001147864,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001148335,Long Coat Chihuahua,Pug,FALSE
+40001148631,Labrador Retriever,Mastiff,FALSE
+40001149166,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40001149980,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001149999,Shar Pei,Mastiff,FALSE
+40001150490,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001150555,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001150865,Shar Pei,Mastiff,FALSE
+40001151160,Kerry Blue Terrier,Pit Bull Terrier,FALSE
+40001151292,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001151454,American Staffordshire Terrier,Shar Pei,FALSE
+40001151667,American Bulldog,Staffordshire Bull Terrier,FALSE
+40001152124,American Bulldog,Mastiff,FALSE
+40001152191,Boxer,Staffordshire Bull Terrier,FALSE
+40001152450,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001152590,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001152685,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001153112,Bearded Collie,Labrador Retriever,FALSE
+40001153155,American Staffordshire Terrier,Rhodesian Ridgeback,FALSE
+40001153163,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001153406,Labrador Retriever,German Shepherd,FALSE
+40001153937,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001154356,American Pit Bull Terrier,Huntaway,FALSE
+40001154941,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001155034,Whippet,Staffordshire Bull Terrier,FALSE
+40001155883,Labrador Retriever,Border Collie,FALSE
+40001157037,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001158157,Neapolitan Mastiff,American Staffordshire Terrier,FALSE
+40001158653,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001158890,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001159617,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40001160216,Labrador Retriever,Mastiff,FALSE
+40001160488,Huntaway,Greyhound,FALSE
+40001160526,Labrador Retriever,Pit Bull Terrier,FALSE
+40001161980,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001163282,American Staffordshire Terrier,Mastiff,FALSE
+40001163290,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001164055,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001164432,Staffordshire Bull Terrier,Australian Cattle,FALSE
+40001166257,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001167199,Bull Mastiff,Mastiff,FALSE
+40001167305,Labrador Retriever,Shar Pei,FALSE
+40001167318,Labrador Retriever,Shar Pei,FALSE
+40001167326,Labrador Retriever,Shar Pei,FALSE
+40001167334,Labrador Retriever,Shar Pei,FALSE
+40001167377,American Staffordshire Terrier,Rough Collie,FALSE
+40001167571,Heading,Heading Dog,FALSE
+40001167585,Bull Mastiff,American Staffordshire Terrier,FALSE
+40001168268,Mastiff,Labrador Retriever,FALSE
+40001168632,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001169027,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001169065,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001170599,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40001171269,Heading,Heading Dog,FALSE
+40001171277,German Short Haired Pointer,German Shepherd,FALSE
+40001171609,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001171889,Heading,Heading Dog,FALSE
+40001172281,American Pit Bull Terrier,Whippet,FALSE
+40001172478,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001172656,Hungarian Vizsla,German Short Haired Pointer,FALSE
+40001172907,Bull Terrier,Labrador Retriever,FALSE
+40001174586,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001174632,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001174659,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40001175477,Labrador Retriever,Rottweiler,FALSE
+40001175995,Mastiff,Shar Pei,FALSE
+40001176724,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001177046,Whippet,Greyhound,FALSE
+40001177165,Border Collie,Huntaway,FALSE
+40001177496,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001177771,American Bulldog,Bull Mastiff,FALSE
+40001178115,German Shepherd,Akita,FALSE
+40001178352,Bull Mastiff,Mastiff,FALSE
+40001179073,Heading,Heading Dog,FALSE
+40001179502,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001180438,Rottweiler,Pit Bull Terrier,FALSE
+40001180446,Rottweiler,Staffordshire Bull Terrier,FALSE
+40001180454,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001181256,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001181620,Dogo Argentino,American Staffordshire Terrier,FALSE
+40001182031,American Pit Bull Terrier,Mastiff,FALSE
+40001183216,Shar Pei,Pit Bull Terrier,FALSE
+40001183645,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001183798,Huntaway,Staffordshire Bull Terrier,FALSE
+40001184816,American Pit Bull Terrier,Rhodesian Ridgeback,FALSE
+40001185006,Labrador Retriever,Staffordshire Bull Terrier,FALSE
+40001185200,Shar Pei,Staffordshire Bull Terrier,FALSE
+40001185596,Staffordshire Bull Terrier,Mastiff,FALSE
+40001186134,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001186347,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001186541,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40001186568,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001186843,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001187165,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001188323,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001188579,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001188609,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001188854,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001189397,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001189613,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001190018,Long Coat Chihuahua,Papillon,FALSE
+40001190026,Rhodesian Ridgeback,American Staffordshire Terrier,FALSE
+40001190034,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001190247,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001190255,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001190263,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001190344,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001191022,Shar Pei,Mastiff,FALSE
+40001191650,Labrador Retriever,Mastiff,FALSE
+40001191745,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001191855,Staffordshire Bull Terrier,Shar Pei,FALSE
+40001193416,Staffordshire Bull Terrier,Mastiff,FALSE
+40001193424,Belgian (Malinois) Shepherd,Rhodesian Ridgeback,FALSE
+40001193424,Belgian (Malinois) Shepherd,Belgian Shepherd (Malinois),FALSE
+40001194846,Staffordshire Bull Terrier,Shar Pei,FALSE
+40001194854,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001195273,Labrador Retriever,Rhodesian Ridgeback,FALSE
+40001195516,Labrador Retriever,Mastiff,FALSE
+40001196865,Staffordshire Bull Terrier,American Bulldog,FALSE
+40001196873,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001197802,Border Collie,Labrador Retriever,FALSE
+40001198183,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001199975,Bull Mastiff,Pit Bull Terrier,FALSE
+40001200455,Staffordshire Bull Terrier,American Bulldog,FALSE
+40001201451,Jack Russell Terrier,Fox Terrier (Smooth),FALSE
+40001203209,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001204086,German Short Haired Pointer,Staffordshire Bull Terrier,FALSE
+40001204647,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001204655,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001204779,Bull Mastiff,Pit Bull Terrier,FALSE
+40001204787,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001204833,American Pit Bull Terrier,Mastiff,FALSE
+40001204876,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001204892,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001205341,Bulldog,American Bulldog,FALSE
+40001205465,Bearded Collie,German Shepherd,FALSE
+40090548923,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090549989,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40090655304,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40090924399,German Shepherd,Bull Terrier,FALSE
+40091020884,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000072208,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000207529,Labrador Retriever,Huntaway,FALSE
+40000332205,Maltese,Bichon Frise,FALSE
+40000141795,Heading,Heading Dog,FALSE
+40000534015,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000557945,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000553664,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40000743035,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000755534,American Pit Bull Terrier,Shar Pei,FALSE
+40000740944,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000743951,American Pit Bull Terrier,American Bulldog,FALSE
+40000743951,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000775268,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000784887,German Shepherd,Rhodesian Ridgeback,FALSE
+40000784887,German Shepherd,Rough Collie,FALSE
+40000840469,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000935465,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000264557,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000265324,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000989063,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001042701,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000320651,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001083866,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001099865,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000532659,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001134193,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001146272,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001147406,Staffordshire Bull Terrier,Shar Pei,FALSE
+40001149557,Australian Kelpie,German Shepherd,FALSE
+40001110014,German Short Haired Pointer,Rottweiler,FALSE
+40001134088,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001218325,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001219318,German Shepherd,Mastiff,FALSE
+40001219318,German Shepherd,Staffordshire Bull Terrier,FALSE
+40001219806,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001230295,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40001249853,Siberian Husky,German Shepherd,FALSE
+40001250282,American Pit Bull Terrier,American Staffordshire Terrier,FALSE
+40001253370,Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001188110,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001263422,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001276583,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001277288,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001198612,Siberian Husky,Border Collie,FALSE
+40001167377,Border Collie,Rough Collie,FALSE
+40001202275,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001281846,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001212785,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001288433,Border Collie,Huntaway,FALSE
+40001299818,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001308396,Shar Pei,Labrador Retriever,FALSE
+40001308396,Shar Pei,Pit Bull Terrier,FALSE
+40001226543,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001205937,Staffordshire Bull Terrier,Bull Terrier,FALSE
+40001320426,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001243383,Heading,Heading Dog,FALSE
+40001223722,German Short Haired Pointer,German Shepherd,FALSE
+40001335075,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001341059,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001350473,Rhodesian Ridgeback,Mastiff,FALSE
+40001265344,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001265530,Dogue de Bordeaux,Dogue De Bordeaux,FALSE
+40001280815,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001371446,German Shepherd,Huntaway,FALSE
+40001371519,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001296725,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001305907,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001306135,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001236298,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001386805,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001239599,Bull Mastiff,Mastiff,FALSE
+40001312105,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001313934,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001316593,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001320248,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001402481,Miniature Schnauzer,Schnauzer,FALSE
+40001329202,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001331630,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001334141,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001335873,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001342667,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001246137,Heading,Heading Dog,FALSE
+40001344090,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001344856,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001380666,Rhodesian Ridgeback,Staffordshire Bull Terrier,FALSE
+40001263996,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001272952,Golden Retriever,Staffordshire Bull Terrier,FALSE
+40001302959,German Pinscher,Dobermann,FALSE
+40001303394,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001316720,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001322631,Huntaway,Border Collie,FALSE
+40001326971,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001341156,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001344392,Bulldog,American Bulldog,FALSE
+40001354614,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001357346,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001370423,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001375285,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001377061,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001383835,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000735509,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000743838,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000746985,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000345522,Staffordshire Bull Terrier,Dalmatian,FALSE
+40000763936,Standard Smooth Haired Dachshund,Fox Terrier (Smooth),FALSE
+40090851936,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40091078610,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40090998996,Miniature Smooth Haired Dachshund,Min. Smooth Haired Dachshund,FALSE
+40091114463,Siberian Husky,Pit Bull Terrier,FALSE
+40000946712,Australian Kelpie,Pit Bull Terrier,FALSE
+40001099105,Mastiff,Staffordshire Bull Terrier,FALSE
+40001114125,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001203926,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000940099,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001252153,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001258895,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40001262715,Shar Pei,Mastiff,FALSE
+40001276494,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001291701,Jack Russell Terrier,Min. Wire Haired Dachshund,FALSE
+40001329245,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001350589,Bull Terrier,American Bulldog,FALSE
+40001079117,Mastiff,American Staffordshire Terrier,FALSE
+40001382626,Siberian Husky,German Shepherd,FALSE
+40001183216,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001196873,American Pit Bull Terrier,Staffordshire Bull Terrier,FALSE
+40001196873,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001206135,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001221415,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001222009,Shar Pei,Staffordshire Bull Terrier,FALSE
+40001226160,Fox (Smooth) Terrier,Chihuahua Smooth Coat,FALSE
+40001235054,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001235860,Staffordshire Bull Terrier,Mastiff,FALSE
+40001280394,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40001293577,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40001307608,Siberian Husky,German Shepherd,FALSE
+40001313616,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001317476,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001340990,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001358660,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001365624,American Pit Bull Terrier,Mastiff,FALSE
+40001365905,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001368178,Mastiff,Pit Bull Terrier,FALSE
+40000734502,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001383932,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001393148,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000916090,Huntaway,Staffordshire Bull Terrier,FALSE
+40000969836,Shar Pei,Bull Mastiff,FALSE
+40000977537,American Pit Bull Terrier,Mastiff,FALSE
+40000969844,Shar Pei,Bull Mastiff,FALSE
+40001042507,American Staffordshire Terrier,Thai Ridgeback,FALSE
+40001042590,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001101740,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001139225,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001151160,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001160526,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001196121,Siberian Husky,Staffordshire Bull Terrier,FALSE
+40001207123,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001213972,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001240228,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001078765,Boxer,Labrador Retriever,FALSE
+40001078765,Boxer,Mastiff,FALSE
+40001124015,Rhodesian Ridgeback,Bull Terrier,FALSE
+40001183062,Staffordshire Bull Terrier,Labrador Retriever,FALSE
+40001256124,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001264291,Rhodesian Ridgeback,Staffordshire Bull Terrier,FALSE
+40001269641,Staffordshire Bull Terrier,Whippet,FALSE
+40001271409,American Staffordshire Terrier,Staffordshire Bull Terrier,FALSE
+40001271625,Staffordshire Bull Terrier,Rough Collie,FALSE
+40001272146,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001275439,Staffordshire Bull Terrier,Mastiff,FALSE
+40001280845,Heading,Heading Dog,FALSE
+40001298838,Long Coat Chihuahua,Chihuahua Long Coat,FALSE
+40001304625,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001307985,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001211287,Mastiff,Bull Mastiff,FALSE
+40001216181,Bulldog,American Bully,FALSE
+40001317455,American Bulldog,Mastiff,FALSE
+40001194965,Staffordshire Bull Terrier,Rhodesian Ridgeback,FALSE
+40001212399,Fox (Smooth) Terrier,Fox Terrier (Smooth),FALSE
+40001219091,Fox (Wire) Terrier,Fox Terrier (Wire),FALSE
+40001237340,Smooth Collie,Rough Collie,FALSE
+40001245688,American Bulldog,American Staffordshire Terrier,FALSE
+40001250207,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001255950,Belgian (Malinois) Shepherd,Belgian Shepherd (Malinois),FALSE
+40001354835,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001355106,Mastiff,Staffordshire Bull Terrier,FALSE
+40001355106,Mastiff,Boxer,FALSE
+40001358520,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001259409,Belgian (Groenendael) Shepherd,Belgian Shepherd (Malinois),FALSE
+40001257619,Staffordshire Bull Terrier,Mastiff,FALSE
+40001264631,American Bulldog,Staffordshire Bull Terrier,FALSE
+40001265859,American Pit Bull Terrier,American Bulldog,FALSE
+40001263236,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40001264283,Rhodesian Ridgeback,Mastiff,FALSE
+40001267865,Mastiff,American Bulldog,FALSE
+40001281803,Bull Mastiff,Mastiff,FALSE
+40001284853,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001289944,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001376464,Bull Mastiff,Staffordshire Bull Terrier,FALSE
+40001382618,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001295693,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001384246,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001286643,German Shepherd,Siberian Husky,FALSE
+40001288727,Rottweiler,Huntaway,FALSE
+40001298692,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001304345,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001286996,Huntaway,Siberian Husky,FALSE
+40001303777,American Staffordshire Terrier,Pit Bull Terrier,FALSE
+40001331355,Whippet,Boxer,FALSE
+40001336543,Beagle,Staffordshire Bull Terrier,FALSE
+40001340265,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001341938,Mastiff,Heading Dog,FALSE
+40001349920,Rottweiler,Mastiff,FALSE
+40001357052,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40001377401,Whippet,German Shepherd,FALSE
+40001316739,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001360415,Mastiff,Bull Mastiff,FALSE
+40001374984,Maltese,Bichon Frise,FALSE
+40001392532,Shar Pei,Huntaway,FALSE
+40001392532,Shar Pei,Labrador Retriever,FALSE
+40001336365,Labrador Retriever,Border Collie,FALSE
+40090420889,American Bulldog,Bulldog,FALSE
+40090458231,Standard Poodle,Maltese,FALSE
+40090870167,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000444275,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40000713963,Staffordshire Bull Terrier,Mastiff,FALSE
+40000887643,Staffordshire Bull Terrier,Pit Bull Terrier,FALSE
+40000959261,American Pit Bull Terrier,Pit Bull Terrier,FALSE
+40001037961,Chow Chow,Labrador Retriever,FALSE
+40001059065,Huntaway,German Shepherd,FALSE
+40001109199,Bulldog,Boxer,FALSE
+40001158408,Mastiff,American Staffordshire Terrier,FALSE
+40001287968,American Bulldog,Mastiff,FALSE
+40001317921,Staffordshire Bull Terrier,German Shepherd,FALSE
+40001347049,Staffordshire Bull Terrier,American Staffordshire Terrier,FALSE
+40090869134,Neapolitan Mastiff,Shar Pei,FALSE
+40090909799,Australian Kelpie,Staffordshire Bull Terrier,FALSE
+40091099745,Siberian Husky,Pit Bull Terrier,FALSE

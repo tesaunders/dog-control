@@ -138,8 +138,6 @@ map_regions <- ggplot() +
   ) +
   theme_void() +
   theme(legend.position = "none")
-
-map_regions
 ```
 
 Auckland Local Boards
@@ -155,14 +153,12 @@ map_boards <- ggplot() +
   ) +
   theme_void() +
   theme(legend.position = "none")
-
-map_boards
 ```
 
 Join maps together
 
 ```{r}
-#| label: map-regions-boards
+#| label: fig-regions-boards
 #| fig-cap: "Left: Auckland regions (North = blue, West = red, Central = green, East = orange, South = purple). Right: Auckland's 21 Local Boards, coloured based on their parent region."
 
 map_regions + map_boards
