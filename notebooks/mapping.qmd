@@ -36,8 +36,6 @@ regional_data <-
               path_ext_remove())
 ```
 
-Get Auckland human population by Local Board
-
 ```{r}
 #| message: false
 
