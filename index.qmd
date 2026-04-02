@@ -124,6 +124,40 @@ Local Boards differed greatly in the rate of dog attacks, impounds, and euthanas
 
 {{< embed notebooks/data-analysis.qmd#euth-board >}}
 
+## Action
+
+A number of professional and advocacy organisations have issued position statements and called for urgent policy reform to address the growing issue of dog control in New Zealand. All are united in their desire that dog control policy be evidence-based and preventative in nature. The New Zealand Veterinary Association[@newzealandveterinaryassociation2019] has called for
+
+> a comprehensive plan delivered across multiple agencies that work together to address each factor. These agencies \[would\] include local and central government, animal control personnel, the veterinary profession, the medical profession, dog trainers and behaviourists, educators, dog breeders, dog welfare agencies and the media.
+
+The New Zealand SPCA has issued position statements on dog safety[@newzealandspca] and breed-specific legislation[@newzealandspcaa], while the Paediatric Society of New Zealand[@thepaediatricsocietyofnewzealand2023] is concerned about the disproportionate impact of dog attacks on children. A number of academic studies and reviews have also investigated dog control in New Zealand[@duncan-sutherland2022; @duncan-sutherland2023; @smith2019; @duncan-sutherland2024; @duncan-sutherland2022].
+
+Major recommendations include:
+
+-   The application of kaupapa Māori approaches in the development and implementation of dog control strategies to ensure solutions are grounded in tikanga and reflect local aspirations.
+
+-   The treatment of dog ownership as a privelege instead of a right, with a corresponding set of responsibilities reinforced through compulsory owner licensing and education.
+
+-   The compulsory registration, desexing, and microchipping of all dogs.
+
+-   The removal of breed-specific legislation due to a lack of evidence that breed is the largest contributing factor to dog bite events, that determining breed by appearance is unreliable, that it has failed to work overseas, and that it does not promote responsible dog ownership.
+
+-   The introduction of a revised classification system based on behaviour instead of breed, which takes into account the context in whcih the aggressive behaviour ocurred, and which places increasingly stringent conditions on the dog and owner, while also providing a pathway for rehabilitation and the removal of the classification.
+
+-   The regulation of breeding through a permit system administered by territorial authorities to recognise that breeding feeds directly into supply, and an oversupply of dog leads to overflowing shelters and roaming.
+
+-   The introduction of targeted education programmes to first-time dog owners, owners whose dog has displayed aggresion or has attacked a person, and in areas with high incidences of dog attacks and roaming, delivered by a combination of dog breeders, veterniary clinics, and territorial authorities.
+
+-   The resourcing of enforcement mechanisms to properly deal with irresponsible owners and their dogs within a consistent nation-wide framework, including supporting Animal Management Officers with the budgets, training, and powers they need to do their jobs properly.
+
+-   The introduction of compulsory nation-wide notification of dog bites or dog-related injuries to the Territorial Authority in which the incident occurred.
+
+-   The amendment of legislation to require that dogs are properly fenced or constrained on their property to prevent roaming and attacks, especially on children, the elderly, disabled, and other vulnerable groups.
+
+-   The introduction of standardised data collection and reporting at the level of territorial authorities, which feeds into a national database of dog-related injuries, to better track trends and identify where interventions may be most effective.
+
+-   The funding and conducting of research into interventions which reduce the incidence of dog-related injuries, especially in children.
+
 ## References
 
 ::: {#refs}
