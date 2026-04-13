@@ -186,7 +186,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={A Decade of Decline: Confronting the Reality of Auckland's Dog Control Crisis Using Auckland Council Data},
+  pdftitle={A Decade of Decline: Confronting Auckland's Dog Control Crisis Using Auckland Council Data},
   pdfauthor={Thomas E. Saunders},
   pdfkeywords={dog control, dog attacks, Auckland, euthanasia},
   colorlinks=true,
@@ -197,10 +197,10 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{A Decade of Decline: Confronting the Reality of Auckland's Dog
-Control Crisis Using Auckland Council Data}
+\title{A Decade of Decline: Confronting Auckland's Dog Control Crisis
+Using Auckland Council Data}
 \author{Thomas E. Saunders}
-\date{2026-04-02}
+\date{2026-04-13}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -226,24 +226,22 @@ Over the last 10 years:
 \begin{itemize}
 \tightlist
 \item
-  Auckland's dog population has increased by 14.5\%, mostly since
-  FY2020.
+  Auckland's dog population has increased by 14.5\%.
 \item
-  Registration and desexing rates have fallen, while the proportion of
-  `menacing' dogs has doubled to 1 in 20.
+  Registration and desexing rates have fallen.
 \item
-  Dog attack rates have almost doubled from 6 to 10 attacks for every
-  1,000 dogs.
+  The proportion of `menacing' dogs has doubled to 1 in 20.
 \item
-  Impound rates in FY2025 are the second highest ever.
+  Dog attack rates have almost doubled to 10 attacks for every 1,000
+  dogs.
 \item
-  Euthanasia rates of impounded dogs have risen from 22\% to 60\%,
-  mostly due to failed temperament tests and full shelters.
+  Over half of impounded dogs are euthanised due to their temperament
+  and full shelters.
 \item
-  A small number of breeds are over-represented in attacks and impounds.
+  Pit Bull type breeds are over-represented in attacks and impounds.
 \item
-  Local Boards in South Auckland have experienced lower rates of
-  registration and desexing, and higher rates of attacks and impounds.
+  South Auckland has lower rates of registration and desexing, and
+  higher rates of attacks and impounds.
 \end{itemize}
 
 \section{Introduction}\label{introduction}
@@ -287,26 +285,27 @@ dog owners, which include registering their dog, controlling their dog
 at all times, and ensuring their dog ``does not injure, endanger,
 intimidate, or otherwise cause distress to any person.'' The Act also
 lays out the functions, duties, and powers of territorial authorities,
-which include minimising the dangers presented by dogs in the community
-and ensuring the public can ``use streets and public amenities without
-fear of attack or intimidation by dogs.'' Auckland Council's approach to
-dog control is set out in it's Dog Management Bylaw\textsuperscript{11}
-and Policy on Dogs\textsuperscript{12}. Auckland Council's Animal
-Management division has around 150 permanent staff, including five
-area-based field teams (Central, East, North, South and West), a
-regional Barking and Registration team, a Proactive team, four animal
-shelters (Henderson, Manukau, Silverdale, and Pukekohe), a Veterinary
-Services team, and management, legal, and operational support staff.
+whose responsibilities include minimising the dangers presented by dogs
+in the community and ensuring the public can ``use streets and public
+amenities without fear of attack or intimidation by dogs.'' Auckland
+Council's approach to dog control is set out in it's Dog Management
+Bylaw\textsuperscript{11} and Policy on Dogs\textsuperscript{12}.
+Auckland Council's Animal Management division has around 150 permanent
+staff, including five area-based field teams (Central, East, North,
+South and West), a regional Barking and Registration team, a Proactive
+team, four animal shelters (Henderson, Manukau, Silverdale, and
+Pukekohe), a Veterinary Services team, and management, legal, and
+operational support staff.
 
 Territorial authorities are required to collect and publish data
 relating to dog control policies and practices. Auckland Council's
 Animal Management division publishes a high-level summary of selected
 data in it's annual reports. I made a request under the Local Government
 Official Information and Meetings Act 1987\textsuperscript{13} on 20
-November 2025 for the full dataset compiled by the Council, which was
-fulfilled on 18 December 2025 (request \#8140017948). The raw data is
-available as an R package called \texttt{akldogs}\textsuperscript{14},
-and the data is also available as cleaned .csv files in the package's
+November 2025 for the full dataset, which was fulfilled on 18 December
+2025 (request \#8140017948). The raw data is available as an R package
+called \texttt{akldogs}\textsuperscript{14}, and the data is also
+available as cleaned .csv files in the package's
 \href{https://github.com/tesaunders/akldogs/tree/main/data-raw}{GitHub
 repository}. I also compiled data from Auckland Council Animal
 Management annual reports going back to FY2016, and this data can be
@@ -362,9 +361,9 @@ data.}
 Analysis}}
 
 Over 200 breeds are represented in the Auckland dog population. Labrador
-Retrievers remain the most popular at 11\% of the Auckland dog
-population, with the top 10 also including the Staffordshire Bull
-Terrier and American Pit Bull Terrier, both automatically classified as
+Retrievers remain the most popular, accounting for 11\% of dogs in
+Auckland, with the top 10 also including the Staffordshire Bull Terrier
+and American Pit Bull Terrier, both automatically classified as
 `menacing' under the Dog Control Act 1996.
 
 {
@@ -499,7 +498,7 @@ Analysis}}
 
 The proportion of impounded dogs that were euthanised was steadily
 dropping between 2014 and 2021, when it reached a low of 21.7\%.
-However, since then it climbed dramatically to reach 60.8\% in 2025.
+However, since then it has climbed steadily to 60.8\% in 2025.
 
 \pandocbounded{\includegraphics[keepaspectratio]{index_files/figure-latex/notebooks-data-analysis-impound-outcome-output-2.png}}
 
@@ -717,11 +716,13 @@ Analysis}}
 
 \section{Action}\label{action}
 
-A number of professional and advocacy organisations have issued position
-statements and called for urgent policy reform to address the growing
-issue of dog control in New Zealand. All are united in their desire that
-dog control policy be evidence-based and preventative in nature. The New
-Zealand Veterinary Association\textsuperscript{15} has called for
+The government announced a review of the Dog Control Act 1996 in March
+2026\textsuperscript{15}. A number of professional and advocacy
+organisations have previously issued position statements and called for
+urgent policy reform to address the growing issue of dog control in New
+Zealand. All are united in their desire that dog control policy be
+evidence-based and preventative in nature. The New Zealand Veterinary
+Association\textsuperscript{16} has called for
 
 \begin{quote}
 a comprehensive plan delivered across multiple agencies that work
@@ -732,12 +733,12 @@ educators, dog breeders, dog welfare agencies and the media.
 \end{quote}
 
 The New Zealand SPCA has issued position statements on dog
-safety\textsuperscript{16} and breed-specific
-legislation\textsuperscript{17}, while the Paediatric Society of New
-Zealand\textsuperscript{18} is concerned about the disproportionate
+safety\textsuperscript{17} and breed-specific
+legislation\textsuperscript{18}, while the Paediatric Society of New
+Zealand\textsuperscript{19} is concerned about the disproportionate
 impact of dog attacks on children. A number of academic studies and
 reviews have also investigated dog control in New
-Zealand\textsuperscript{19,19--22}.
+Zealand\textsuperscript{20,20--23}.
 
 Major recommendations include:
 
@@ -890,53 +891,59 @@ official information and meetings act 1987. Published online 1987.
 council. Published online March 12, 2026.
 \url{https://tesaunders.github.io/akldogs/}}
 
-\bibitem[\citeproctext]{ref-newzealandveterinaryassociation2019}
+\bibitem[\citeproctext]{ref-anonymous2026a}
 \CSLLeftMargin{15. }%
+\CSLRightInline{Anonymous. Government orders review of dog control act.
+Published online March 21, 2026.
+\url{https://www.beehive.govt.nz/release/government-orders-review-dog-control-act}}
+
+\bibitem[\citeproctext]{ref-newzealandveterinaryassociation2019}
+\CSLLeftMargin{16. }%
 \CSLRightInline{New Zealand Veterinary Association. Position statement:
 Safe dogs. Published online November 2019.
 \url{https://nzva.org.nz/positions-advocacy/position-statements/safe-dogs/}}
 
 \bibitem[\citeproctext]{ref-newzealandspca}
-\CSLLeftMargin{16. }%
+\CSLLeftMargin{17. }%
 \CSLRightInline{New Zealand SPCA. Position statement: Dog safety.
 \url{https://www.spca.nz/advocacy/position-statements/article/dog-safety}}
 
 \bibitem[\citeproctext]{ref-newzealandspcaa}
-\CSLLeftMargin{17. }%
+\CSLLeftMargin{18. }%
 \CSLRightInline{New Zealand SPCA. Position statement: Breed specific
 legislation.
 \url{https://www.spca.nz/advocacy/position-statements/article/breed-specific-legislation-bsl}}
 
 \bibitem[\citeproctext]{ref-thepaediatricsocietyofnewzealand2023}
-\CSLLeftMargin{18. }%
+\CSLLeftMargin{19. }%
 \CSLRightInline{The Paediatric Society of New Zealand. Media release:
 High number of dog attacks concerns child health experts. Published
 online March 20, 2023.
 \url{https://www.paediatrics.org.nz/knowledge-hub/view-resource?id=25}}
 
 \bibitem[\citeproctext]{ref-duncan-sutherland2022}
-\CSLLeftMargin{19. }%
+\CSLLeftMargin{20. }%
 \CSLRightInline{Duncan-Sutherland N, Cunningham C, Cooper S, Boys S. An
 audit of dog-related injury notification practices in a new zealand
 public hospital. \emph{New Zealand Medical Journal}. Published online
 2022.}
 
 \bibitem[\citeproctext]{ref-duncan-sutherland2023}
-\CSLLeftMargin{20. }%
+\CSLLeftMargin{21. }%
 \CSLRightInline{Duncan-Sutherland N, Hunt M, Alatini M, Shepherd M, Kool
 B. Study of dog control strategies. \emph{Injury Prevention}.
 2023;29(3):219-226.
 doi:\href{https://doi.org/10.1136/ip-2022-044686}{10.1136/ip-2022-044686}}
 
 \bibitem[\citeproctext]{ref-smith2019}
-\CSLLeftMargin{21. }%
+\CSLLeftMargin{22. }%
 \CSLRightInline{Smith LM, Hartmann S, Munteanu AM, Dalla Villa P,
 Quinnell RJ, Collins LM. The effectiveness of dog population management:
 A systematic review. \emph{Animals}. 2019;9(12):1020.
 doi:\href{https://doi.org/10.3390/ani9121020}{10.3390/ani9121020}}
 
 \bibitem[\citeproctext]{ref-duncan-sutherland2024}
-\CSLLeftMargin{22. }%
+\CSLLeftMargin{23. }%
 \CSLRightInline{Duncan-Sutherland N. Dog-related injuries: Notification,
 safeguarding and bite management. Published online December 3, 2024.
 \url{https://starship.org.nz/guidelines/dog-related-injuries-notification-safeguarding-and-bite-management/}}
