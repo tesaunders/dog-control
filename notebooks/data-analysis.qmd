@@ -113,6 +113,16 @@ Investigate breed mismatches between registration and impound data.
 The breed recorded in impound data does not match the breed for the dog with the same animal_id in the registration data, in over 6,000 cases. The rest of the analyses in this notebook use the data as provided by Animal Management, but noting this for follow up.
 
 ```{r}
+# Unique animals in impound data
+
+impounds_unique <- impounds |> 
+  select(dog_id) |> 
+  unique()
+
+nrow(impounds_unique)
+```
+
+```{r}
 comparison_by_id <- inner_join(
   registration |> select(animal_id, breed_reg = clean_name),
   impounds     |> select(dog_id, breed_imp = clean_name),
@@ -121,10 +131,6 @@ comparison_by_id <- inner_join(
   unique() |> 
   mutate(is_match = (breed_reg == breed_imp))
 
-comparison_by_id |> 
-  filter(is_match == FALSE) |> 
-  write_csv("../outputs/breed_mismatches.csv")
-
 match_summary <- comparison_by_id |>
   summarise(
     total_dogs_checked = n(),
@@ -132,7 +138,13 @@ match_summary <- comparison_by_id |>
     mismatches = sum(!is_match),
     accuracy_rate = mean(is_match) * 100
   )
+```
 
+`{r} match_summary |> select(accuracy_rate) |> pull() |> percent(scale = 1, accuracy = 0.1)` of unique dogs in the impound data, identified by their animal id number, have a different breed listed in the registration data. In many cases, this appears to reflect thedifficulty in identifying breeds visually, hence why many pit bull type breeds are grouped under 'Pit Bull Terrier'. 
+
+But there are also many cases of dogs which appear visually distinct having mismatched breeds between the impound and registration data.
+
+```{r}
 top_mismatches <- comparison_by_id |>
   filter(!is_match) |>
   count(breed_reg, breed_imp, sort = TRUE) |>
@@ -142,7 +154,7 @@ top_mismatches <- comparison_by_id |>
     frequency = n
   )
 
-head(top_mismatches, 10)
+head(top_mismatches, n = 10)
 ```
 
 Top 10 primary breeds as at FY2025:
