@@ -6,7 +6,6 @@ author:
     url: https://tomsaunders.me
     orcid: 0000-0003-1780-0314
     corresponding: true
-    affiliation: University of Auckland
 keywords: dog control, dog attacks, Auckland, euthanasia
 abstract: A spate of fatal dog attacks have focussed attention on New Zealand's growing problem with roaming and aggressive dogs. Under the Dog Control Act 1996, Territorial Authorities are resposible for managing the harms associated with dogs in communities. Auckland Council's Animal Management division publishes selected high-level statistics related to it's dog control practices, but an examination of the underlying raw data in combination with data from it's annual reports reveals troubling trends for some of the most important metrics. The rate of attacks, impounds, and euthanasia of impounded dogs are all increasing due to an explosion in the dog population and a stretched shelter system. Attack rates are highest in South Auckland, and several breeds are over-represented in negative statistics. 
 number-sections: true
